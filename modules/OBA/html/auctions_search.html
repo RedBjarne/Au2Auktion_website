@@ -1,0 +1,103 @@
+<input type="hidden" id="auction_type" value="live" />
+
+<script>
+function SelectType(at)
+{
+	$("#auction_type").val(at);
+	$(".tabactive").attr("class", "tab");
+	$("#" + at).attr("class", "tabactive");
+}
+
+function AuctionsSearch()
+{
+	$("#divSearchLoading").show();
+	$("#divSearchButton").hide();
+	$("#divSearchResults").html("");
+	
+	new ajax{AJAX}('search', {
+		auction_type: $("#auction_type").val(),
+		brand: $("#brand").val(),
+		year: $("#year").val(),
+		fuel: $("#fuel").val(),
+		km: $("#km").val()
+	}, AuctionsSearchResults, 'POST', true);
+
+	// Ændrer URL i browser
+	var url = '/site/{LANG_ID}/{MODULE}/{PAGE}/search?';
+	if ($("#auction_type").val() != "") url += "&auction_type=" + escape($("#auction_type").val());
+	if ($("#brand").val() != "") url += "&brand=" + escape($("#brand").val());
+	if ($("#year").val() != "") url += "&year=" + escape($("#year").val());
+	if ($("#fuel").val() != "") url += "&fuel=" + escape($("#fuel").val());
+	if ($("#km").val() != "") url += "&km=" + escape($("#km").val());
+	try
+	{
+		window.history.pushState({
+		},"", url);
+	}
+	catch(e)
+	{
+	}	
+}
+
+function AuctionsSearchResults(val)
+{
+	$("#divSearchLoading").hide();
+	$("#divSearchButton").show();
+	
+	if (val['state'] && val['state'] == 'ok' && val['html']) $("#divSearchResults").html(val["html"]);
+}
+</script>
+
+<div style="height: 400px;">
+	<div class="frontpage_searcharea" style="margin-left:0px;">
+		<div class="frontpage_searchtitles">
+			<a href="#" onclick="SelectType('live'); return false;" id="live" class="tabactive"><span>Fysiske auktioner</span></a>
+			<a href="#" onclick="SelectType('online'); return false;" id="online" class="tab"><span>Online auktioner</span></a>
+		</div>
+	
+		<div class="frontpage_left">
+			<br />
+			<br />
+		    <div class="field_frontpage">
+		        <select class="other" id="brand" name="brand" title="Mærke"><option value="">Mærke</option>{SELECT_BRAND}</select>
+		    </div>
+		    <div class="field_frontpage">
+		        <select class="other" id="year" name="year" title="Årgang"><option value="">Årgang</option>{SELECT_YEAR}</select>
+		    </div>
+		    <div class="field_frontpage">
+		        <select class="other" id="fuel" name="fuel" title="Brændstoftype"><option value="">Brændstoftype</option>{SELECT_FUEL}</select>
+		    </div>
+		    <div class="field_frontpage">
+		        <select class="other" id="km" name="km" title="Km interval"><option value="">Km interval</option>{SELECT_KM}</select>
+		    </div>
+		</div>
+		
+		<div class="frontpage_spacer"></div>
+		
+		<div class="frontpage_right">
+			<img src="/layouts/{SITE_LAYOUT}/img/banner_front.png" style="margin-top:-40px;margin-left:5px;">
+		</div>
+		
+		<div class="field submit_frontpage" id="divSearchLoading" style="display: none; padding-left: 212px; padding-top: 30px;">
+			<img src="/modules/{MODULE}/img/loading.gif" alt="Vent venligst.." />
+		</div>
+		<div class="field submit_frontpage" id="divSearchButton">
+			<input type="button" value="SØG" onclick="AuctionsSearch();" />
+		</div>	
+	</div>
+</div>
+
+<!-- Søgeresultater -->
+<div id="divSearchResults">
+	<!-- Vis tilfældige biler -->
+	{MODULE|{MODULE}|{PAGE}|random|12}
+</div>
+
+<script>
+if ('{VAR|auction_type}' != '') SelectType('{VAR|auction_type}');
+if ('{VAR|brand}' != '') $("#brand").val('{VAR|brand}');
+if ('{VAR|year}' != '') $("#year").val('{VAR|year}');
+if ('{VAR|fuel}' != '') $("#fuel").val('{VAR|fuel}');
+if ('{VAR|km}' != '') $("#km").val('{VAR|km}');
+if ('{VAR|auction_type}' != '' || '{VAR|brand}' != '' || '{VAR|year}' != '' || '{VAR|fuel}' != '' || '{VAR|km}' != '') AuctionsSearch();
+</script>

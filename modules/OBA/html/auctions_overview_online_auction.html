@@ -1,0 +1,37 @@
+<a href="/site/{LANG_ID}/{MODULE}/auctions/show/{ID}"><div id="auction_page_right_auction"><!--auction_page_right_auction-->	
+{BID}
+
+    <div class="auction_page_right_auction_img">{IMAGES}</div>
+    <div class="auction_page_right_auction_title">{YEAR} {BRAND} {MODEL} {VARIANT} {IF|{DOORS}|||, {DOORS}d}{IF|{FUEL}|||, {FUEL}}</div>
+    <div class="auction_page_right_auction_1reg">1. Reg: <span style="color:#c40912;">{FIRST_REG_DATE}</span></div>
+    <div class="auction_page_right_auction_inspection">Seneste Syn: <span style="color:#c40912;">{NEWLY_TESTED_DATE}</span></div>
+    <div class="auction_page_right_auction_desc"><!--{DESCRIPTION}--></div>
+   
+    <div class="auction_page_right_auction_end">Auktionen slutter: <span style="color:#c40912;">{END_TIME}</span></div>
+    <div class="auction_page_right_auction_latestbid">Seneste bud: <span style="color:#c40912;">{CUR_PRICE}</span></div>
+    <div class="auction_page_right_auction_radius">{ZIPCODE} {CITY} {IF|{GPS_DISTANCE}|||({GPS_DISTANCE} km)}</div>
+</div></a><!--auction_page_right_auction slut-->
+ <div class="auction_page_right_auction_bidagain AuctionOverviewDoBid {DO_BID_CLASS}">
+    
+        <div class="auction_page_right_auction_loggedinbidmp_bid"><!--auction_pagedetails_bid_loggedinbidnomp_bid-->
+        
+        <!-- Bud-tip -->
+        {BID_TIP}
+        
+		<form action="/" method="post">
+		<input type="hidden" name="module" value="{MODULE}" />
+		<input type="hidden" name="page" value="{PAGE}" />
+		<input type="hidden" name="do" value="bid" />
+		<input type="hidden" name="id" value="{ID}" />
+		<input type="hidden" name="return_url" value="/site/{LANG_ID}/{MODULE}/{PAGE}/{DO}?auction_type={VAR|auction_type}&group_id={VAR|group_id}&brand={VAR|brand}&no_tax={VAR|no_tax}&order={VAR|order}#{ID}" />
+        <label class="auction_page_right_auction_loggedinbidmp_bid_labeltop">Indtast nyt bud:</label>
+		<input type="number" name="bid" value="{NEXT_BID}" class="auction_page_right_auction_loggedinbidmp_bid_field"/>
+		<input type="submit" value="Byd" class="auction_page_right_auction_loggedinbidmp_bid_button" />
+		</form>
+         </div><!--auction_pagedetails_bid_loggedinbidnomp_bid slut-->
+                               
+        
+        
+                                    
+                               
+    </div>

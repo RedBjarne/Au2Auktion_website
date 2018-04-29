@@ -1,0 +1,440 @@
+<!-- Container med alle auktioner -->
+<div id="divLiveAuction" style="display: none;">
+
+    	<div id="auctions_container"><!--auktions container start-->
+        	<div class="auctions_title">Liveauktion</div>
+        	
+        	<!-- Aktuel auktion -->
+        	<div id="divCurAuction"><div id="divInner">
+	        	
+	    		<div class="auctions_active">Aktuel auktion: <span id="auction_no"></span></div>
+	            <div class="auctions_images" id="divImages">
+	            	<!--
+	            	<div class="auctions_images_large"><img src="images/bil1.png" /></div>
+	                <div class="auctions_images_small"><img src="images/bil2.png" /></div>
+	                <div class="auctions_images_small"><img src="images/bil2.png" /></div>
+	                <div class="auctions_images_small"><img src="images/bil2.png" /></div>
+	                -->
+	            </div>
+	            <div class="auctions_information">
+	            	<div class="auctions_information_title"><span id="brand"></span> <span id="model"></span> <span id="variant"></span></div>
+	                <div class="auctions_information_value"><b>Brændstof:</b>&nbsp;<span id="fuel"></span></div>
+	                <div class="auctions_information_value"><b>Døre:</b>&nbsp;<span id="doors"></span></div>
+	                <div class="auctions_information_value"><b>Årgang:</b>&nbsp;<span id="year"></span></div>
+	                <div class="auctions_information_value"><b>Km-stand:</b>&nbsp;<span id="km"></span> KM</div>
+	                <div class="auctions_information_value"><b>Farve:</b>&nbsp;<span id="color"></span></div>
+	                <div id="newly_tested" class="auctions_information_value"><b>Nysynet:</b>&nbsp;Ja</div>
+	                <div class="auctions_information_value"><b>Sidste syn:</b>&nbsp;<span id="newly_tested_date"></span></div>
+	                <div id="is_regged" class="auctions_information_value"><b>Indregistreret:</b>&nbsp;Ja</div>
+	                <div class="auctions_information_value"><b>1. indreg.:</b>&nbsp;<span id="first_reg_date"></span></div>
+	                <div id="service" class="auctions_information_value"><b>Servicebog:</b>&nbsp;Ja</div>
+	                <div id="no_vat" class="auctions_information_value"><b>Moms:</b>&nbsp;ekskl. moms</div>
+	                <div id="no_tax" class="auctions_information_value"><b>Afgift:</b>&nbsp;uden afgift (ikke reg. i dk)</div>
+	                <div id="yellow_plate" class="auctions_information_value"><b>Gul-plade:</b>&nbsp;Ja</div>
+	                <div class="auctions_information_value"><b>Kategori:</b>&nbsp;<span id="category_type"></span></div>
+	            </div>
+	            <div class="auctions_bid">
+	            	<div class="auctions_bid_winning"><span id="divWinner">Tillykke! Du har budt højest!</span></div>
+	                <div class="auctions_bid_current">Aktuelt bud: <span id="cur_price"></span></div>
+	                <div class="auctions_bid_your">Dit seneste bud: <span id="my_bid"></span></div>
+	                <div class="auctions_bid_bidonthis">Byd op auktionen</div>
+	                <form class="auctions_bidding" id="divBid">
+	                	<input class="auctions_pris" type="text" id="inputBid" name="pris" />
+	                    <input class="auctions_btn-500" onclick="AddBid(500);" type="button" name="500" />
+	                    <input class="auctions_btn-1000" onclick="AddBid(1000);" type="button" name="1000" />
+	                    <input class="auctions_btn-5000" onclick="AddBid(5000);" type="button" name="5000" />
+	                    <input class="auctions_btn-10000" onclick="AddBid(10000);" type="button" name="10000" />
+	                    <input class="auctions_btn-bid" type="button" name="byd" onclick="DoBid();" />
+	                </form>
+	            </div>
+                <div style="height: 15px;"><div id="divMessage" style="color: #ff0000; text-align: center;"></div></div>
+
+            </div></div>
+            
+            <div class="auctions_livestream"><iframe src="http://webstream.dk/livestreaming/?stream=oba&hash=odensebilauktion" frameborder="0" framespacing="0" width="592" height="349" scrolling="no"></iframe></div>
+            
+            <!-- Næste auktion -->
+            <div class="auctions_upcoming">
+            	<div style="position: absolute;"><div style="position: relative; left: -8px; top: -60px;"><img src="/modules/{MODULE}/img/live_icons.png"></div></div>
+            
+            	<div class="auctions_upcoming_title">Kommende Auktioner</div><div class="auctions_upcoming_underauction"></div>
+                
+            	<div id="divNextAuction"></div>
+            	<!--
+            	<div class="auctions_upcoming_car">Honda Accord - 1.8L - Benzin - 2007 - Auktion 5asassdsa</div><div class="auctions_status_ua"></div>
+                <div class="auctions_upcoming_car">Honda Accord - 1.8L - Benzin - 2007 - Auktion 5</div><div class="auctions_status_ua"></div>
+                <div class="auctions_upcoming_car">Honda Accord - 1.8L - Benzin - 2007 - Auktion 5</div><div class="auctions_status_ua"></div>
+                <div class="auctions_upcoming_car">Honda Accord - 1.8L - Benzin - 2007 - Auktion 5</div><div class="auctions_status_ua"></div>
+                <div class="auctions_upcoming_car">Honda Accord - 1.8L - Benzin - 2007 - Auktion 5</div><div class="auctions_status_ua"></div>
+                <div class="auctions_upcoming_car">Honda Accord - 1.8L - Benzin - 2007 - Auktion 5</div><div class="auctions_status_ua"></div>
+                -->
+            </div>
+            
+            <!-- Forrige auktion -->
+            <div class="auctions_latest">
+            	<div class="auctions_upcoming_title">Seneste Auktioner</div><div class="auctions_upcoming_underauction"></div>
+                
+            	<div id="divPrevAuction"></div>
+            	<!--
+            	<div class="auctions_latest_car">Honda Accord - 1.8L - Benzin - 2007 - 1.123.432 kr,-</div><div class="auctions_status_s"></div>
+                <div class="auctions_latest_car">Honda Accord - 1.8L - Benzin - 2007 - 1.123.432 kr,-</div><div class="auctions_status_s"></div>
+                <div class="auctions_latest_car">Honda Accord - 1.8L - Benzin - 2007 - 1.123.432 kr,-</div><div class="auctions_status_ua"></div>
+                <div class="auctions_latest_car">Honda Accord - 1.8L - Benzin - 2007 - 1.123.432 kr,-</div><div class="auctions_status_ns"></div>
+                <div class="auctions_latest_car">Honda Accord - 1.8L - Benzin - 2007 - 1.123.432 kr,-</div><div class="auctions_status_ns"></div>
+                <div class="auctions_latest_car">Honda Accord - 1.8L - Benzin - 2007 - 1.123.432 kr,-</div><div class="auctions_status_ua"></div>
+                -->
+            </div>
+            
+        </div><!--auktions container slut-->
+</div>
+
+<!-- Container når der ikke er live auktioner -->
+<div id="divNoAuction">
+	{MODULE|WYSIWYG|default|Ingen live auktion}
+</div>
+
+<script>
+function HideMessage(msg)
+{
+	if (msg == $("#divMessage").html())
+	{
+		$("#divMessage").stop(true, true);
+		$("#divMessage").fadeOut(400);
+	}
+}
+
+function ShowMessage(msg)
+{
+	$("#divMessage").stop(true, true);
+	$("#divMessage").html(msg);
+	$("#divMessage").fadeIn(400, function() {
+		setTimeout(function() {
+			HideMessage(msg)
+		}, 2000);
+	});
+}
+
+function DoBid()
+{
+	if (boolBidding) return;
+	var curBid = parseInt($("#inputBid").val());
+	if (isNaN(curBid))
+	{
+		ShowMessage('Indtast dit bud i bud-feltet i hele kroner');
+		$("#inputBid").focus();
+		return;
+	}
+	if (curBid < intCurPrice + 500)
+	{
+		ShowMessage('Dit bud er for lavt');
+		$("#inputBid").focus();
+		return;
+	}
+	boolBidding = true;
+	$("#divBid").animate({
+		opacity: 0.25
+	}, 200);
+	new ajax('bid', {
+		id: strCurAuctionId,
+		bid: curBid
+	}, function(val) {
+		if (val['state'] && val['state'] == 'ok')
+		{
+			if (val['message']) ShowMessage(val['message']);
+			if (val['cur_price']) $("#divCurAuction #cur_price").html(val['cur_price'] + ',-');
+		}
+		setTimeout(function() {
+			boolBidding = false;
+			$("#divBid").animate({
+				opacity: 1
+			}, 200);
+		}, 5000);
+	}, 'POST', true);
+}
+
+function AddBid(intAdd)
+{
+	var curBid = parseInt($("#inputBid").val());
+	if (isNaN(curBid)) curBid = intCurPrice;
+	if (curBid < intCurPrice + 500) curBid = intCurPrice + 500;
+	curBid += intAdd;
+	$("#inputBid").val(curBid);
+}
+
+function Refresh()
+{
+	if (timeoutRefresh != null) clearTimeout(timeoutRefresh);
+	new ajax('refresh', [], RefreshReturn, 'POST', true);
+}
+
+function RefreshReturn(val)
+{
+	if (val['state'] == 'ok')
+	{
+		boolCheckRefresh = true;
+		
+		// Ur
+		$("#divWatch").html(val['time']);
+		
+		// Er der en aktiv auktion?
+		if (val['current_auction_id'] != '' && val['current_auction_id'] != 'undefined' && val['current_auction_id'] != null)
+		{
+			if ($("#divNoAuction").css("display") != "none")
+			{
+				$("#divNoAuction").hide();
+				$("#divLiveAuction").show();
+			}
+
+			// Forrige og næste
+			if (strPrevAuctionId != val['prev_auction_id'] || strNextAuctionId != val['next_auction_id'])
+			{
+				strPrevAuctionId = val['prev_auction_id'];
+				strNextAuctionId = val['next_auction_id'];
+				
+				new ajax('get_prev_and_next', {
+				}, function(val) {
+					if (val['state'] == 'ok')
+					{
+						// Forrige auktioner
+						var html = "";
+						for (var i = 0; i < parseInt(val['prev_count']); i++)
+						{
+							// Data
+							var auc = {
+								id: (val['prev_id' + i] ? val['prev_id' + i] : ""),
+								auction_no: (val['prev_auction_no' + i] ? val['prev_auction_no' + i] : ""),
+								brand: (val['prev_brand' + i] ? val['prev_brand' + i] : ""),
+								model: (val['prev_model' + i] ? val['prev_model' + i] : ""),
+								variant: (val['prev_variant' + i] ? val['prev_variant' + i] : ""),
+								fuel: (val['prev_fuel' + i] ? val['prev_fuel' + i] : ""),
+								year: (val['prev_year' + i] ? val['prev_year' + i] : ""),
+								cur_price: (val['prev_cur_price' + i] ? val['prev_cur_price' + i] : ""),
+								min_price: (val['prev_min_price' + i] ? val['prev_min_price' + i] : ""),
+								bidder_id: (val['prev_bidder_id' + i] ? val['prev_bidder_id' + i] : ""),
+								cancel: (val['prev_cancel' + i] ? val['prev_cancel' + i] : "")
+							};
+
+							// Viser
+							if (parseInt(auc["min_price"]) <= parseInt(auc["cur_price"]) && parseInt(auc["cur_price"]) > 0)
+							{
+								// Solgt
+								var state = "s";
+							}
+							else if (auc["cancel"] == "1" || parseInt(auc["min_price"]) == 0)
+							{
+								// Ikke solgt
+								var state = "ns";
+							}
+							else
+							{
+								// Under bearbejdning
+								var state = "ua";
+							}
+							html += '<div class="auctions_latest_car">' + 
+								auc["brand"] + ' ' + auc["model"] + ' ' + auc["variant"] + ' - ' + auc["fuel"] + ' - ' + auc["year"] + ' - ' + auc["cur_price"] + 
+								',-</div><div class="auctions_status_' + state + '"></div>';
+							
+							// Har brugeren vundet ?
+							if (i == 0 && auc['bidder_id'] == '{USER_ID}' && parseInt(auc['cur_price']) >= parseInt(auc['min_price']) && parseInt(auc['cur_price']) > 0)
+							{
+								// Har vundet!
+								html_popup('<h1>Tillykke du har vundet auktionsnr. ' + auc['auction_no'] + '</h1>' +
+									'Dit vindende bud er: ' + auc['cur_price'] + ',-<br>' +
+									'Vi kontakter dig inden for 24 timer.');
+							}
+						}
+						$("#divPrevAuction").html(html);
+						
+						// Næste auktioner
+						var html = "";
+						for (var i = 0; i < parseInt(val['next_count']); i++)
+						{
+							// Data
+							var auc = {
+								id: (val['next_id' + i] ? val['next_id' + i] : ""),
+								auction_no: (val['next_auction_no' + i] ? val['next_auction_no' + i] : ""),
+								brand: (val['next_brand' + i] ? val['next_brand' + i] : ""),
+								model: (val['next_model' + i] ? val['next_model' + i] : ""),
+								variant: (val['next_variant' + i] ? val['next_variant' + i] : ""),
+								fuel: (val['next_fuel' + i] ? val['next_fuel' + i] : ""),
+								year: (val['next_year' + i] ? val['next_year' + i] : ""),
+								cur_price: (val['next_cur_price' + i] ? val['next_cur_price' + i] : ""),
+								min_price: (val['next_min_price' + i] ? val['next_min_price' + i] : ""),
+								bidder_id: (val['next_bidder_id' + i] ? val['next_bidder_id' + i] : "")
+							};
+
+							// Viser
+							if (parseInt(auc["min_price"]) <= parseInt(auc["cur_price"]) && parseInt(auc["cur_price"]) > 0)
+							{
+								// Solgt
+								var state = "s";
+							}
+							else
+							{
+								// Ikke solgt
+								var state = "ns";
+							}
+							html += '<div class="auctions_upcoming_car">' + 
+								auc["brand"] + ' ' + auc["model"] + ' ' + auc["variant"] + ' - ' + auc["fuel"] + ' - ' + auc["year"] + '</div><div class="auctions_status_' + state + '"></div>';
+							
+							// Har brugeren vundet ?
+							if (i == 0 && auc['bidder_id'] == '{USER_ID}' && parseInt(auc['cur_price']) >= parseInt(auc['min_price']) && parseInt(auc['cur_price']) > 0)
+							{
+								// Har vundet!
+								html_popup('<h1>Tillykke du har vundet auktionsnr. ' + auc['auction_no'] + '</h1>' +
+									'Dit vindende bud er: ' + auc['cur_price'] + ',-<br>' +
+									'Vi kontakter dig inden for 24 timer.');
+							}
+						}
+						$("#divNextAuction").html(html);
+					}
+				}, 'POST', true);
+			}
+			
+			// Aktuel
+			if (strCurAuctionId != val['current_auction_id'])
+			{
+				strCurAuctionId = val['current_auction_id'];
+				$("#divCurAuction #divInner").fadeOut();
+				new ajax('get_auction', {
+					id: strCurAuctionId,
+					tpl: 'current'
+				}, function(val) {
+					if (val['state'] == 'ok')
+					{
+						$("#divCurAuction #divInner").fadeIn();
+						for (key in val)
+						{
+							if (key == 'newly_tested' || key == 'is_regged' || key == 'no_vat' || key == 'no_tax' || key == 'yellow_plate' || key == 'service')
+							{
+								// Vis/skjul
+								if (val[key] == '1')
+								{
+									$("#divCurAuction #" + key).show();
+								}
+								else
+								{
+									$("#divCurAuction #" + key).hide();
+								}
+							}
+							else
+							{
+								// Værdi
+								if (key == 'cur_price')
+								{
+									val[key] = val[key] + ',-';
+									intCurPrice = parseInt(val[key]);
+									$("#inputBid").val(intCurPrice + 500);
+								}
+								$("#divCurAuction #" + key).html(val[key]);
+							}
+						}
+						arrCurImages = val['images'].split('|');
+						var images = "";
+						for (var i = 0; i < arrCurImages.length && i <= 3; i++)
+						{
+							images += '<a class="LiveAuctionImage" href="/modules/{MODULE}/upl/image_' + arrCurImages[i] + '.jpg"><span class="' + (i == 0 ? "auctions_images_large" : "auctions_images_small") + '" ' +
+								'style="background-image: url(/modules/{MODULE}/upl/image_' + arrCurImages[i] + '.jpg);" rel="LiveGallery"></span></a>';
+						}
+						$("#divImages").html(images);
+						$(".LiveAuctionImage").fancybox();
+					}
+				}, 'POST', true);
+				
+				$("#divWinner").hide();
+			}
+			else if (val['cur_price'])
+			{
+				// Opdater aktuelt bud
+				$("#divCurAuction #cur_price").html(val['cur_price'] + ',-');
+				intCurPrice = parseInt(val['cur_price']);
+				
+				if ($("#divWinner").css("display") == 'none')
+				{
+					if (val['is_winner'] == '1')
+					{
+						$("#divWinner").fadeIn();
+					}
+				}
+				else
+				{
+					if (val['is_winner'] != '1')
+					{
+						$("#divWinner").fadeOut();
+					}
+				}
+				
+				if (val['my_bid'] && val['my_bid'] != "0")
+				{
+					$("#divCurAuction #my_bid").html(val['my_bid'] + ',-');
+				}
+				else
+				{
+					$("#divCurAuction #my_bid").html("Du har ikke budt !");
+				}
+				
+			}
+		}
+		else
+		{
+			// Ingen aktive auktioner
+			
+			if ($("#divNoAuction").css("display") == "none")
+			{
+				$("#divLiveAuction").hide();
+				$("#divNoAuction").show();
+			}
+			
+			// Forrige
+			if (strPrevAuctionId != val['prev_auction_id'])
+			{
+				strPrevAuctionId = val['prev_auction_id'];
+				new ajax('get_auction', {
+					id: strPrevAuctionId,
+					tpl: 'prev'
+				}, function(val) {
+					if (val['state'] == 'ok')
+					{
+						// Har brugeren vundet ?
+						if (val['bidder_id'] == '{USER_ID}' && parseInt(val['cur_price']) >= parseInt(val['min_price']) && parseInt(val['cur_price']) > 0)
+						{
+							// Har vundet!
+							$("#divWinnerPrev").show();
+							html_popup('<h1>Tillykke du har vundet auktionsnr. ' + val['auction_no'] + '</h1>' +
+								'Dit vindende bud er: ' + val['cur_price'] + ',-<br>' +
+								'Vi kontakter dig inden for 24 timer.');
+						}
+					}
+				}, 'POST', true);
+			}
+		}
+		
+		timeoutRefresh = setTimeout('timeoutRefresh = null; Refresh();', 1000);
+	}
+}
+
+function CheckRefresh()
+{
+	if (!boolCheckRefresh)
+	{
+		if (timeoutRefresh != null) clearTimeout(timeoutRefresh);
+		Refresh();
+	}
+	boolCheckRefresh = false;
+}
+
+var boolCheckRefresh = false;
+var strPrevAuctionId = '';
+var strCurAuctionId = '';
+var strNextAuctionId = '';
+var intWidth = 0;
+var intHeight = 0;
+var timeoutRefresh = null;
+var intCurPrice = 0;
+var boolBidding = false;
+
+$(document).ready(function() {
+	Refresh();
+	setInterval('CheckRefresh();', 15000);
+});
+</script>

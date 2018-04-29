@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="{LANG_ID}">
+<head>
+<title>Au2Auktion</title>
+	<meta name="description" content="Au2Auktion.dk">
+	<meta name="keywords" content="Au2Auktion.dk">
+	<meta charset="ISO-8859-1">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="Content-Language" content="{LANG_ID}">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="pragma" content="no-cache">
+	<link rel="icon" type="image/png" href="/layouts/{SITE_LAYOUT}/images/logo.png">
+    <link rel="stylesheet" type="text/css" href="/layouts/OdenseBilauktion/css/style.css">
+
+	{TPL|jquery}    
+	{TPL|LAYOUT|{SITE_LAYOUT}|jquery_popup}
+</head>
+
+<body>
+	<div id="container"><!--container-->
+    	<div id="top"><!--top-->
+        	<div class="t_topcontent">
+            	<a href="/"><div class="t_tc_logo"></div></a>
+                <div class="t_tc_search"><!--search-->
+                	<form id="formSearch" action="/" >
+                        <input type="hidden" name="module" value="OBA" />
+                        <input type="hidden" name="page" value="auctions" />
+                        <input type="hidden" name="auction_type" value="online" />
+                        <input class="t_tc_search_field" type="text" name="searchstring" id="searchstring" onfocus="if (this.value == 'Indtast søgeord') this.value = '';" onblur="if (this.value == '') this.value = 'Indtast søgeord';" value="{VAR|searchstring}"/>
+                        
+                    </form>
+                     <script>
+                        if ($("#searchstring").val() == "")
+                        {
+	                        $("#searchstring").val("Indtast søgeord");
+                        }
+                        </script>
+                        <a href="javascript:$('#formSearch').submit();void(0);"><div class="t_tc_search_button" style="margin-top:-40px;margin-left:330px;">Søg</div></a>
+                </div><!--search slut-->
+                
+                {TPL|LAYOUT|{SITE_LAYOUT}|BrugerMenu{MODULE|OBA|user|logged_in}}
+                
+                
+            </div>
+            <div class="t_bottomcontent"><!--bottomcontent-->
+				<div class="t_bc_menu"><!--menu-->
+                    <ul>{PAGE|menu}</ul>
+				</div><!--menu slut-->
+			</div><!--bottomcontent slut-->
+        </div><!--top slut-->
+			
+				<!-- content of all pages between here-->       
+			<div id="content"><!--content-->
+        
+        	
+        	{HTML}
+		
+		
+		</div><!--content slut-->
+		
+    	</div><!--container slut-->
+    	<!-- Søg efter katalognummer -->
+        <div id="catalogsearch"><!--catalogsearch-->
+    	{MODULE|OBA|auctions|searchid}
+        </div><!--catalogsearch slut-->
+    	
+    
+	<!-- Footer -->
+     <div id="footer"><!--footer-->
+		<div id="footer_content"><!--footer_content-->
+			<div class="fc_about"><!--fc_about-->
+				<div class="fc_a_logo"></div>
+				<div class="fc_spacer"></div>
+				<div class="fc_a_text">Au2Auktion er en online bilauktion for alle, både private og forhandlere.<br>Odense Bilauktion er ejer og producent af Au2Auktion</div>
+			</div><!--fc_about slut-->
+			{PAGE|menu_link}
+			<div class="fc_contact"><!--fc_content-->
+			<div class="fc_nav_title">Kontakt <strong>os</strong></div>
+				<div class="fc_spacer"></div>
+				<div class="fc_nav"><!--fc_nav-->
+					<br>
+					{MODULE|WYSIWYG|default|show|2}
+				</div><!--fc_nav slut-->
+			</div><!--fc_contact slut-->
+		</div><!--footer_content slut-->
+		<div id="footer_copyright">&copy; Alle rettigheder forbeholdt 2014 | <strong>Au2Auktion.dk</strong> </div>
+	</div><!--footer slut-->  
+</body>
+</html>

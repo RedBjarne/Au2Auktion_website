@@ -1,0 +1,1541 @@
+*{margin:0 auto;}
+body{background:url(../images/bg_top.png) repeat-x #ffffff;font-family:arial, Tahoma, sans-serif}
+img{border:none;}
+*:focus {
+    outline: 0;
+}
+.Hidden{display:none;}
+a {text-decoration:none;border:none;underline:none;}
+#container{width:1196px;height:auto;min-height:1500px;overflow:auto;}
+#top{width:1196px;height:201px;float:left;}
+.t_topcontent{width:1196px;height:111px;float:left;margin-top:5px;}
+.t_tc_logo{width:370px;height:111px;float:left;background:url(../images/logo.png) no-repeat;}
+.t_tc_search{width:397px;height:38px;float:left;margin-top:71px;margin-left:20px;}
+.t_tc_search_field{width:312px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;}
+.t_tc_search_button{width:65px;height:40px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;margin-left:8px;font-size:14px;}
+.t_tc_search_button:hover{background:#aa0911;}
+.t_tc_login{width:389px;height:38px;float:left;margin-top:71px;margin-left:20px;}
+.t_tc_login_field{width:143px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.t_tc_login_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.t_tc_login_button:hover{background:#aa0911;}
+.t_tc_loggedin{width:300px;height:38px;float:left;margin-top:71px;margin-left:100px;font-family:tahoma;font-size:16px;}
+.t_bottomcontent{width:1196px;height:85px;float:left;}
+.t_bc_menu{width:1196px;height:85px;float:left;}
+.t_bc_menu ul{display:inline;}
+.t_bc_menu li {list-style-type:none;border:none;display:inline;}
+.t_bc_menu .auktioner{width:176px;height:85px;float:left;background:url(../images/auktioner.png) top center no-repeat;}
+.t_bc_menu .auktioner:hover{background:url(../images/auktioner.png) bottom center no-repeat;}
+.t_bc_menu .auktioner1{width:176px;height:85px;float:left;background:url(../images/auktioner.png) bottom center no-repeat;}
+.t_bc_menu .favoritter{width:205px;height:85px;float:left;background:url(../images/favoritter.png) top center no-repeat;}
+.t_bc_menu .favoritter:hover{background:url(../images/favoritter.png) bottom center no-repeat;}
+.t_bc_menu .favoritter1{width:205px;height:85px;float:left;background:url(../images/favoritter.png) bottom center no-repeat;}
+.t_bc_menu .biler{width:156px;height:85px;float:left;background:url(../images/biler.png) top center no-repeat;}
+.t_bc_menu .biler:hover{background:url(../images/biler.png) bottom center no-repeat;}
+.t_bc_menu .biler1{width:156px;height:85px;float:left;background:url(../images/biler.png) bottom center no-repeat;}
+.t_bc_menu .handler{width:189px;height:85px;float:left;background:url(../images/handler.png) top center no-repeat;}
+.t_bc_menu .handler:hover{background:url(../images/handler.png) bottom center no-repeat;}
+.t_bc_menu .handler1{width:189px;height:85px;float:left;background:url(../images/handler.png) bottom center no-repeat;}
+.t_bc_menu .kundeservice{width:185px;height:85px;float:left;background:url(../images/kundeservice.png) top center no-repeat;}
+.t_bc_menu .kundeservice:hover{background:url(../images/kundeservice.png) bottom center no-repeat;}
+.t_bc_menu .kundeservice1{width:185px;height:85px;float:left;background:url(../images/kundeservice.png) bottom center no-repeat;}
+.t_bc_menu .information{width:186px;height:85px;float:left;background:url(../images/information.png) top center no-repeat;}
+.t_bc_menu .information:hover{background:url(../images/information.png) bottom center no-repeat;}
+.t_bc_menu .information1{width:186px;height:85px;float:left;background:url(../images/information.png) bottom center no-repeat;}
+#content{width:1196px;height:auto;min-height:1000px;float:left;margin-bottom:50px;}
+.content_title{width:1176px;height:86px;float:left;margin-left:20px;line-height:86px;color:white;font-style:italic;font-weight:bold;font-size:22px;}
+.content_page{width:1196px;height: auto;min-height:1600px;float:left;}
+#catalogsearch{width:420px;height:40px;margin-bottom:15px;}
+.cs_search_field{width:312px;height:36px;border:1px solid #d8d8d8;padding-left:10px;float:left;}
+.cs_search_button{width:65px;height:40px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;margin-left:10px;}
+.cs_search_button:hover{background:#aa0911;}
+#auction_cat_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+.auction_cat_topbar{width:1184px;height:67px;float:left;background:#c40912;border:1px solid #aa0911;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;margin-top:72px;}
+.auction_cat_topbar label{color:white;font-family:tahoma;font-style:italic;font-size:14px;float:left;line-height:67px;margin-left:40px;}
+.auction_cat_topbar select{width:190px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:none;margin-left:5px;margin-top:15px;padding-left:12px;color:#c8c6c7;}
+.auction_cat_button{width:238px;height:67px;float:left;background:#aa0911;border:none;margin-left:63px;color:white;font-size:16px;font-family:tahoma;-webkit-border-top-right-radius: 3px;-webkit-border-bottom-right-radius: 3px;-moz-border-radius-topright: 3px;-moz-border-radius-bottomright: 3px;border-top-right-radius: 3px;border-bottom-right-radius: 3px;}
+.auction_cat_button:hover{background:#c40912;}
+.auction_cat_infobar{width:1186px;height:26px;float:left;background:#f0eeef;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:none;margin-top:18px;}
+.auction_cat_infobar_auctiontype{width:335px;height:26px;float:left;border-left:2px solid white;padding-left:12px;line-height:26px;font-family:tahoma;font-size:12px;color:#9c98a6;margin-left:182px;}
+.auction_cat_infobar_auctioncountry{width:213px;height:26px;float:left;border-left:2px solid white;padding-left:12px;line-height:26px;font-family:tahoma;font-size:12px;color:#9c98a6;}
+.auction_cat_infobar_cars{width:190px;height:26px;float:left;border-left:2px solid white;padding-left:12px;line-height:26px;font-family:tahoma;font-size:12px;color:#9c98a6;}
+.auction_cat_infobar_date{width:210px;height:26px;float:left;border-left:2px solid white;padding-left:12px;line-height:26px;font-family:tahoma;font-size:12px;color:#9c98a6;}
+.auction_cat{width:1186px;height:67px;float:left;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #f0eeef;margin-top:18px;}
+.auction_cat_logo{width:182px;height:67px;float:left;}
+.auction_cat_logo img{margin-top:8px;margin-left:6px;}
+.auction_cat_auctiontype{width:345px;height:67px;float:left;margin-left:2px;text-align:center;font-family:tahoma;font-size:18px;line-height:67px;color:#9a9a9a;}
+.auction_cat_auctioncountry{width:225px;height:67px;float:left;margin-left:2px;text-align:center;font-family:tahoma;font-size:18px;line-height:67px;color:#9a9a9a;}
+.auction_cat_cars{width:202px;height:67px;float:left;margin-left:2px;text-align:center;font-family:tahoma;font-size:18px;line-height:67px;color:#9a9a9a;}
+.auction_cat_date{width:222px;height:67px;float:left;margin-left:2px;text-align:center;font-family:tahoma;font-size:18px;line-height:33px;color:#9a9a9a;}
+.auction_cat_helpbar{width:1186px;height:167px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;margin-top:18px;}
+.auction_cat_helpbar_boxleft{width:584px;height:157px;float:left;padding-left:8px;padding-top:10px;border-right:1px solid #aa0911;}
+.auction_cat_helpbar_boxright{width:585px;height:157px;float:left;padding-left:8px;padding-top:10px;}
+/* auction style */
+#auction_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#auction_page_title{width:676px;height:107px;float:left;line-height:107px;font-size:22px;font-weight:bold;font-family:tahoma;color:#c40912;padding-left:10px;}
+#auction_page_subtitle_top_right{width:500px;height:43px;float:left;text-align:right;margin-top:10px;}
+#auction_page_subtitle_bottom_right{width:500px;height:44px;float:left;text-align:right;color:black;margin-top:10px;line-height:44px;}
+#auction_page_subtitle_bottom_right a{color:#c40912;}
+#auction_page_subtitle_bottom_left{width:500px;height:53px;float:left;clear:both;display:none;}
+#auction_page_topbar{width:1184px;height:67px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_page_topbar_status{width:380px;height:18px;float:left;margin-top:24px;color:white;line-height:18px;font-size:14px;font-family:tahoma;text-align:center;}
+.auction_page_topbar_update{width:169px;height:18px;float:left;margin-top:24px;color:white;line-height:18px;font-size:14px;font-family:tahoma;text-align:center;border-left:1px solid white;}
+.auction_page_topbar_print{width:169px;height:18px;float:left;margin-top:24px;color:white;line-height:18px;font-size:14px;font-family:tahoma;text-align:center;border-left:1px solid white;}
+.auction_page_topbar_sort{width:330px;height:67px;float:left;margin-left:133px;}
+.auction_page_topbar_sort label{color:white;font-family:tahoma;font-style:italic;font-size:14px;float:left;line-height:67px;margin-left:40px;}
+.auction_page_topbar_sort select{width:190px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:none;margin-left:5px;margin-top:15px;padding-left:12px;color:#c8c6c7;}
+#auction_page_left{width:215px;height:auto;min-height:344px;float:left;background:#c40912;margin-top:34px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_page_left_bids{width:205px;height:auto;min-height:90px;margin-top:20px;}
+.auction_page_left_bids_title{width:205px;height:16px;color:white;font-size:16px;font-family:tahoma;}
+.auction_page_left_bids_text{width:205px;height:auto;min-size:64px;margin-top:10px;color:#b6b6b6;font-size:12px;font-family:tahoma;}
+.auction_page_left_category{width:205px;height:auto;min-height:150px;margin-top:20px;}
+.auction_page_left_category_title{width:205px;height:16px;color:white;font-size:16px;font-family:tahoma;}
+.auction_page_left_category_sort{width:205px;height:70px;margin-top:10px;}
+.auction_page_left_category_sort label{color:#b6b6b6;font-family:tahoma;font-size:12px;float:left;}
+.auction_page_left_category_brandtitle{width:205px;height:12px;color:#b6b6b6;font-family:tahoma;font-size:12px;float:left;}
+.auction_page_left_category_brand{width:205px;height:14px;color:white;font-family:tahoma;font-size:14px;float:left;margin-top:5px;}
+.auction_page_left_category_brandselected{font-weight:bold;}
+.auction_page_left_category_sort select{width:190px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:none;margin-left:5px;margin-top:5px;padding-left:12px;color:#c8c6c7;}
+
+.auction_page_left_auctions{width:205px;height:auto;min-height:90px;margin-top:20px;}
+.auction_page_left_auctions_title{width:205px;height:16px;color:white;font-size:16px;font-family:tahoma;margin-top:20px;font-weight:bold;}
+.auction_page_left_auctions_auctionname{width:205px;height:14px;color:white;font-family:tahoma;font-size:14px;float:left;margin-top:5px;}
+.auction_page_left_auctions_auctionname_selected{font-weight:bold;}
+#auction_page_right{width:909px;min-height:435px;height:auto;float:left;margin-top:34px;margin-left:60px;}
+#auction_page_right_auction{width:907px;height:auto;min-height:210px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #b7b7b7;}
+.auction_page_right_auction_img{width:308px;height:203px;margin-left:5px;margin-top:5px;float:left;}
+.auction_page_right_auction_img img{width:308px;height:196px;}
+.auction_page_right_auction_title{width:585px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.auction_page_right_auction_1reg{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.auction_page_right_auction_inspection{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.auction_page_right_auction_desc{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.auction_page_right_auction_bidagain{width:265px;height:110px;float:left;margin-left: 635px;margin-top: -185px;}
+.auction_page_right_auction_end{width:575px;height:16px;float:left;margin-left:319px;margin-top:-47px;font-size:16px;color:#b7b7b7;font-family:tahoma;text-align:right;margin-right:10px;}
+.auction_page_right_auction_latestbid{width:575px;height:22px;float:left;margin-left:326px;margin-top:-28px;font-size:22px;color:#b7b7b7;font-family:tahoma;text-align:right;font-weight:bold;margin-right:10px;}
+.auction_page_right_auction_radius{width:585px;height:14px;float:left;margin-left:317px;margin-top:-22px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+
+#auction_page_right_auction_loggedinbidmp{width:907px;height:231px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #008001;}
+.auction_page_right_auction_top_loggedinbidmp{width:907px;height:25px;float:left;font-size:14px;text-align:center;font-family:tahoma;color:white;background-color:#008001;line-height:25px;-webkit-border-top-left-radius: 3px;-webkit-border-top-right-radius: 3px;-moz-border-radius-topleft: 3px;-moz-border-radius-topright: 3px;border-top-left-radius: 3px;border-top-right-radius: 3px;}
+.auction_page_right_auction_img_loggedinbidmp{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;}
+.auction_page_right_auction_img_loggedinbidmp img{width:308px;height:196px;}
+.auction_page_right_auction_title_loggedinbidmp{width:585px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.auction_page_right_auction_1reg_loggedinbidmp{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.auction_page_right_auction_inspection_loggedinbidmp{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.auction_page_right_auction_desc_loggedinbidmp{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.auction_page_right_auction_bidagain_loggedinbidmp{width:265px;height:160px;float:left;margin-left:5px;margin-top:-228px;margin-left:635px;}
+.auction_page_right_auction_end_loggedinbidmp{width:585px;height:16px;float:left;margin-left:5px;font-size:16px;color:#b7b7b7;font-family:tahoma;text-align:right;}
+.auction_page_right_auction_latestbid_loggedinbidmp{width:585px;height:22px;float:left;margin-left:5px;font-size:22px;color:#b7b7b7;font-family:tahoma;text-align:right;font-weight:bold;}
+.auction_page_right_auction_radius_loggedinbidmp{width:585px;height:14px;float:left;margin-left:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.auction_page_right_auction_loggedinbidmp_tip{width:265px;height:13px;float:left;font-size:10px;font-family:tahoma;line-height:13px;}
+.auction_page_right_auction_loggedinbidmp_bid{width:265px;height:40px;float:left;margin-top:10px;}
+.auction_page_right_auction_loggedinbidmp_bid_labeltop{float:left;width:80px;height:40px;line-height:40px;font-size:10px;}
+.auction_page_right_auction_loggedinbidmp_bid_field{width:95px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.auction_page_right_auction_loggedinbidmp_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.auction_page_right_auction_loggedinbidmp_bid_button:hover{background:#aa0911;}
+.auction_page_right_auction_loggedinbidmp_bid_labelbottom{width:260px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;color:#b7b7b7;text-align:right;padding-right:5px;}
+.auction_page_right_auction_loggedinbidmp_bid_fees{width:265px;height:13px;font-size:10px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+#auction_page_right_auction_loggedinbidoverbid{width:907px;height:231px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #c40912;}
+.auction_page_right_auction_top_loggedinbidoverbid{width:907px;height:25px;float:left;font-size:14px;text-align:center;font-family:tahoma;color:white;background-color:#c40912;line-height:25px;-webkit-border-top-left-radius: 3px;-webkit-border-top-right-radius: 3px;-moz-border-radius-topleft: 3px;-moz-border-radius-topright: 3px;border-top-left-radius: 3px;border-top-right-radius: 3px;}
+.auction_page_right_auction_img_loggedinbidoverbid{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;}
+.auction_page_right_auction_img_loggedinbidoverbid img{width:308px;height:196px;}
+.auction_page_right_auction_title_loggedinbidoverbid{width:585px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.auction_page_right_auction_1reg_loggedinbidoverbid{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.auction_page_right_auction_inspection_loggedinbidoverbid{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.auction_page_right_auction_desc_loggedinbidoverbid{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.auction_page_right_auction_bidagain_loggedinbidoverbid{width:265px;height:160px;float:left;margin-left:5px;margin-top:-228px;margin-left:635px;}
+.auction_page_right_auction_end_loggedinbidoverbid{width:585px;height:16px;float:left;margin-left:5px;font-size:16px;color:#b7b7b7;font-family:tahoma;text-align:right;}
+.auction_page_right_auction_latestbid_loggedinbidoverbid{width:585px;height:22px;float:left;margin-left:5px;font-size:22px;color:#b7b7b7;font-family:tahoma;text-align:right;font-weight:bold;}
+.auction_page_right_auction_radius_loggedinbidoverbid{width:585px;height:14px;float:left;margin-left:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.auction_page_right_auction_loggedinbidoverbid_tip{width:265px;height:13px;float:left;font-size:10px;font-family:tahoma;line-height:13px;}
+.auction_page_right_auction_loggedinbidoverbid_bid{width:265px;height:40px;float:left;margin-top:10px;}
+.auction_page_right_auction_loggedinbidoverbid_bid_labeltop{float:left;width:80px;height:40px;line-height:40px;font-size:10px;}
+.auction_page_right_auction_loggedinbidoverbid_bid_field{width:95px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.auction_page_right_auction_loggedinbidoverbid_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.auction_page_right_auction_loggedinbidoverbid_bid_button:hover{background:#aa0911;}
+.auction_page_right_auction_loggedinbidoverbid_bid_labelbottom{width:260px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;color:#b7b7b7;text-align:right;padding-right:5px;}
+.auction_page_right_auction_loggedinbidoverbid_bid_fees{width:265px;height:13px;font-size:10px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+#auction_page_right_auction_loggedinbidnomp{width:907px;height:231px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #fea501;}
+.auction_page_right_auction_top_loggedinbidnomp{width:907px;height:25px;float:left;font-size:14px;text-align:center;font-family:tahoma;color:white;background-color:#fea501;line-height:25px;-webkit-border-top-left-radius: 3px;-webkit-border-top-right-radius: 3px;-moz-border-radius-topleft: 3px;-moz-border-radius-topright: 3px;border-top-left-radius: 3px;border-top-right-radius: 3px;}
+.auction_page_right_auction_img_loggedinbidnomp{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;}
+.auction_page_right_auction_img_loggedinbidnomp img{width:308px;height:196px;}
+.auction_page_right_auction_title_loggedinbidnomp{width:585px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.auction_page_right_auction_1reg_loggedinbidnomp{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.auction_page_right_auction_inspection_loggedinbidnomp{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.auction_page_right_auction_desc_loggedinbidnomp{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.auction_page_right_auction_bidagain_loggedinbidnomp{width:265px;height:160px;float:left;margin-left:5px;margin-top:-228px;margin-left:635px;}
+.auction_page_right_auction_end_loggedinbidnomp{width:585px;height:16px;float:left;margin-left:5px;font-size:16px;color:#b7b7b7;font-family:tahoma;text-align:right;}
+.auction_page_right_auction_latestbid_loggedinbidnomp{width:585px;height:22px;float:left;margin-left:5px;font-size:22px;color:#b7b7b7;font-family:tahoma;text-align:right;font-weight:bold;}
+.auction_page_right_auction_radius_loggedinbidnomp{width:585px;height:14px;float:left;margin-left:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.auction_page_right_auction_loggedinbidnomp_tip{width:265px;height:13px;float:left;font-size:10px;font-family:tahoma;line-height:13px;}
+.auction_page_right_auction_loggedinbidnomp_bid{width:265px;height:40px;float:left;margin-top:10px;}
+.auction_page_right_auction_loggedinbidnomp_bid_labeltop{float:left;width:80px;height:40px;line-height:40px;font-size:10px;}
+.auction_page_right_auction_loggedinbidnomp_bid_field{width:95px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.auction_page_right_auction_loggedinbidnomp_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.auction_page_right_auction_loggedinbidnomp_bid_button:hover{background:#aa0911;}
+.auction_page_right_auction_loggedinbidnomp_bid_labelbottom{width:260px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;color:#b7b7b7;text-align:right;padding-right:5px;}
+.auction_page_right_auction_loggedinbidnomp_bid_fees{width:265px;height:13px;font-size:10px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+/* auction style slut */
+
+/* favorite style */
+#favorite_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#favorite_page_title{width:1176px;height:107px;float:left;line-height:107px;font-size:22px;font-weight:bold;font-family:tahoma;color:#c40912;padding-left:10px;}
+#favorite_page_topbar{width:1184px;height:67px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;margin-top:30px;}
+.favorite_page_topbar_status{width:380px;height:18px;float:left;margin-top:24px;color:white;line-height:18px;font-size:14px;font-family:tahoma;text-align:center;}
+.favorite_page_topbar_update{width:169px;height:18px;float:left;margin-top:24px;color:white;line-height:18px;font-size:14px;font-family:tahoma;text-align:center;border-left:1px solid white;}
+.favorite_page_topbar_print{width:169px;height:18px;float:left;margin-top:24px;color:white;line-height:18px;font-size:14px;font-family:tahoma;text-align:center;border-left:1px solid white;}
+.favorite_page_topbar_sort{width:330px;height:67px;float:left;margin-left:133px;}
+.favorite_page_topbar_sort label{color:white;font-family:tahoma;font-style:italic;font-size:14px;float:left;line-height:67px;margin-left:40px;}
+.favorite_page_topbar_sort select{width:190px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:none;margin-left:5px;margin-top:15px;padding-left:12px;color:#c8c6c7;}
+#favorite_page_content{width:1186px;min-height:435px;height:auto;float:left;margin-top:34px;}
+#favorite_page_content_favorite{width:1184px;height:auto;min-height:205px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #b7b7b7;}
+.favorite_page_content_favorite_img{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;margin-bottom:5px;}
+.favorite_page_content_favorite_img img{width:308px;height:196px;}
+.favorite_page_content_favorite_title{width:865px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.favorite_page_content_favorite_1reg{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.favorite_page_content_favorite_inspection{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.favorite_page_content_favorite_desc{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.favorite_page_content_favorite_bidagain{width:265px;height:110px;float:left;margin-left:5px;margin-top:-10px;}
+.favorite_page_content_favorite_end{width:860px;height:16px;float:left;margin-left:5px;font-size:16px;color:#b7b7b7;font-family:tahoma;text-align:right;}
+.favorite_page_content_favorite_latestbid{width:860px;height:22px;float:left;margin-left:5px;font-size:22px;color:#b7b7b7;font-family:tahoma;text-align:right;font-weight:bold;}
+.favorite_page_content_favorite_radius{width:585px;height:14px;float:left;margin-left:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.favorite_page_content_favorite_remove{font-size:14px;font-family:tahoma;color:#c40912;width:50px;height:17px;float:left;margin-top:-225px;margin-left:1131px;}
+
+#favorite_page_content_favorite_loggedinbidmp{width:1184px;height:231px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #008001;}
+.favorite_page_content_favorite_top_loggedinbidmp{width:1184px;height:25px;float:left;font-size:14px;text-align:center;font-family:tahoma;color:white;background-color:#008001;line-height:25px;}
+.favorite_page_content_favorite_img_loggedinbidmp{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;}
+.favorite_page_content_favorite_img_loggedinbidmp img{width:308px;height:196px;}
+.favorite_page_content_favorite_title_loggedinbidmp{width:865px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.favorite_page_content_favorite_1reg_loggedinbidmp{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.favorite_page_content_favorite_inspection_loggedinbidmp{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.favorite_page_content_favorite_desc_loggedinbidmp{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.favorite_page_content_favorite_bidagain_loggedinbidmp{width:425px;height:160px;float:left;margin-top:-253px;margin-left:758px;}
+.favorite_page_content_favorite_end_loggedinbidmp{width:860px;height:16px;float:left;margin-left:5px;font-size:16px;color:#b7b7b7;font-family:tahoma;text-align:right;}
+.favorite_page_content_favorite_latestbid_loggedinbidmp{width:860px;height:22px;float:left;margin-left:5px;font-size:22px;color:#b7b7b7;font-family:tahoma;text-align:right;font-weight:bold;}
+.favorite_page_content_favorite_radius_loggedinbidmp{width:585px;height:14px;float:left;margin-left:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.favorite_page_content_favorite_loggedinbidmp_tip{width:425px;height:17px;float:left;font-size:14px;font-family:tahoma;line-height:13px;margin-top:5px;}
+.favorite_page_content_favorite_loggedinbidmp_bid{width:425px;height:40px;float:left;margin-top:10px;}
+.favorite_page_content_favorite_loggedinbidmp_bid_labeltop{float:left;width:130px;height:40px;line-height:40px;font-size:14px;}
+.favorite_page_content_favorite_loggedinbidmp_bid_field{width:140px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.favorite_page_content_favorite_loggedinbidmp_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.favorite_page_content_favorite_loggedinbidmp_bid_button:hover{background:#aa0911;}
+.favorite_page_content_favorite_loggedinbidmp_bid_labelbottom{width:320px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;color:#b7b7b7;text-align:right;padding-right:5px;}
+.favorite_page_content_favorite_loggedinbidmp_bid_fees{width:425px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+.favorite_page_content_favorite_loggedinbidmp_remove{font-size:14px;font-family:tahoma;color:#c40912;width:50px;height:17px;float:left;margin-top:-225px;margin-left:1131px;}
+
+#favorite_page_content_favorite_loggedinbidoverbid{width:1184px;height:231px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #c40912;}
+.favorite_page_content_favorite_top_loggedinbidoverbid{width:1184px;height:25px;float:left;font-size:14px;text-align:center;font-family:tahoma;color:white;background-color:#c40912;line-height:25px;}
+.favorite_page_content_favorite_img_loggedinbidoverbid{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;}
+.favorite_page_content_favorite_img_loggedinbidoverbid img{width:308px;height:196px;}
+.favorite_page_content_favorite_title_loggedinbidoverbid{width:865px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.favorite_page_content_favorite_1reg_loggedinbidoverbid{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.favorite_page_content_favorite_inspection_loggedinbidoverbid{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.favorite_page_content_favorite_desc_loggedinbidoverbid{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.favorite_page_content_favorite_bidagain_loggedinbidoverbid{width:425px;height:160px;float:left;margin-top:-249px;margin-left:758px;}
+.favorite_page_content_favorite_end_loggedinbidoverbid{width:860px;height:16px;float:left;margin-left:5px;font-size:16px;color:#b7b7b7;font-family:tahoma;text-align:right;}
+.favorite_page_content_favorite_latestbid_loggedinbidoverbid{width:860px;height:22px;float:left;margin-left:5px;font-size:22px;color:#b7b7b7;font-family:tahoma;text-align:right;font-weight:bold;}
+.favorite_page_content_favorite_radius_loggedinbidoverbid{width:585px;height:14px;float:left;margin-left:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.favorite_page_content_favorite_loggedinbidoverbid_tip{width:425px;height:17px;float:left;font-size:14px;font-family:tahoma;line-height:13px;margin-top:5px;}
+.favorite_page_content_favorite_loggedinbidoverbid_bid{width:425px;height:40px;float:left;margin-top:10px;}
+.favorite_page_content_favorite_loggedinbidoverbid_bid_labeltop{float:left;width:130px;height:40px;line-height:40px;font-size:14px;}
+.favorite_page_content_favorite_loggedinbidoverbid_bid_field{width:140px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.favorite_page_content_favorite_loggedinbidoverbid_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.favorite_page_content_favorite_loggedinbidoverbid_bid_button:hover{background:#aa0911;}
+.favorite_page_content_favorite_loggedinbidoverbid_bid_labelbottom{width:320px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;color:#b7b7b7;text-align:right;padding-right:5px;}
+.favorite_page_content_favorite_loggedinbidoverbid_bid_fees{width:425px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+.favorite_page_content_favorite_loggedinbidoverbid_remove{font-size:14px;font-family:tahoma;color:#c40912;width:50px;height:17px;float:left;margin-top:-225px;margin-left:1131px;}
+
+#favorite_page_content_favorite_loggedinbidnomp{width:1184px;height:231px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #fea501;}
+.favorite_page_content_favorite_top_loggedinbidnomp{width:1184px;height:25px;float:left;font-size:14px;text-align:center;font-family:tahoma;color:white;background-color:#fea501;line-height:25px;}
+.favorite_page_content_favorite_img_loggedinbidnomp{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;}
+.favorite_page_content_favorite_img_loggedinbidnomp img{width:308px;height:196px;}
+.favorite_page_content_favorite_title_loggedinbidnomp{width:865px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.favorite_page_content_favorite_1reg_loggedinbidnomp{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.favorite_page_content_favorite_inspection_loggedinbidnomp{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.favorite_page_content_favorite_desc_loggedinbidnomp{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.favorite_page_content_favorite_bidagain_loggedinbidnomp{width:425px;height:160px;float:left;margin-top:-228px;margin-left:758px;}
+.favorite_page_content_favorite_end_loggedinbidnomp{width:860px;height:16px;float:left;margin-left:5px;font-size:16px;color:#b7b7b7;font-family:tahoma;text-align:right;}
+.favorite_page_content_favorite_latestbid_loggedinbidnomp{width:860px;height:22px;float:left;margin-left:5px;font-size:22px;color:#b7b7b7;font-family:tahoma;text-align:right;font-weight:bold;}
+.favorite_page_content_favorite_radius_loggedinbidnomp{width:585px;height:14px;float:left;margin-left:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.favorite_page_content_favorite_loggedinbidnomp_tip{width:425px;height:17px;float:left;font-size:14px;font-family:tahoma;line-height:13px;margin-top:5px;}
+.favorite_page_content_favorite_loggedinbidnomp_bid{width:425px;height:40px;float:left;margin-top:10px;}
+.favorite_page_content_favorite_loggedinbidnomp_bid_labeltop{float:left;width:130px;height:40px;line-height:40px;font-size:14px;}
+.favorite_page_content_favorite_loggedinbidnomp_bid_field{width:140px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.favorite_page_content_favorite_loggedinbidnomp_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.favorite_page_content_favorite_loggedinbidnomp_bid_button:hover{background:#aa0911;}
+.favorite_page_content_favorite_loggedinbidnomp_bid_labelbottom{width:320px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;color:#b7b7b7;text-align:right;padding-right:5px;}
+.favorite_page_content_favorite_loggedinbidnomp_bid_fees{width:425px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+.favorite_page_content_favorite_loggedinbidnomp_remove{font-size:14px;font-family:tahoma;color:#c40912;width:50px;height:17px;float:left;margin-top:-225px;margin-left:1131px;}
+/* favorite style slut */
+
+/* cars style */
+#cars_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#cars_page_nocars{width:1184px;height:239px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;margin-top:30px;}
+.cars_page_nocars_left{width:393px;height:239px;float:left;border-right:2px solid #aa0911;}
+.cars_page_nocars_left_title{width:373px;height:23px;float:left;font-size:20px;font-family:tahoma;color:white;padding-left:10px;margin-top:10px;}
+.cars_page_nocars_left_text{width:373px;height:126px;float:left;font-size:14px;font-family:tahoma;color:white;padding-left:10px;margin-top:10px;}
+
+.cars_page_nocars_middle{width:393px;height:239px;float:left;border-right:2px solid #aa0911;}
+.cars_page_nocars_middle_title{width:373px;height:23px;float:left;font-size:20px;font-family:tahoma;color:white;padding-left:10px;margin-top:10px;}
+.cars_page_nocars_middle_text{width:373px;height:126px;float:left;font-size:14px;font-family:tahoma;color:white;padding-left:10px;margin-top:10px;}
+.cars_page_nocars_middle_button{width:273px;height:40px;float:left;font-size:17px;font-family:tahoma;color:#aa0911;padding-left:10px;margin-top:10px;background:white;line-height:40px;text-align:center;margin-left:60px;}
+.cars_page_nocars_middle_button:hover{background:#aa0911;color:white;}
+.cars_page_nocars_right{width:394px;height:239px;float:left;}
+.cars_page_nocars_right_title{width:373px;height:23px;float:left;font-size:20px;font-family:tahoma;color:white;padding-left:10px;margin-top:10px;}
+.cars_page_nocars_right_text{width:373px;height:126px;float:left;font-size:14px;font-family:tahoma;color:white;padding-left:10px;margin-top:10px;}
+.cars_page_nocars_right_button{width:273px;height:40px;float:left;font-size:17px;font-family:tahoma;color:#aa0911;padding-left:10px;margin-top:10px;background:white;line-height:40px;text-align:center;margin-left:60px;}
+.cars_page_nocars_right_button:hover{background:#aa0911;color:white;}
+
+#cars_page_topbar{width:1184px;height:67px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;margin-top:30px;}
+.cars_page_topbar_search{width:397px;height:38px;float:left;margin-top:15px;margin-left:20px;}
+.cars_page_topbar_search input{width:312px;height:36px;float:left;border:1px solid #aa0911;padding-left:10px;font-size:14px;margin-top:-20px;margin-left:90px;}
+.cars_page_topbar_search .submitButton{display:none;}
+.cars_page_topbar_search .submitButton:hover{background:#aa0911;color:white;}
+.cars_page_topbar_search th{display:none;}
+.cars_page_topbar_search label{color:white;width:70px;height:20px;float:left;text-aling:left;}
+.cars_page_topbar_search_field{width:312px;height:36px;float:left;border:1px solid #aa0911;padding-left:10px;font-size:14px;}
+.cars_page_topbar_search_button{width:65px;height:40px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:white;color:#aa0911;margin-left:8px;font-size:14px;}
+.cars_page_topbar_search_button:hover{background:#aa0911;color:white;}
+.cars_page_topbar_createcar{width:100px;height:40px;float:right;border:1px solid #aa0911;text-align:center;line-height:36px;background:white;color:#aa0911;margin-right:20px;font-size:14px;margin-top:15px;}
+.cars_page_topbar_createcar:hover{background:#aa0911;color:white;}
+#cars_page_content{width:1186px;min-height:435px;height:auto;float:left;margin-top:34px;}
+
+#cars_page_content_cars_approved{width:1184px;height:231px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #008001;}
+.cars_page_content_cars_top_approved{width:1184px;height:25px;float:left;font-size:14px;text-align:center;font-family:tahoma;color:white;background-color:#008001;line-height:25px;}
+.cars_page_content_cars_img_approved{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;}
+.cars_page_content_cars_img_approved img{width:308px;height:196px;}
+.cars_page_content_cars_title_approved{width:865px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.cars_page_content_cars_1reg_approved{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.cars_page_content_cars_inspection_approved{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.cars_page_content_cars_desc_approved{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.cars_page_content_cars_text_approved{width:425px;height:160px;float:left;margin-top:-228px;margin-left:758px;}
+.cars_page_content_cars_end_approved{width:860px;height:16px;float:left;margin-left:5px;font-size:16px;color:#b7b7b7;font-family:tahoma;text-align:right;}
+.cars_page_content_cars_latestbid_approved{width:860px;height:22px;float:left;margin-left:5px;font-size:22px;color:#b7b7b7;font-family:tahoma;text-align:right;font-weight:bold;}
+.cars_page_content_cars_approved_edit{font-size:14px;font-family:tahoma;color:#c40912;width:100px;height:17px;float:left;margin-top:-225px;margin-left:971px;border-right:1px solid #aa0911;}
+.cars_page_content_cars_approved_remove{font-size:14px;font-family:tahoma;color:#c40912;width:100px;height:17px;float:left;margin-top:-225px;margin-left:1091px;}
+
+#cars_page_content_cars_declined{width:1184px;height:231px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #c40912;}
+.cars_page_content_cars_top_declined{width:1184px;height:25px;float:left;font-size:14px;text-align:center;font-family:tahoma;color:white;background-color:#c40912;line-height:25px;}
+.cars_page_content_cars_img_declined{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;}
+.cars_page_content_cars_img_declined img{width:308px;height:196px;}
+.cars_page_content_cars_title_declined{width:865px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.cars_page_content_cars_1reg_declined{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.cars_page_content_cars_inspection_declined{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.cars_page_content_cars_desc_declined{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.cars_page_content_cars_text_declined{width:425px;height:160px;float:left;margin-top:-228px;margin-left:758px;}
+.cars_page_content_cars_declined_remove{font-size:14px;font-family:tahoma;color:#c40912;width:100px;height:17px;float:left;margin-top:-225px;margin-left:1091px;}
+
+
+#cars_page_content_cars_missingapproval{width:1184px;height:231px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #fea501;}
+.cars_page_content_cars_top_missingapproval{width:1184px;height:25px;float:left;font-size:14px;text-align:center;font-family:tahoma;color:white;background-color:#fea501;line-height:25px;}
+.cars_page_content_cars_img_missingapproval{width:308px;height:196px;margin-left:5px;margin-top:5px;float:left;}
+.cars_page_content_cars_img_missingapproval img{width:308px;height:196px;}
+.cars_page_content_cars_title_missingapproval{width:865px;height:18px;float:left;font-size:18px;color:#c40912;font-family:tahoma;font-weight:bold;margin-left:5px;}
+.cars_page_content_cars_1reg_missingapproval{width:130px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;}
+.cars_page_content_cars_inspection_missingapproval{width:180px;height:14px;float:left;margin-left:5px;margin-top:5px;font-size:14px;color:#b7b7b7;font-family:tahoma;margin-right:240px;}
+.cars_page_content_cars_desc_missingapproval{width:310px;height:95px;float:left;margin-left:5px;margin-top:10px;font-family:tahoma;font-size:12px;color:#b7b7b7;}
+.cars_page_content_cars_text_missingapproval{width:425px;height:160px;float:left;margin-top:-228px;margin-left:758px;}
+.cars_page_content_cars_missingapproval_edit{font-size:14px;font-family:tahoma;color:#c40912;width:100px;height:17px;float:left;margin-top:-225px;margin-left:971px;border-right:1px solid #aa0911;}
+.cars_page_content_cars_missingapproval_remove{font-size:14px;font-family:tahoma;color:#c40912;width:100px;height:17px;float:left;margin-top:-225px;margin-left:1091px;}
+/* cars style slut*/
+
+/* login style */
+#login_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#login_page_content{width:1186px;min-height:435px;height:auto;float:left;margin-top:34px;}
+#login_page_content_left{width:576px;height:500px;float:left;}
+.login_page_content_left_title{width:576px;height:24px;float:left;font-size:24px;font-family:tahoma;color:#c40912;margin-bottom:10px;}
+.login_page_content_left_fields{width:576px;min-height:150px;height:auto;float:left;font-size:17px;font-family:tahoma;color:#40912;margin-bottom:10px;margin-top:40px;}
+.login_page_content_left_fields label{width:120px;height:40px;float:left;text-align:right;font-size:17px;font-family:tahoma;color:#c40912;margin-right:10px;line-height:40px}
+.login_page_content_left_fields_label{width:120px;height:40px;float:left;text-align:right;font-size:17px;font-family:tahoma;color:#c40912;margin-right:10px;line-height:40px}
+.login_page_content_left_fields_field{width:300px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;margin-bottom:20px;margin-right:130px;}
+.login_page_content_left_fields_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;margin-left:377px;}
+.login_page_content_left_fields_button:hover{background:#aa0911;}
+#login_page_content_right{width:576px;height:500px;float:left;margin-left:34px;}
+.login_page_content_right_title{width:576px;height:24px;float:left;font-size:24px;font-family:tahoma;color:#c40912;margin-bottom:10px;}
+.login_page_content_right_fields{width:576px;min-height:200px;height:auto;float:left;font-size:17px;font-family:tahoma;color:#40912;margin-bottom:10px;margin-top:40px;}
+.login_page_content_right_fields label{width:120px;height:40px;float:left;text-align:right;font-size:17px;font-family:tahoma;color:#c40912;margin-right:10px;line-height:40px}
+.login_page_content_right_fields_field{width:300px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;margin-bottom:20px;margin-right:130px;}
+.login_page_content_right_fields_select{width:310px;height:40px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;margin-bottom:20px;margin-right:130px;}
+.login_page_content_right_fields_button{width:120px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;margin-left:322px;}
+.login_page_content_right_fields_button:hover{background:#aa0911;}
+.login_page_content_left_fields_error{float: left;height: 10px;width: 40px;font-size: 10px;text-align: left;margin-left: -114px;margin-top: 16px;}
+.submitButton{width:120px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;margin-left:195px;}
+/* login style slut */
+
+/* trades style */
+#trades_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#trades_page_content{width:1186px;min-height:435px;height:auto;float:left;margin-top:34px;}
+#trades_page_left{width:215px;height:auto;min-height:300px;float:left;background:#c40912;margin-top:34px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.trades_page_left_typesort{width:195px;height:65px;float:left;color:white;font-family:tahoma;padding-left:10px;margin-top:10px;}
+.trades_page_left_typesort select{width:190px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:none;margin-top:5px;padding-left:12px;color:#c8c6c7;}
+.trades_page_left_period{width:195px;height:65px;float:left;color:white;font-family:tahoma;padding-left:10px;margin-top:10px;}
+.trades_page_left_period_fieldtop{width:70px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:none;margin-top:5px;padding-left:12px;color:#c8c6c7;}
+.trades_page_left_period_spacer{width:25px;height:40px;float:left;line-height:40px;text-align:center;color:white;font-size:20px;font-family:tahoma;}
+.trades_page_left_period_fieldbottom{width:70px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:none;margin-top:5px;padding-left:12px;color:#c8c6c7;}
+.trades_page_left_status{width:195px;height:140px;float:left;color:white;font-family:tahoma;padding-left:10px;margin-top:10px;}
+.trades_page_left_status select{width:190px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:none;margin-top:5px;padding-left:12px;color:#c8c6c7;}
+.trades_page_left_status_button{width:65px;height:40px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:white;color:#aa0911;font-size:14px;margin-top:30px;}
+.trades_page_left_status_button:hover{background:#aa0911;color:white;}
+#trades_page_right{width:909px;min-height:435px;height:auto;float:left;margin-top:34px;margin-left:60px;}
+#trades_page_right_trade_bought{width:907px;height:378px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #008001;}
+.trades_page_right_trade_bought_top{width:897px;height:29px;float:left;background-color:#008001;padding-left:10px;font-size:17px;color:white;font-family:tahoma;line-height:29px;}
+.trades_page_right_trade_bought_details{width:897px;height:39px;float:left;border-bottom:1px solid #b7b7b7;line-height:39px;padding-left:10px;font-size:17px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_bought_info{width:907px;height:139px;float:left;border-bottom:1px solid #b7b7b7;padding-bottom:10px;}
+.trades_page_right_trade_bought_info_step1{width:907px;height:39px;float:left;}
+.trades_page_right_trade_bought_info_step1_left{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_bought_info_step1_right{width:253px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_bought_info_step2_left{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_bought_info_step2_middle{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_bought_info_step2_right{width:253px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_bought_info_step2{width:907px;height:110px;float:left;}
+.trades_page_right_trade_bought_info_step2_left{width:253px;height:110px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:110px;}
+.trades_page_right_trade_bought_info_step2_middle{width:353px;height:100px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:20px;}
+.trades_page_right_trade_bought_info_step2_right{width:253px;height:70px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:20px;text-align:center;padding-top:25px;}
+.trades_page_right_trade_bought_text{width:887px;height:85px;float:left;border-bottom:1px solid #b7b7b7;font-size:15px;color:black;font-family:tahoma;padding:10px;}
+.trades_page_right_trade_bought_options{width:887px;height:33px;float:left;padding:10px;font-size:15px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_bought_options a{color:#c40912;}
+
+#trades_page_right_trade_bids{width:907px;height:auto;min-height:50px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #fea502;}
+.trades_page_right_trade_bids_top{width:897px;height:29px;float:left;background-color:#fea502;padding-left:10px;font-size:17px;color:white;font-family:tahoma;line-height:29px;}
+.trades_page_right_trade_bids_details{width:897px;height:39px;float:left;line-height:39px;padding-left:10px;font-size:17px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_bids_info{width:897px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_bids_topHidden{display:none;}
+
+#trades_page_right_trade_bidsHighest{width:907px;height:auto;min-height:50px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #008001;}
+.trades_page_right_trade_bids_topHighest{width:897px;height:29px;float:left;background-color:#008001;padding-left:10px;font-size:17px;color:white;font-family:tahoma;line-height:29px;}
+.trades_page_right_trade_bids_details{width:897px;height:39px;float:left;line-height:39px;padding-left:10px;font-size:17px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_bids_info{width:897px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_bids_topHighestHidden{display:none;}
+
+#trades_page_right_trade_bidsMinPrice{width:907px;height:auto;min-height:50px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #fea502;}
+.trades_page_right_trade_bids_topMinPrice{width:897px;height:29px;float:left;background-color:#fea502;padding-left:10px;font-size:17px;color:white;font-family:tahoma;line-height:29px;}
+.trades_page_right_trade_bids_details{width:897px;height:39px;float:left;line-height:39px;padding-left:10px;font-size:17px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_bids_info{width:897px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_bids_topMinPriceHidden{display:none;}
+
+#trades_page_right_trade_bidsOverbid{width:907px;height:auto;min-height:50px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #c40912;}
+.trades_page_right_trade_bids_topOverbid{width:897px;height:29px;float:left;background-color:#c40912;padding-left:10px;font-size:17px;color:white;font-family:tahoma;line-height:29px;}
+.trades_page_right_trade_bids_details{width:897px;height:39px;float:left;line-height:39px;padding-left:10px;font-size:17px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_bids_info{width:897px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_bids_topOverbidHidden{display:none;}
+
+
+#trades_page_right_trade_sold{width:907px;height:338px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #c40912;}
+.trades_page_right_trade_sold_top{width:897px;height:29px;float:left;background-color:#c40912;padding-left:10px;font-size:17px;color:white;font-family:tahoma;line-height:29px;}
+.trades_page_right_trade_sold_topHidden{display:none;}
+.trades_page_right_trade_sold_details{width:897px;height:39px;float:left;border-bottom:1px solid #b7b7b7;line-height:39px;padding-left:10px;font-size:17px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_sold_info{width:907px;height:139px;float:left;border-bottom:1px solid #b7b7b7;padding-bottom:10px;}
+.trades_page_right_trade_sold_infoHidden{display:none;}
+.trades_page_right_trade_sold_info_step1{width:907px;height:39px;float:left;}
+.trades_page_right_trade_sold_info_step1_left{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step1_right{width:253px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2_left{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2_middle{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2_right{width:253px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2{width:907px;height:110px;float:left;}
+.trades_page_right_trade_sold_info_step2_left{width:253px;height:110px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:110px;}
+.trades_page_right_trade_sold_info_step2_middle{width:353px;height:100px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:20px;}
+.trades_page_right_trade_sold_info_step2_right{width:253px;height:70px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:20px;text-align:center;padding-top:25px;}
+.trades_page_right_trade_sold_text{width:887px;height:85px;float:left;border-bottom:1px solid #b7b7b7;font-size:15px;color:black;font-family:tahoma;padding:10px;}
+.trades_page_right_trade_sold_options{width:887px;height:33px;float:left;padding:10px;font-size:15px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_sold_optionsHidden{display:none;}
+.trades_page_right_trade_sold_options a{color:#c40912;}
+
+#trades_page_right_trade_soldNotSold{width:907px;height:135px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #c40912;}
+.trades_page_right_trade_sold_topNotSold{width:897px;height:29px;float:left;background-color:#c40912;padding-left:10px;font-size:17px;color:white;font-family:tahoma;line-height:29px;}
+.trades_page_right_trade_sold_topNotSoldHidden{display:none;}
+.trades_page_right_trade_sold_detailsNotSold{width:897px;height:39px;float:left;border-bottom:1px solid #b7b7b7;line-height:39px;padding-left:10px;font-size:17px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_sold_infoNotSold{width:907px;height:139px;float:left;border-bottom:1px solid #b7b7b7;padding-bottom:10px;}
+.trades_page_right_trade_sold_infoNotSoldHidden{display:none;}
+.trades_page_right_trade_sold_info_step1NotSold{width:907px;height:39px;float:left;}
+.trades_page_right_trade_sold_info_step1_leftNotSold{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step1_rightNotSold{width:253px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2_leftNotSold{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2_middleNotSold{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2_rightNotSold{width:253px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2NotSold{width:907px;height:110px;float:left;}
+.trades_page_right_trade_sold_info_step2_leftNotSold{width:253px;height:110px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:110px;}
+.trades_page_right_trade_sold_info_step2_middleNotSold{width:353px;height:100px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:20px;}
+.trades_page_right_trade_sold_info_step2_rightNotSold{width:253px;height:70px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:20px;text-align:center;padding-top:25px;}
+.trades_page_right_trade_sold_textNotSold{width:887px;height:85px;float:left;border-bottom:1px solid #b7b7b7;font-size:15px;color:black;font-family:tahoma;padding:10px;}
+.trades_page_right_trade_sold_optionsNotSold{width:887px;height:33px;float:left;padding:10px;font-size:15px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_sold_optionsNotSoldHidden{display:none;}
+.trades_page_right_trade_sold_optionsNotSold a{color:#c40912;}
+
+#trades_page_right_trade_soldSold{width:907px;height:288px;float:left;margin-bottom:23px;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #c40912;}
+.trades_page_right_trade_sold_topSold{width:897px;height:29px;float:left;background-color:#c40912;padding-left:10px;font-size:17px;color:white;font-family:tahoma;line-height:29px;}
+.trades_page_right_trade_sold_topSoldHidden{display:none;}
+.trades_page_right_trade_sold_detailsSold{width:897px;height:39px;float:left;border-bottom:1px solid #b7b7b7;line-height:39px;padding-left:10px;font-size:17px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_sold_infoSold{width:907px;height:139px;float:left;border-bottom:1px solid #b7b7b7;padding-bottom:10px;}
+.trades_page_right_trade_sold_infoSoldHidden{display:none;}
+.trades_page_right_trade_sold_info_step1Sold{width:907px;height:39px;float:left;}
+.trades_page_right_trade_sold_info_step1_leftSold{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step1_rightSold{width:253px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2_leftSold{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2_middleSold{width:253px;height:39px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2_rightSold{width:253px;height:39px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:39px;}
+.trades_page_right_trade_sold_info_step2Sold{width:907px;height:110px;float:left;}
+.trades_page_right_trade_sold_info_step2_leftSold{width:253px;height:110px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:110px;}
+.trades_page_right_trade_sold_info_step2_middleSold{width:353px;height:100px;float:left;color:black;font-size:17px;font-family:tahoma;padding-left:10px;line-height:20px;}
+.trades_page_right_trade_sold_info_step2_rightSold{width:253px;height:70px;float:left;color:#c40912;font-size:17px;font-family:tahoma;padding-left:10px;line-height:20px;text-align:center;padding-top:25px;}
+.trades_page_right_trade_sold_textSold{width:887px;height:85px;float:left;border-bottom:1px solid #b7b7b7;font-size:15px;color:black;font-family:tahoma;padding:10px;}
+.trades_page_right_trade_sold_optionsSold{width:887px;height:33px;float:left;padding:10px;font-size:15px;font-family:tahoma;color:#c40912;}
+.trades_page_right_trade_sold_optionsSoldHidden{display:none;}
+.trades_page_right_trade_sold_optionsSold a{color:#c40912;}
+/* trades style slut */
+
+/* customerservice */
+#customerservice_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#customerservice_page_content{width:1186px;min-height:407px;height:auto;float:left;margin-top:34px;}
+.customerservice_page_content_contactinfo{width:1186px;height:407px;float:left;background:url(../images/map.jpg) no-repeat;}
+.customerservice_page_content_contactinfo_info{width:800px;height:359px;float:left;margin-top:20px;margin-left:100px;background:url(../images/customerservice_field_bg.png) no-repeat;}
+.customerservice_page_content_contactinfo_info_title{width:790px;height:28px;float:left;font-size:25px;font-family:tahoma;color:#c40912;padding-left:10px;margin-top:10px;}
+.customerservice_page_content_contactinfo_info_text{width:780px;height:130px;float:left;font-size:17px;font-family:tahoma;color:black;padding-left:10px;margin-top:10px;}
+.customerservice_page_content_contactinfo_info_contactform{width:780px;height:161px;float:left;margin-left:10px;margin-top:10px;}
+.customerservice_page_content_contactinfo_info_contactform_location{width:216px;height:24px;float:left;font-size:14px;font-family:tahoma;background:url(../images/customerservice_location_icon.png) no-repeat left center;padding-left:40px;line-height:24px;}
+.customerservice_page_content_contactinfo_info_contactform_number{width:216px;height:24px;float:left;font-size:14px;font-family:tahoma;background:url(../images/customerservice_phone_icon.png) no-repeat left center;padding-left:40px;line-height:24px;margin-left:20px;}
+.customerservice_page_content_contactinfo_info_contactform_mail{width:176px;height:24px;float:left;font-size:14px;font-family:tahoma;background:url(../images/customerservice_mail_icon.png) no-repeat left center;padding-left:40px;line-height:24px;margin-left:20px;}
+.customerservice_page_content_contactinfo_info_contactform_form{width:780px;height:117px;float:left;margin-top:10px;}
+.customerservice_page_content_contactinfo_info_contactform_form_fieldname{width:190px;height:41px;float:left;background:url(../images/customerservice_field.png) no-repeat;padding-left:10px;line-height:41px;border:none;margin-top:10px;margin-left:9px;}
+.customerservice_page_content_contactinfo_info_contactform_form_fieldsurname{width:199px;height:41px;float:left;background:url(../images/customerservice_field.png) no-repeat;padding-left:10px;line-height:41px;border:none;margin-top:10px;margin-left:11px;}
+.customerservice_page_content_contactinfo_info_contactform_form_fieldmail{width:190px;height:41px;float:left;background:url(../images/customerservice_field.png) no-repeat;padding-left:10px;line-height:41px;border:none;margin-left:11px;margin-top:10px;}
+.customerservice_page_content_contactinfo_info_contactform_form_fieldphone{width:190px;height:41px;float:left;background:url(../images/customerservice_field.png) no-repeat;padding-left:10px;line-height:41px;border:none;margin-left:10px;margin-top:10px;}
+.customerservice_page_content_contactinfo_info_contactform_form_fieldmessage{width:190px;height:83px;float:left;background:url(../images/customerservice_message_field.png) no-repeat;padding-left:10px;border:none;margin-top:-44px;margin-left:10px;font-family:tahoma;padding-top:12px;resize: none;}
+.customerservice_page_content_contactinfo_info_contactform_form_button{width:120px;height:95px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c40912;color:white;margin-left:10px;font-size:14px;margin-top:-44px;}
+.customerservice_page_content_contactinfo_info_contactform_form_button:hover{background:#aa0911;color:white;}
+#customerservice_page_confirm{width:1186px;height:500px;float:left;margin-left:5px;}
+#customerservice_page_confirm_content{width:1186px;height:500px;float:left;margin-left:5px;margin-top:60px;}
+#customerservice_page_confirm_content_title{width:1186px;height:24px;font-size:24px;font-family:tahoma;color:#c40912;float:left;}
+#customerservice_page_confirm_content_name{width:1186px;height:19px;font-size:17px;font-family:tahoma;color:#000000;float:left;margin-top:10px;}
+#customerservice_page_confirm_content_email{width:1186px;height:19px;font-size:17px;font-family:tahoma;color:#000000;float:left;margin-top:10px;}
+#customerservice_page_confirm_content_phone{width:1186px;height:19px;font-size:17px;font-family:tahoma;color:#000000;float:left;margin-top:10px;}
+#customerservice_page_confirm_content_message{width:1186px;height:auto;min-height:50px;font-size:17px;font-family:tahoma;color:#000000;float:left;margin-top:10px;}
+#customerservice_page_confirm_content_backbtn{width:85px;height:40px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:white;color:#aa0911;font-size:14px;margin-top:30px;}
+#customerservice_page_confirm_content_backbtn:hover{background:#aa0911;color:white;}
+#customerservice_page_confirm_content_confirmbtn{width:85px;height:40px;margin-left:20px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:white;color:#aa0911;font-size:14px;margin-top:30px;}
+#customerservice_page_confirm_content_confirmbtn:hover{background:#aa0911;color:white;}
+/* customerservice slut*/
+
+/* information */
+#information_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#information_page_content{width:681px;min-height:431px;height:auto;float:left;margin-top:34px;margin-left:252px;}
+.information_page_content_saadanforegaarauktion{width:197px;height:192px;float:left;background:url(../images/saadanforegaarauktion_icon.png) no-repeat center center #c40912;border:1px solid #aa0911;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;}
+.information_page_content_saadanforegaarauktion:hover{background:url(../images/saadanforegaarauktion_icon.png) no-repeat center center #aa0911;border:1px solid #aa0911;}
+.information_page_content_salaerpriser{width:197px;height:192px;float:left;background:url(../images/salaerpriser_icon.png) no-repeat center center #c40912;border:1px solid #aa0911;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;margin-left:42px;}
+.information_page_content_salaerpriser:hover{background:url(../images/salaerpriser_icon.png) no-repeat center center #aa0911;border:1px solid #aa0911;}
+.information_page_content_auktionsregler{width:197px;height:192px;float:left;background:url(../images/auktionsregler_icon.png) no-repeat center center #c40912;border:1px solid #aa0911;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;margin-left:42px;}
+.information_page_content_auktionsregler:hover{background:url(../images/auktionsregler_icon.png) no-repeat center center #aa0911;border:1px solid #aa0911;}
+.information_page_content_registrer{width:197px;height:192px;float:left;background:url(../images/registrer_icon.png) no-repeat center center #c40912;border:1px solid #aa0911;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;margin-top:43px;}
+.information_page_content_registrer:hover{background:url(../images/registrer_icon.png) no-repeat center center #aa0911;border:1px solid #aa0911;}
+.information_page_content_hvorforsaelge{width:197px;height:192px;float:left;background:url(../images/hvorforsaelge_icon.png) no-repeat center center #c40912;border:1px solid #aa0911;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;margin-left:42px;margin-top:43px;}
+.information_page_content_hvorforsaelge:hover{background:url(../images/hvorforsaelge_icon.png) no-repeat center center #aa0911;border:1px solid #aa0911;}
+.information_page_content_hvorforkoebe{width:197px;height:192px;float:left;background:url(../images/hvorforkoebe_icon.png) no-repeat center center #c40912;border:1px solid #aa0911;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;margin-left:42px;margin-top:43px;}
+.information_page_content_hvorforkoebe:hover{background:url(../images/hvorforkoebe_icon.png) no-repeat center center #aa0911;border:1px solid #aa0911;}
+/* information slut */
+
+/* information_underpage */
+#information_underpage_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#information_underpage_page_content{width:1186px;min-height:431px;height:auto;float:left;margin-top:34px;}
+.information_underpage_page_content_title{width:1176px;height:107px;float:left;line-height:107px;font-size:22px;font-weight:bold;font-family:tahoma;color:#c40912;padding-left:10px;}
+.information_underpage_page_content_text{width:1166px;height:auto;min-height:324px;float:left;font-size:16px;font-family:tahoma;color:black;padding-left:10px;padding-right:10px;margin-bottom:10px;}
+/* information_underpage slut */
+
+/* account */
+#account_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#account_page_content{width:1186px;min-height:431px;height:auto;float:left;margin-top:34px;}
+.account_page_content_accountinfo{width:323px;height:100%;min-height:250px;float:left;}
+.account_page_content_accountinfo_topbar{width:311px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.account_page_content_accountinfo_info{width:303px;height:251px;float:left;padding:10px;font-family:tahoma;font-size:17px;color:#b7b7b7;}
+.account_page_content_billinformation{width:823px;height:auto;min-height:500px;float:left;margin-left:40px;}
+.account_page_content_unpaidbills{width:823px;height:auto;min-height:250px;float:left;}
+.account_page_content_unpaidbills_topbar{width:811px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.account_page_content_unpaidbills_information{width:823px;height:23px;float:left;margin-top:10px;}
+.account_page_content_unpaidbills_information_bill{width:387px;height:23px;float:left;padding-left:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;}
+.account_page_content_unpaidbills_information_billnumber{width:101px;height:23px;float:left;padding-left:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;}
+.account_page_content_unpaidbills_information_lastpay{width:90px;height:23px;float:left;padding-left:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;}
+.account_page_content_unpaidbills_information_amount{width:92px;height:23px;float:left;padding-right:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;text-align:right;}
+.account_page_content_unpaidbills_information_debtamount{width:103px;height:23px;float:left;padding-right:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;text-align:right;}
+.account_page_content_unpaidbills_bill{width:823px;height:148px;float:left;margin-top:10px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.account_page_content_unpaidbills_bill_bill{width:386px;height:128px;float:left;padding-left:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;border-right:1px solid #c40912;}
+.account_page_content_unpaidbills_bill_billnumber{width:100px;height:128px;float:left;padding-left:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;border-right:1px solid #c40912;}
+.account_page_content_unpaidbills_bill_lastpay{width:89px;height:128px;float:left;padding-left:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;border-right:1px solid #c40912;}
+.account_page_content_unpaidbills_bill_amount{width:91px;height:128px;float:left;padding-right:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;text-align:right;border-right:1px solid #c40912;}
+.account_page_content_unpaidbills_bill_debtamount{width:103px;height:128px;float:left;padding-right:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;text-align:right;}
+.account_page_content_unpaidbills_saldo{width:823px;height:23px;float:left;margin-top:10px;}
+.account_page_content_unpaidbills_saldo_saldo{width:710px;height:23px;float:left;font-size:14px;font-family:tahoma;color:black;text-align:right;font-weight:bold;line-height:23px;}
+.account_page_content_unpaidbills_saldo_saldoamount{width:102px;height:23px;float:left;padding-right:10px;font-size:14px;font-family:tahoma;color:#c40912;text-align:right;line-height:23px;}
+
+.account_page_content_bills{width:823px;height:auto;min-height:250px;float:left;margin-top:30px;}
+.account_page_content_bills_topbar{width:811px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.account_page_content_bills_information{width:823px;height:23px;float:left;margin-top:10px;}
+.account_page_content_bills_information_bill{width:387px;height:23px;float:left;padding-left:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;}
+.account_page_content_bills_information_billnumber{width:101px;height:23px;float:left;padding-left:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;}
+.account_page_content_bills_information_lastpay{width:90px;height:23px;float:left;padding-left:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;}
+.account_page_content_bills_information_amount{width:92px;height:23px;float:left;padding-right:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;text-align:right;}
+.account_page_content_bills_information_debtamount{width:103px;height:23px;float:left;padding-right:10px;font-size:14px;font-family:tahoma;color:#c40912;line-height:23px;text-align:right;}
+.account_page_content_bills_bill{width:823px;height:148px;float:left;margin-top:10px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.account_page_content_bills_bill_bill{width:386px;height:128px;float:left;padding-left:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;border-right:1px solid #c40912;}
+.account_page_content_bills_bill_billnumber{width:100px;height:128px;float:left;padding-left:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;border-right:1px solid #c40912;}
+.account_page_content_bills_bill_lastpay{width:89px;height:128px;float:left;padding-left:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;border-right:1px solid #c40912;}
+.account_page_content_bills_bill_amount{width:91px;height:128px;float:left;padding-right:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;text-align:right;border-right:1px solid #c40912;}
+.account_page_content_bills_bill_debtamount{width:103px;height:128px;float:left;padding-right:10px;padding-top:10px;padding-bottom:10px;font-size:14px;font-family:tahoma;color:black;text-align:right;}
+
+/* account slut */
+
+/* account_edit */
+#account_edit_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#account_edit_page_content{width:1186px;min-height:431px;height:auto;float:left;margin-top:34px;}
+.account_edit_page_content_topbar{width:1174px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.account_edit_page_content_edit{width:650px;height:auto;min-height:300px;float:left;margin-top:30px;}
+.account_edit_page_content_edit label{width:80px;height:40px;float:left;line-height:40px;font-size:14px;font-family:tahoma;color:#c40912;padding-right:10px;text-align:right;}
+.account_edit_page_content_edit_field{width:190px;height:38px;float:left;background:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;margin-bottom:30px;padding-left:10px;font-size:14px;font-family:tahoma;margin-right:20px;}
+.account_edit_page_content_edit_button{width:140px;height:38px;float:left;background:#c40912;border:1px solid #aa0911;font-size:14px;font-family:tahoma;color:white;margin-left:465px;}
+.account_edit_page_content_edit_button:hover{background:#aa0911;}
+/* account_edit slut */
+
+/* createcar */
+#createcar_page{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#createcar_page_content{width:1186px;min-height:435px;height:auto;float:left;margin-top:34px;}
+.createcar_page_content_auctiontype{width:1186px;min-height:70px;height:auto;float:left;}
+.createcar_page_content_auctiontype_topbar{width:1174px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.createcar_page_content_auctiontype_form{width:1186px;height:25px;float:left;margin-top:20px;}
+
+.createcar_page_content_auctiontype_form label{margin-left:10px;width:80px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_auctiontype_form_field{width:176px;height:44px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;background:white;margin-right:34px;}
+
+.createcar_page_content_cardetails{width:1186px;min-height:435px;height:auto;float:left;margin-top:34px;}
+.createcar_page_content_cardetails_topbar{width:1174px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.createcar_page_content_cardetails_form_spacer{width:1186px;height:10px;clear:both;}
+.createcar_page_content_cardetails_form{width:1186px;height:auto;min-height:350px;float:left;margin-top:20px;}
+.createcar_page_content_cardetails_form_nrplate{width:290px;height:40px;float:left;}
+.createcar_page_content_cardetails_form_nrplate_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_nrplate_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_vinnr{width:350px;height:40px;float:left;margin-left:10px;margin-right:400px;}
+.createcar_page_content_cardetails_form_vinnr_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_vinnr_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_vinnr_button{width:50px;height:40px;float:left;background:#c40912;border:1px solid #aa0911;font-size:14px;font-family:tahoma;color:white;margin-left:10px;}
+.createcar_page_content_cardetails_form_vinnr_button:hover{background:#aa0911;}
+.createcar_page_content_cardetails_form_spacer{width:1186px;height:1px;float:left;clear:both;margin-top:20px;background:#c40912;}
+.createcar_page_content_cardetails_form_make{width:289px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_cardetails_form_make_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_make_field{width:164px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_model{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_model_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_model_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_variant{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_variant_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_variant_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_enginesize{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_enginesize_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_enginesize_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_hp{width:289px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_cardetails_form_hp_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_hp_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_type{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_type_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_type_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_fueltype{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_fueltype_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_fueltype_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_doors{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_doors_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_doors_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_geartype{width:289px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_cardetails_form_geartype_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_geartype_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_gears{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_gears_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_gears_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_newprice{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_newprice_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_newprice_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+
+.createcar_page_content_cardetails_form_wheelpull{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_wheelpull_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_wheelpull_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_year{width:289px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_cardetails_form_year_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_year_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_milage{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_milage_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_milage_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_milagedoc{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_milagedoc_label{margin-left:10px;width:200px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_milagedoc_check{margin-top:10px;width:20px;height:20px;}
+.createcar_page_content_cardetails_form_moms{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_moms_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_moms_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_tax{width:289px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_cardetails_form_tax_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_tax_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_#fea501plate{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_#fea501plate_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_#fea501plate_check{margin-top:10px;width:20px;height:20px;}
+.createcar_page_content_cardetails_form_inspected{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_inspected_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_inspected_check{margin-top:10px;width:20px;height:20px;}
+.createcar_page_content_cardetails_form_lastinspection{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_lastinspection_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_lastinspection_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_status{width:289px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_cardetails_form_status_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_status_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_1reg{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_1reg_label{margin-left:10px;width:97px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:left;}
+.createcar_page_content_cardetails_form_1reg_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_servicebook{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_servicebook_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_servicebook_check{margin-top:10px;width:20px;height:20px;}
+.createcar_page_content_cardetails_form_debt{width:289px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_cardetails_form_debt_label{width:107px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;}
+.createcar_page_content_cardetails_form_debt_field{width:182px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_minprice{width:1186px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_cardetails_form_minprice_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_minprice_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_cardetails_form_desc{width:1186px;height:200px;float:left;margin-top:10px;}
+.createcar_page_content_cardetails_form_desc_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_cardetails_form_desc_textfield{width:1065px;height:194px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;resize: none;}
+
+.createcar_page_content_equipment{width:1186px;min-height:435px;height:auto;float:left;margin-top:34px;}
+.createcar_page_content_equipment_topbar{width:1174px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.createcar_page_content_equipment_form{width:1186px;height:auto;min-height:350px;float:left;margin-top:20px;}
+.createcar_page_content_equipment_form_item{width:289px;height:40px;float:left;margin-top:10px;margin-right:7px;}
+.createcar_page_content_equipment_form_item_label{margin-left:10px;width:240px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_equipment_form_item_check{margin-top:10px;width:20px;height:20px;}
+.createcar_page_content_equipment_form_airbags{width:1186px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_equipment_form_airbags_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_equipment_form_airbags_field{width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_equipment_form_notice{width:1186px;height:200px;float:left;margin-top:10px;}
+.createcar_page_content_equipment_form_notice_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_equipment_form_notice_textfield{width:1045px;height:194px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;resize: none;}
+
+
+.createcar_page_content_tiresandrims{width:576px;min-height:250px;height:auto;float:left;margin-top:34px;}
+.createcar_page_content_tiresandrims_topbar{width:564px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.createcar_page_content_tiresandrims_left{width:277px;height:200px;float:left;margin-top:20px;}
+.createcar_page_content_tiresandrims_left_tiretype{width:277px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_tiresandrims_left_tiretype_label{width:102px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:5px;}
+.createcar_page_content_tiresandrims_left_tiretype_field{width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_tiresandrims_left_rims{width:277px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_tiresandrims_left_rims_label{width:102px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:5px;}
+.createcar_page_content_tiresandrims_left_rims_field{width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_tiresandreartires_left{width:277px;height:200px;float:left;background:#fea501;margin-top:20px;}
+.createcar_page_content_tiresandreartires_left_fronttires{width:277px;height:40px;float:left;margin-top:10px;margin-left:10px;}
+.createcar_page_content_tiresandreartires_left_fronttires_label{width:102px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:5px;}
+.createcar_page_content_tiresandreartires_left_fronttires_field{width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_tiresandreartires_left_reartires{width:300px;height:40px;float:left;margin-top:10px;}
+.createcar_page_content_tiresandreartires_left_reartires_label{width:125px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:5px}
+.createcar_page_content_tiresandreartires_left_reartires_field{width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+
+.createcar_page_content_tiresandrims_right{width:277px;height:200px;float:left;margin-left:20px;margin-top:20px;}
+.createcar_page_content_tiresandrims_right_extratiretype{width:277px;height:40px;float:left;margin-top:10px;margin-bottom:30px;}
+.createcar_page_content_tiresandrims_right_extratiretype_label{width:102px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:5px;}
+.createcar_page_content_tiresandrims_right_extratiretype_field{width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_tiresandrims_right_extrarims{width:277px;height:40px;float:left;margin-top:10px;margin-bottom:30px;margin-left:10px;}
+.createcar_page_content_tiresandrims_right_extrarims_label{width:102px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:5px;}
+.createcar_page_content_tiresandrims_right_extrarims_field{width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_tiresandreartires_left{width:277px;height:200px;float:left;background:#fea501;margin-top:20px;}
+.createcar_page_content_tiresandreartires_right_extrafronttires{width:277px;height:40px;float:left;margin-top:10px;margin-bottom:30px;margin-left:10px;}
+.createcar_page_content_tiresandreartires_right_extrafronttires_label{width:102px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:5px;}
+
+.createcar_page_content_tiresandreartires_right_extrafronttires_field{width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_tiresandreartires_right_extrareartires{width:300px;height:40px;float:left;margin-top:10px;margin-bottom:30px;}
+.createcar_page_content_tiresandreartires_right_extrareartires_label{width:125px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:5px}
+.createcar_page_content_tiresandreartires_right_extrareartires_field{width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_tiresandsparetires_spacer{width:100%;height:1px; background:#c0c0c0;float:left;margin-top:10px;margin-bottom:10px;}
+.createcar_page_content_condition{width:576px;height:250px;height:auto;float:left;margin-top:34px;margin-left:34px;}
+.createcar_page_content_condition_topbar{width:564px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.createcar_page_content_condition_form{width:576px;height:200px;float:left;margin-top:20px;}
+.createcar_page_content_condition_form_conditions{width:278px;height:40px;float:left;margin-bottom:10px;margin-right:10px;background:white;margin-bottom:10px;}
+.createcar_page_content_condition_form_conditions_label{width:107px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;margin-right:7px;}
+.createcar_page_content_condition_form_conditions_field{width:164px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+
+.createcar_page_content_maintenance{width:1186px;height:370px;float:left;margin-top:34px;}
+.createcar_page_content_maintenance_topbar{width:1174px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.createcar_page_content_maintenance_form{width:1186px;height:200px;float:left;margin-top:20px;}
+.createcar_page_content_maintenance_form_maintenances{width:289px;height:40px;float:left;margin-top:10px;margin-right:7px;}
+.createcar_page_content_maintenance_form_maintenances_label{width:135px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;margin-right:10px;}
+.createcar_page_content_maintenance_form_maintenances_field{width:142px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+.createcar_page_content_maintenance_form_notice{width:1186px;height:200px;float:left;margin-top:10px;}
+.createcar_page_content_maintenance_form_notice_label{width:134px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;margin-right:10px;}
+.createcar_page_content_maintenance_form_notice_textfield{width:1018px;height:194px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;resize: none;}
+
+
+.createcar_page_content_exteriorcondition{width:1186px;min-height:435px;height:auto;float:left;margin-top:34px;}
+.createcar_page_content_exteriorcondition_topbar{width:1174px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.createcar_page_content_exteriorcondition_form{width:1186px;min-height:450px;height:auto;float:left;margin-top:20px;}
+.createcar_page_content_exteriorcondition_form_exteriorconditions{width:1186px;height:120px;float:left;border-bottom:1px solid #c40912;margin-bottom:10px;}
+.createcar_page_content_exteriorcondition_form_exteriorconditions_image{width:269px;height:120px;float:left;}
+.createcar_page_content_exteriorcondition_form_exteriorconditions_image_title{width:269px;height:20px;float:left;font-size:17px;font-family:tahoma;margin-bottom:5px;text-align:center;color:#c40912;}
+.createcar_page_content_exteriorcondition_form_exteriorconditions_image_img{width:269px;height:95px;float:left;}
+.createcar_page_content_exteriorcondition_form_exteriorconditions_image_img img{display: block;margin-left: auto;margin-right: auto;}
+.createcar_page_content_exteriorcondition_form_exteriorconditions_fieldbox{width:897px;height:120px;float:left;margin-left:20px;}
+.createcar_page_content_exteriorcondition_form_exteriorconditions_fieldbox_fields{width:289px;height:40px;float:left;margin-top:10px;margin-right:10px;}
+.createcar_page_content_exteriorcondition_form_exteriorconditions_fieldbox_fields_label{margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;font-color:#c40912;font-size:14px;text-align:right;padding-right:10px;}
+.createcar_page_content_exteriorcondition_form_exteriorconditions_fieldbox_fields_field{width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;}
+
+.createcar_page_content_images{width:1186px;min-height:435px;height:auto;float:left;margin-top:34px;}
+.createcar_page_content_images_topbar{width:1174px;height:30px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:30px;font-family:tahoma;padding-left:10px;color:white;}
+.createcar_page_content_images_form{width:1186px;height:625px;float:left;margin-top:20px;background:url(../images/imageeditor.jpg) no-repeat;}
+/* createcar slut*/
+
+.createcar_page_content_button{width:120px;height:39px;float:right;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;margin-top:20px;}
+.createcar_page_content_button:hover{background:#aa0911;}
+#auction_pagedetails{width:1186px;height:auto;min-height:800px;float:left;margin-left:5px;}
+#auction_pagedetails_title{width:1176px;height:107px;float:left;line-height:107px;font-size:22px;font-weight:bold;font-family:tahoma;color:#c40912;padding-left:10px;}
+#auction_pagedetails_catalognumber{font-size:16px;font-family:tahoma;float:right;margin-top:-97px;color:#b7b7b7;}
+#auction_pagedetails_actions{width:1186px;height:18px;font-size:16px;font-family:tahoma;float:left;color:#b7b7b7;}
+.auction_pagedetails_actions_back{font-size:16px;font-family:tahoma;float:left;color:#c40912;}
+.auction_pagedetails_actions_save{font-size:16px;font-family:tahoma;float:left;color:#c40912;margin-left:40%;}
+.auction_pagedetails_actions_save_Hidden{display:none;}
+.auction_pagedetails_actions_print{font-size:16px;font-family:tahoma;float:right;color:#c40912;}
+#auction_pagedetails_topbar{width:1186px;height:87px;float:left;background:#c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;margin-top:10px;}
+.auction_pagedetails_topbar_latestbid{width:573px;height:87px;float:left;line-height:87px;color:white;font-family:tahoma;font-size:22px;padding-left:20px;}
+.auction_pagedetails_topbar_end{width:573px;height:87px;float:left;line-height:87px;color:white;font-family:tahoma;font-size:22px;padding-right:20px;text-align:right;}
+#auction_pagedetails_topinfo{width:1186px;height:338px;float:left;margin-top:10px;}
+.auction_pagedetails_topinfo_image{width:454px;height:288px;float:left;}
+.auction_pagedetails_topinfo_image img{width:454px;height:288px;}
+.auction_pagedetails_topinfo_title{width:712px;height:24px;font-size:24px;font-family:tahoma;margin-left:10px;float:left;text-transform:uppercase;color:#c40912;}
+.auction_pagedetails_topinfo_subtitle{width:712px;height:16px;font-size:16px;font-family:tahoma;margin-left:10px;float:left;text-transform:uppercase;color:#b7b7b7;margin-top:5px;}
+.auction_pagedetails_topinfo_1reg{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;}
+.auction_pagedetails_topinfo_year{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;margin-left:20px;}
+.auction_pagedetails_topinfo_tax{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;margin-left:20px;}
+.auction_pagedetails_topinfo_inspection{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;}
+.auction_pagedetails_topinfo_color{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;margin-left:20px;}
+.auction_pagedetails_topinfo_moms{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;margin-left:20px;}
+.auction_pagedetails_topinfo_vinnumber{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;}
+.auction_pagedetails_topinfo_milage{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;margin-left:20px;}
+.auction_pagedetails_topinfo_fueltype{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;margin-left:20px;}
+.auction_pagedetails_topinfo_regnumber{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;}
+.auction_pagedetails_topinfo_debt{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;margin-left:20px;}
+.auction_pagedetails_topinfo_debt a{color:#b7b7b7;}
+.auction_pagedetails_topinfo_status{width:224px;height:50px;float:left;margin-left:10px;font-size:17px;color:#b7b7b7;font-family:tahoma;margin-top:15px;margin-left:20px;}
+.auction_pagedetails_topinfo_newprice{width:1186px;height:24px;float:left;font-size:24px;font-family:tahoma;color:#b7b7b7;}
+#auction_pagedetails_doc-milage{width:1186px;height:70px;float:left;margin-top:10px;}
+.auction_pagedetails_doc-milage_topbar{width:1174px;height:34px;float:left;background:#c40912;font-size:17px;padding-left:10px;line-height:34px;color:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_pagedetails_doc-milage_text{width:1174px;height:26px;float:left;line-height:13px;margin-top:10px;color:#c40912;font-family:tahoma;font-size:17px;padding-left:10px;}
+#auction_pagedetails_equipment{width:1186px;height:auto;min-height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_equipment_topbar{width:1174px;height:34px;float:left;background:#c40912;font-size:17px;padding-left:10px;line-height:34px;color:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_pagedetails_equipment_items{width:261px;height:17px;float:left;font-size:17px;float:left;color:#c40912;margin-top:10px;margin-right:20px;}
+.auction_pagedetails_equipment_commenttitle{width:1186px;height:18px;font-size:17px;float:left;font-family:tahoma;color:#b7b7b7;margin-top:10px}
+.auction_pagedetails_equipment_commenttext{width:1186px;height:auto;min-height:17px;float:left;font-family:tahoma;color:#c40912;margin-top:10px;font-size:17px;}
+#auction_pagedetails_tires{width:583px;height:174px;float:left;margin-top:10px;}
+.auction_pagedetails_tires_topbar{width:571px;height:34px;float:left;background:#c40912;font-size:17px;padding-left:10px;line-height:34px;color:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_pagedetails_tires_left{width:281px;height:138px;float:left;}
+.auction_pagedetails_tires_left_title{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;}
+.auction_pagedetails_tires_left_tires{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:30px;}
+.auction_pagedetails_tires_left_rims{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_tires_left_printfor{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_tires_left_printback{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_tires_right{width:281px;height:138px;float:left;margin-left:21px;}
+.auction_pagedetails_tires_right_title{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;}
+.auction_pagedetails_tires_right_tires{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:30px;}
+.auction_pagedetails_tires_right_rims{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_tires_right_printfor{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_tires_right_printback{width:281px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+#auction_pagedetails_condition{width:583px;height:174px;float:left;margin-top:10px;margin-left:20px;}
+.auction_pagedetails_condition_topbar{width:571px;height:34px;float:left;background:#c40912;font-size:17px;padding-left:10px;line-height:34px;color:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_pagedetails_condition_interior{width:174px;height:36px;float:left;margin-left:10px;color:#b7b7b7;margin-top:7px;font-size:17px;font-family:tahoma;}
+.auction_pagedetails_condition_headlights{width:174px;height:36px;float:left;margin-left:20px;color:#b7b7b7;margin-top:7px;font-size:17px;font-family:tahoma;}
+.auction_pagedetails_condition_electrics{width:174px;height:36px;float:left;margin-left:20px;color:#b7b7b7;margin-top:7px;font-size:17px;font-family:tahoma;}
+.auction_pagedetails_condition_mechanics{width:174px;height:36px;float:left;margin-left:10px;color:#b7b7b7;margin-top:7px;font-size:17px;font-family:tahoma;}
+.auction_pagedetails_condition_rearlights{width:174px;height:36px;float:left;margin-left:20px;color:#b7b7b7;margin-top:7px;font-size:17px;font-family:tahoma;}
+.auction_pagedetails_condition_damaged{width:174px;height:36px;float:left;margin-left:20px;color:#b7b7b7;margin-top:7px;font-size:17px;font-family:tahoma;}
+.auction_pagedetails_condition_paint{width:174px;height:36px;float:left;margin-left:10px;color:#b7b7b7;margin-top:7px;font-size:17px;font-family:tahoma;}
+.auction_pagedetails_condition_foglights{width:174px;height:36px;float:left;margin-left:20px;color:#b7b7b7;margin-top:7px;font-size:17px;font-family:tahoma;}
+#auction_pagedetails_maintenance{width:583px;height:220px;float:left;margin-top:10px;}
+.auction_pagedetails_maintenance_topbar{width:571px;height:34px;float:left;background:#c40912;font-size:17px;padding-left:10px;line-height:34px;color:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_pagedetails_maintenance_servicebook{width:271px;height:18px;float:left;margin-left:10px;margin-top:10px;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_maintenance_lastservice{width:271px;height:18px;float:left;margin-left:20px;margin-top:10px;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_maintenance_servicebookfull{width:271px;height:18px;float:left;margin-left:10px;margin-top:25px;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_maintenance_nextservice{width:271px;height:18px;float:left;margin-left:20px;margin-top:25px;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_maintenance_underbody{width:271px;height:18px;float:left;margin-left:10px;margin-top:25px;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_maintenance_beltdrive{width:271px;height:18px;float:left;margin-left:20px;margin-top:25px;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_maintenance_brakepads{width:271px;height:18px;float:left;margin-left:10px;margin-top:25px;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+.auction_pagedetails_maintenance_oil{width:271px;height:18px;float:left;margin-left:20px;margin-top:25px;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+#auction_pagedetails_maintenancecomments{width:583px;height:220px;float:left;margin-top:10px;margin-left:20px;}
+.auction_pagedetails_maintenancecomments_topbar{width:571px;height:34px;float:left;background:#c40912;font-size:17px;padding-left:10px;line-height:34px;color:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_pagedetails_maintenancecomments_text{width:563px;height:174px;float:left;margin-left:10px;margin-top:10px;font-size:17px;font-family:tahoma;color:#b7b7b7;}
+#auction_pagedetails_outercondition{width:1186px;height:auto;min-height:250px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_topbar{width:1174px;height:34px;float:left;background:#c40912;font-size:17px;padding-left:10px;line-height:34px;color:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+/* carparts */
+.auction_pagedetails_outercondition_windshield{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_windshield_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_windshield_img img{height:48px;display: block;margin-left: auto;margin-right: auto}
+.auction_pagedetails_outercondition_windshield_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_windshield_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_hood{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_hood_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_hood_img img{height:48px;margin-left:25px;}
+.auction_pagedetails_outercondition_hood_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_hood_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_bumper-front{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_bumper-front_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_bumper-front_img img{height:48px;margin-left:25px;}
+.auction_pagedetails_outercondition_bumper-front_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_bumper-front_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+
+.auction_pagedetails_outercondition_fender-front-right{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_fender-front-right_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_fender-front-right_img img{width:107px;}
+.auction_pagedetails_outercondition_fender-front-right_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_fender-front-right_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_door-front-right{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_door-front-right_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_door-front-right_img img{width:107px;}
+.auction_pagedetails_outercondition_door-front-right_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_door-front-right_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_door-back-right{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_door-back-right_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_door-back-right_img img{width:107px;}
+.auction_pagedetails_outercondition_door-back-right_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_door-back-right_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_fender-back-right{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_fender-back-right_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_fender-back-right_img img{width:107px;}
+.auction_pagedetails_outercondition_fender-back-right_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_fender-back-right_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_mirror-right{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_mirror-right_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_mirror-right_img img{width:107px;}
+.auction_pagedetails_outercondition_mirror-right_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_mirror-right_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_panel-right{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_panel-right_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_panel-right_img img{width:107px;}
+.auction_pagedetails_outercondition_panel-right_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_panel-right_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_fender-front-left{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_fender-front-left_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_fender-front-left_img img{width:107px;}
+.auction_pagedetails_outercondition_fender-front-left_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_fender-front-left_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_door-front-left{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_door-front-left_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_door-front-left_img img{width:107px;}
+.auction_pagedetails_outercondition_door-front-left_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_door-front-left_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_door-back-left{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_door-back-left_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_door-back-left_img img{width:107px;}
+.auction_pagedetails_outercondition_door-back-left_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_door-back-left_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_fender-back-left{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_fender-back-left_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_fender-back-left_img img{width:107px;}
+.auction_pagedetails_outercondition_fender-back-left_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_fender-back-left_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_mirror-left{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_mirror-left_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_mirror-left_img img{width:107px;}
+.auction_pagedetails_outercondition_mirror-left_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_mirror-left_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_panel-left{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_panel-left_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_panel-left_img img{width:107px;}
+.auction_pagedetails_outercondition_panel-left_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_panel-left_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_bumper-back{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_bumper-back_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_bumper-back_img img{height:48px;margin-left:25px;}
+.auction_pagedetails_outercondition_bumper-back_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_bumper-back_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+.auction_pagedetails_outercondition_door-back{width:1186px;height:50px;float:left;margin-top:10px;}
+.auction_pagedetails_outercondition_door-back_img{width:102px;height:48px;float:left;margin-top:1px;}
+.auction_pagedetails_outercondition_door-back_img img{height:48px;margin-left:25px;}
+.auction_pagedetails_outercondition_door-back_title{width:1064px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:15px;}
+.auction_pagedetails_outercondition_door-back_text{width:1064px;height:25px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:5px;margin-left:15px;}
+
+/*Normal style*/
+#auction_pagedetails_images{width:1186px;height:auto;min-height:200px;float:left;margin-top:10px;}
+.auction_pagedetails_images_topbar{width:1174px;height:34px;float:left;background:#c40912;font-size:17px;padding-left:10px;line-height:34px;color:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_pagedetails_images_imgspacer{width:8px;height:auto;min-height:200px;margin-top:10px;float:left;}
+.auction_pagedetails_images_img{width:224px;height:142px;margin-top:10px;margin-left:5px;margin-right:5px;float:left;}
+.auction_pagedetails_images_img img{width:224px;height:142px;}
+#auction_pagedetails_bid{width:1186px;height:auto;min-height:200px;float:left;margin-top:10px;}
+.auction_pagedetails_bid_topbar{width:1174px;height:34px;float:left;background:#c40912;font-size:17px;padding-left:10px;line-height:34px;color:white;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;}
+.auction_pagedetails_bid_notloggedin{width:424px;height:123px;float:left;margin-left:381px;margin-top:40px;}
+.auction_pagedetails_bid_notloggedin_highestbid{width:424px;height:28px;float:left;font-size:27px;font-family:tahoma;color:#c40912;}
+.auction_pagedetails_bid_notloggedin_tip{width:424px;height:14px;float:left;font-size:14px;font-style:italic;font-family:tahoma;color:#b7b7b7;margin-top:10px;}
+.auction_pagedetails_bid_notloggedin_login{width:424px;height:38px;float:left;margin-top:10px;}
+.auction_pagedetails_bid_notloggedin_login_field{width:143px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.auction_pagedetails_bid_notloggedin_login_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.auction_pagedetails_bid_notloggedin_login_button:hover{background:#aa0911;}
+
+.auction_pagedetails_bid_loggedinnobid{width:463px;height:157px;float:left;margin-left:345px;margin-top:40px;border:1px solid #b7b7b7;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;}
+.auction_pagedetails_bid_loggedinnobid_highestbid{width:463px;height:28px;float:left;font-size:27px;font-family:tahoma;color:#c40912;margin-top:19px;text-align:center;}
+.auction_pagedetails_bid_loggedinnobid_bid{width:364px;height:40px;float:left;margin-top:10px;margin-left:50px;}
+.auction_pagedetails_bid_loggedinnobid_bid_labeltop{float:left;width:150px;height:40px;line-height:40px;}
+.auction_pagedetails_bid_loggedinnobid_bid_field{width:130px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.auction_pagedetails_bid_loggedinnobid_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.auction_pagedetails_bid_loggedinnobid_bid_button:hover{background:#aa0911;}
+.auction_pagedetails_bid_loggedinnobid_bid_labelbottom{width:263px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;margin-left:200px;color:#b7b7b7;}
+.auction_pagedetails_bid_loggedinnobid_bid_fees{width:463px;height:16px;font-size:16px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+.auction_pagedetails_bid_loggedinbidnomp{width:463px;height:190px;float:left;margin-left:345px;margin-top:40px;border:1px solid #fea501;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;}
+.auction_pagedetails_bid_loggedinbidnomp_top{width:463px;height:25px;float:left;background-color:#fea501;color:white;font-size:14px;font-family:tahoma;text-align:center;line-height:25px;}
+.auction_pagedetails_bid_loggedinbidnomp_tip{width:443px;height:17px;float:left;font-size:14px;font-family:tahoma;padding-left:20px;line-height:17px;margin-top:5px;}
+.auction_pagedetails_bid_loggedinbidnomp_highestbid{width:463px;height:28px;float:left;font-size:27px;font-family:tahoma;color:#c40912;margin-top:5px;text-align:center;}
+.auction_pagedetails_bid_loggedinbidnomp_bid{width:364px;height:40px;float:left;margin-top:10px;margin-left:50px;}
+.auction_pagedetails_bid_loggedinbidnomp_bid_labeltop{float:left;width:150px;height:40px;line-height:40px;}
+.auction_pagedetails_bid_loggedinbidnomp_bid_field{width:130px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.auction_pagedetails_bid_loggedinbidnomp_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.auction_pagedetails_bid_loggedinbidnomp_bid_button:hover{background:#aa0911;}
+.auction_pagedetails_bid_loggedinbidnomp_bid_labelbottom{width:263px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;margin-left:200px;color:#b7b7b7;}
+.auction_pagedetails_bid_loggedinbidnomp_bid_fees{width:463px;height:16px;font-size:16px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+.AuctionBidMinPrice{width:463px;height:190px;float:left;margin-left:345px;margin-top:40px;border:1px solid #fea501;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;}
+.AuctionBidMinPrice_top{width:463px;height:25px;float:left;background-color:#fea501;color:white;font-size:14px;font-family:tahoma;text-align:center;line-height:25px;}
+.AuctionBidMinPrice_tip{width:443px;height:17px;float:left;font-size:14px;font-family:tahoma;padding-left:20px;line-height:17px;margin-top:5px;}
+.AuctionBidMinPrice_highestbid{width:463px;height:28px;float:left;font-size:27px;font-family:tahoma;color:#c40912;margin-top:5px;text-align:center;}
+.AuctionBidMinPrice_bid{width:364px;height:40px;float:left;margin-top:10px;margin-left:50px;}
+.AuctionBidMinPrice_bid_labeltop{float:left;width:150px;height:40px;line-height:40px;}
+.AuctionBidMinPrice_bid_field{width:130px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.AuctionBidMinPrice_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.AuctionBidMinPrice_bid_button:hover{background:#aa0911;}
+.AuctionBidMinPrice_bid_labelbottom{width:263px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;margin-left:200px;color:#b7b7b7;}
+.AuctionBidMinPrice_bid_fees{width:463px;height:16px;font-size:16px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+.AuctionBidDefault{width:463px;height:150px;float:left;margin-left:345px;margin-top:40px;border:1px solid #b7b7b7;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;}
+.AuctionBidDefault_top{display:none;}
+.AuctionBidDefault_tip{display:none;}
+.AuctionBidDefault_highestbid{width:463px;height:28px;float:left;font-size:27px;font-family:tahoma;color:#c40912;margin-top:5px;text-align:center;}
+.AuctionBidDefault_bid{width:364px;height:40px;float:left;margin-top:10px;margin-left:50px;}
+.AuctionBidDefault_bid_labeltop{float:left;width:150px;height:40px;line-height:40px;}
+.AuctionBidDefault_bid_field{width:130px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.AuctionBidDefault_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.AuctionBidDefault_bid_button:hover{background:#aa0911;}
+.AuctionBidDefault_bid_labelbottom{width:263px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;margin-left:200px;color:#b7b7b7;}
+.AuctionBidDefault_bid_fees{width:463px;height:16px;font-size:16px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+.auction_pagedetails_bid_loggedinbidmp{width:463px;height:190px;float:left;margin-left:345px;margin-top:40px;border:1px solid #008001;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;}
+.auction_pagedetails_bid_loggedinbidmp_top{width:463px;height:25px;float:left;background-color:#008001;color:white;font-size:14px;font-family:tahoma;text-align:center;line-height:25px;}
+.auction_pagedetails_bid_loggedinbidmp_tip{width:443px;height:17px;float:left;font-size:14px;font-family:tahoma;padding-left:20px;line-height:17px;margin-top:5px;}
+.auction_pagedetails_bid_loggedinbidmp_highestbid{width:463px;height:28px;float:left;font-size:27px;font-family:tahoma;color:#c40912;margin-top:5px;text-align:center;}
+.auction_pagedetails_bid_loggedinbidmp_bid{width:364px;height:40px;float:left;margin-top:10px;margin-left:50px;}
+.auction_pagedetails_bid_loggedinbidmp_bid_labeltop{float:left;width:150px;height:40px;line-height:40px;}
+.auction_pagedetails_bid_loggedinbidmp_bid_field{width:130px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.auction_pagedetails_bid_loggedinbidmp_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.auction_pagedetails_bid_loggedinbidmp_bid_button:hover{background:#aa0911;}
+.auction_pagedetails_bid_loggedinbidmp_bid_labelbottom{width:263px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;margin-left:200px;color:#b7b7b7;}
+.auction_pagedetails_bid_loggedinbidmp_bid_fees{width:463px;height:16px;font-size:16px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+.AuctionBidHighest{width:463px;height:190px;float:left;margin-left:345px;margin-top:40px;border:1px solid #008001;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;}
+.AuctionBidHighest_top{width:463px;height:25px;float:left;background-color:#008001;color:white;font-size:14px;font-family:tahoma;text-align:center;line-height:25px;}
+.AuctionBidHighest_tip{width:443px;height:17px;float:left;font-size:14px;font-family:tahoma;padding-left:20px;line-height:17px;margin-top:5px;}
+.AuctionBidHighest_highestbid{width:463px;height:28px;float:left;font-size:27px;font-family:tahoma;color:#c40912;margin-top:5px;text-align:center;}
+.AuctionBidHighest_bid{width:364px;height:40px;float:left;margin-top:10px;margin-left:50px;}
+.AuctionBidHighest_bid_labeltop{float:left;width:150px;height:40px;line-height:40px;}
+.AuctionBidHighest_bid_field{width:130px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.AuctionBidHighest_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.AuctionBidHighest_bid_button:hover{background:#aa0911;}
+.AuctionBidHighest_bid_labelbottom{width:263px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;margin-left:200px;color:#b7b7b7;}
+.AuctionBidHighest_bid_fees{width:463px;height:16px;font-size:16px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+.auction_pagedetails_bid_loggedinbidoverbid{width:463px;height:190px;float:left;margin-left:345px;margin-top:40px;border:1px solid #c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;}
+.auction_pagedetails_bid_loggedinbidoverbid_top{width:463px;height:25px;float:left;background-color:#c40912;color:white;font-size:14px;font-family:tahoma;text-align:center;line-height:25px;}
+.auction_pagedetails_bid_loggedinbidoverbid_tip{width:443px;height:17px;float:left;font-size:14px;font-family:tahoma;padding-left:20px;line-height:17px;margin-top:5px;}
+.auction_pagedetails_bid_loggedinbidoverbid_highestbid{width:463px;height:28px;float:left;font-size:27px;font-family:tahoma;color:#c40912;margin-top:5px;text-align:center;}
+.auction_pagedetails_bid_loggedinbidoverbid_bid{width:364px;height:40px;float:left;margin-top:10px;margin-left:50px;}
+.auction_pagedetails_bid_loggedinbidoverbid_bid_labeltop{float:left;width:150px;height:40px;line-height:40px;}
+.auction_pagedetails_bid_loggedinbidoverbid_bid_field{width:130px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.auction_pagedetails_bid_loggedinbidoverbid_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.auction_pagedetails_bid_loggedinbidoverbid_bid_button:hover{background:#aa0911;}
+.auction_pagedetails_bid_loggedinbidoverbid_bid_labelbottom{width:263px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;margin-left:200px;color:#b7b7b7;}
+.auction_pagedetails_bid_loggedinbidoverbid_bid_fees{width:463px;height:16px;font-size:16px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+.AuctionBidOverbid{width:463px;height:190px;float:left;margin-left:345px;margin-top:40px;border:1px solid #c40912;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;}
+.AuctionBidOverbid_top{width:463px;height:25px;float:left;background-color:#c40912;color:white;font-size:14px;font-family:tahoma;text-align:center;line-height:25px;}
+.AuctionBidOverbid_tip{width:443px;height:17px;float:left;font-size:14px;font-family:tahoma;padding-left:20px;line-height:17px;margin-top:5px;}
+.AuctionBidOverbid_highestbid{width:463px;height:28px;float:left;font-size:27px;font-family:tahoma;color:#c40912;margin-top:5px;text-align:center;}
+.AuctionBidOverbid_bid{width:364px;height:40px;float:left;margin-top:10px;margin-left:50px;}
+.AuctionBidOverbid_bid_labeltop{float:left;width:150px;height:40px;line-height:40px;}
+.AuctionBidOverbid_bid_field{width:130px;height:36px;float:left;border:1px solid #d8d8d8;padding-left:10px;font-size:14px;margin-right:7px;}
+.AuctionBidOverbid_bid_button{width:65px;height:39px;float:left;border:1px solid #aa0911;text-align:center;line-height:36px;background:#c50912;color:white;font-size:14px;}
+.AuctionBidOverbid_bid_button:hover{background:#aa0911;}
+.AuctionBidOverbid_bid_labelbottom{width:263px;height:17px;font-size:14px;font-family:tahoma;float:left;margin-top:2px;margin-left:200px;color:#b7b7b7;}
+.AuctionBidOverbid_bid_fees{width:463px;height:16px;font-size:16px;font-family:tahoma;float:left;margin-top:20px;text-align:center;color:#b7b7b7;}
+
+
+
+
+#auction_pagedetails_clearbar{width:1186px;height:1px;float:left;clear:both;margin-top:30px;background-color:#b7b7b7;}
+#auction_pagedetails_latestbids{width:282px;height:137px;float:left;margin-left:183px;margin-top:10px;}
+.auction_pagedetails_latestbids_title{width:282px;height:18px;float:left;font-size:17px;font-weight:bold;font-family:tahoma;color:#c40912;}
+.auction_pagedetails_latestbids_latest{width:282px;height:18px;float:left;font-size:17px;text-align:center;font-family:tahoma;color:#b7b7b7;margin-top:5px;margin-left:-33px;}
+.auction_pagedetails_latestbids_bid{width:136px;height:auto;mine-height:150px;float:left;margin-top:5px;}
+.auction_pagedetails_latestbids_bid_title{width:136px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-bottom:10px;}
+.auction_pagedetails_latestbids_bid_bids{width:136px;height:18px;float:left;font-size:17px;font-family:tahoma;color:black;}
+.auction_pagedetails_latestbids_time{width:136px;height:auto;mine-height:150px;float:left;margin-top:5px;margin-left:10px;}
+.auction_pagedetails_latestbids_time_title{width:136px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-bottom:10px;margin-left:150px;margin-top:-28px;}
+.auction_pagedetails_latestbids_time_times{width:136px;height:18px;float:left;font-size:17px;font-family:tahoma;color:black;margin-left:150px;margin-top:-18px;}
+#auction_pagedetails_end{width:420px;height:186px;float:left;margin-left:240px;margin-top:10px;}
+.auction_pagedetails_end_title{width:420px;height:18px;float:left;font-size:17px;font-weight:bold;font-family:tahoma;color:#c40912;}
+.auction_pagedetails_end_timeleft{width:420px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:15px;}
+.auction_pagedetails_end_auctionend{width:420px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#b7b7b7;margin-top:33px;}
+.auction_pagedetails_end_update{width:420px;height:18px;float:left;font-size:17px;font-family:tahoma;color:#c40912;margin-top:33px;}
+.auction_pagedetails_end_update a{color:#c40912;}
+/*footer style*/
+#footer{width:100%;height:446px;background:url(../images/footer_bg.png) repeat-x;float:left;}
+#footer_content{width:1196px;height:401px;}
+.fc_about{width:281px;height:348px;float:left;margin-top:53px;}
+.fc_a_logo{width:281px;height:85px;float:left;background:url(../images/footerlogo.png) no-repeat;margin-bottom:5px;}
+.fc_a_text{width:271px;height:200px;float:left;margin-left:7px;margin-top:10px;font-size:14px;font-family:tahoma;color:#bbbbbb;}
+.fc_menu{width:281px;height:348px;float:left;margin-top:53px;margin-left:24px;}
+.fc_nav_title{274px;height:22px;float:left;font-family:tahoma;color:white;font-size:18px;margin-left:7px;margin-bottom:10px;}
+.fc_nav{width:274px;height:301px;float:left;margin-top:5px;margin-left:7px;}
+.fc_nav_ul{margin-left:-40px;}
+.fc_nav_li{list-style-type:none;width:274px;height:44px;border-bottom:1px solid #777777;line-height:44px;font-size:12px;font-weight:bold;color:white;text-decoration:none;}
+.fc_nav_li:hover{color:#c50912;}
+.fc_information{width:281px;height:348px;float:left;margin-top:53px;margin-left:24px;}
+.fc_contact{width:281px;height:348px;float:left;margin-top:53px;margin-left:24px;}
+.fc_spacer{width:281px;height:5px;float:left;background:url(../images/footer_spacer.png) no-repeat;}
+#footer_copyright{width:1196px;height:45px;color:white;line-height:45px;font-size:14px;font-family:tahoma;}
+
+
+/* Fra thomas's stylesheet */
+
+/*Dine biler - Generelt 
+*/
+.DealerAuctionDefaults
+{
+	margin-bottom: 10px;
+	border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;
+}
+.DealerAuctionDefaults .title
+{
+	display: block;
+	color: white;
+	padding: 5px 10px;
+}
+.DealerAuctionDefaults .info
+{
+	float: left;
+	margin: 10px;
+}
+.DealerAuctionDefaults .id
+{
+	float: right;
+	display: inline-block;
+	padding: 5px;
+	height:29px;
+	line-height:29px;
+	background:#c40912;
+	color:white;
+}
+.DealerAuctionDefaults .spacer
+{
+	clear: both;
+	border-top: 1px solid #ccc;
+	display: block;
+}
+.DealerAuctionDefaults .status
+{
+	display: block;
+	padding: 5px 10px;
+}
+.DealerAuctionDefaults .options
+{
+	display: block;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+.DealerAuctionDefaults .option
+{
+	display: inline-block;
+	padding: 0px 10px 5px 10px;
+}
+.DealerAuctionDefaults .title .Hidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .info .Hidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .id .Hidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .spacer .Hidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .status .Hidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .options .Hidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .option .Hidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .titleHidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .infoHidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .idHidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .spacerHidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .statusHidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .optionsHidden
+{
+	display: none;
+}
+.DealerAuctionDefaults .optionHidden
+{
+	display: none;
+}
+
+/*
+	Dine biler - Venter på godkendelse
+*/
+.DealerAuctionNew
+{
+	border: 1px solid #fea501;
+}
+.DealerAuctionNew .title
+{
+	background: #fea501;
+}
+
+/*
+	Dine biler - Afvist
+*/
+.DealerAuctionRejected
+{
+	border: 1px solid #c40912;
+}
+.DealerAuctionRejected .title
+{
+	background: #c40912;
+}
+
+/*
+	Dine biler - Godkendt - Venter på auktionsstart
+*/
+.DealerAuctionWaiting
+{
+	border: 1px solid #008001;
+}
+.DealerAuctionWaiting .title
+{
+	background: #008001;
+}
+
+/*
+	Dine biler - Igangværende
+*/
+.DealerAuctionActive
+{
+	border: 1px solid #008001;
+}
+.DealerAuctionActive .title
+{
+	background: #008001;
+}
+
+/*
+	Dine handler - Generelt 
+*/
+.DealerDealDefaults
+{
+	margin-bottom: 20px;
+	border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;
+}
+.DealerDealDefaults input[type=button]
+{
+	width: 200px;
+	height: 30px;
+	padding: 3px;
+	font-size: 10pt;
+}
+.DealerDealDefaults .title
+{
+	display: block;
+	color: white;
+	padding: 5px 10px;
+}
+.DealerDealDefaults .info
+{
+	float: left;
+	margin: 10px;
+}
+.DealerDealDefaults .id
+{
+	float: right;
+	background:#c40912;
+	color:white;
+	padding-left:10px;
+	padding-right:10px;
+	font-size: 17px;
+	line-height:40px;
+	font-family: tahoma;
+	width:auto;
+	min-width:160px;
+	height:39px;
+	float:right;
+}
+.DealerDealDefaults .spacer
+{
+	clear: both;
+	display: block;
+}
+.DealerDealDefaults .status
+{
+	display: block;
+	padding: 5px 10px;
+}
+.DealerDealDefaults .options
+{
+	display: block;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+.DealerDealDefaults .option
+{
+	display: inline-block;
+	padding: 0px 10px 5px 10px;
+}
+.DealerDealDefaults .text
+{
+	display: block;
+	padding: 5px 10px;
+}
+
+/*
+	Dine handler - Solgt
+*/
+.DealerDealSold
+{
+	border: 1px solid #c40912;
+}
+.DealerDealSold .title
+{
+	background: #c40912;
+}
+
+/*
+	Dine handler - Ikke Solgt
+*/
+.DealerDealNotSold
+{
+	border: 1px solid #fea501;
+}
+.DealerDealNotSold .title
+{
+	background: #fea501;
+}
+
+/*
+	Dine handler - Købt
+*/
+.DealerDealBought
+{
+	border: 1px solid #008001;
+}
+.DealerDealBought .title
+{
+	background: #008001;
+}
+
+/*
+	Dine handler - Søgeboks
+*/
+.DealerDealSearchbox h2
+{
+	font-size: 10pt;
+	margin-top: 5px;
+}
+.DealerDealSearchbox select
+{
+	width: 195px;
+}
+.DealerDealSearchbox input[type=text]
+{
+	width: 73px;
+}
+.DealerDealSearchbox input[type=submit]
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 80px;
+	height: 40px;
+}
+.DealerDealSearchbox .InputDate
+{
+	width: 55px !important;
+	font-size: 8pt;
+}
+
+/*
+	Dine handler - Bud - Har højeste bud, mindstepris ikke opnået
+*/
+.DealerDealMinPrice
+{
+	border: 1px solid #fea501;
+}
+.DealerDealMinPrice .title
+{
+	background: #fea501;
+	color: white;
+	display: block;
+}
+
+/*
+	Dine handler - Bud - Har højeste bud
+*/
+.DealerDealHighest 
+{
+	border: 1px solid #008001;
+}
+.DealerDealHighest .title
+{
+	background: #008001;
+	color: white;
+	display: block;
+}
+
+/*
+	Dine handler - Bud - Overbudt
+*/
+.DealerDealOverbid
+{
+	border: 1px solid #c40912;
+}
+.DealerDealOverbid .title
+{
+	background: #c40912;
+	color: #fff;
+	display: block;
+}
+
+	/*Infoboks venstre side
+*/
+.LeftInfoContainer {
+	float: left;
+	width: 175px;
+	margin-top: 10px;
+}
+.LeftInfoBox {
+	background-color: #fcfcfc;
+	border: 1px solid #e0e0e0;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	font-size: 9pt;
+}
+.LeftInfoBoxTitle {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+
+/*
+	Opret bil - Udstyr standard/ekstra
+*/
+.equipmentWrapper {
+	white-space: nowrap;
+}
+.equipmentColumn {
+	display: block;
+	width: 250px;
+	float: left;
+	text-align: right;
+}
+.equipmentCell {
+	overflow: hidden;
+	text-align: right;
+}
+.equipmentCell label {
+	width: 250px;
+	padding: 3px 0px;
+}
+.equipmentCell input {
+	width: 15px;
+	height: 15px;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*
+	Opret bil - Monteret d�k og f�lge + Stand + Vedligeholdelse
+*/
+.SmallSelect {
+	text-align: right;
+	width: 400px;
+	height: 50px;
+	padding: 3px 0px;
+}
+.SmallSelect select {
+	width:170px;height:40px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:40px;font-family:tahoma;padding-left:10px;background:white;
+}
+
+/*
+	Opret bil - Udvendig stand
+*/
+.exteriorRow {
+	width: 100%;
+	border-bottom: 1px solid #c0c0c0;
+}
+.exteriorTitle {
+	width: 200px;
+	float: left;
+	text-align: center;
+	padding: 3px 0px;
+	color:#aa0911;
+}
+.exteriorColumn {
+	width: 300px;
+	float: left;
+	text-align: right;
+}
+.exteriorCell {
+	overflow: hidden;
+	text-align: right;
+	padding: 12px 0px 0px 0px;
+}
+.exteriorCell_fieldtitle {
+	margin-left:10px;width:87px;height:40px;float:left;line-height:40px;font-family:tahoma;color:#aa0911;font-size:14px;text-align:right;padding-right:10px;
+}
+.exteriorCell select {
+	width:170px;height:36px;float:left;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border:1px solid #aa0911;font-size:17px;line-height:36px;font-family:tahoma;padding-left:10px;background:white;
+}
+.clear {
+	clear: both;
+}
+
+.error_login_msg{float:left;line-height:40px;font-family:tahoma;color:#aa0911;font-size:14px;font-weight:100;position:absolute;z-index:5555555555555;margin-top:95px;margin-bottom:-20px;}

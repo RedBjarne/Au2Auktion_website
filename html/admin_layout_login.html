@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="{LANG_ID}">
+
+<head>
+	<title>Admin: {SITE_TITLE}</title>
+	<link rel="stylesheet" href="../css/admin_default.css">
+	{TPL|jquery}
+	<script>
+	function Popup(url, width, height)
+	{
+		// Laver popup
+		if (width == 'undefined' || width == null) width = 600;
+		if (height == 'undefined' || height == null) height = 400;
+		window.open(url,'popup','width='+width+',height='+height+',top='+(screen.height/2-height/2)+',left='+(screen.width/2-width/2)+',scrollbars');
+	}
+	
+	if (top.location.href != document.location.href) top.location.href = document.location.href;
+	</script>
+</head>
+
+<body>
+
+<div style="position: absolute; top: 0px; width: 100%; padding: 3px 0px; color: #a0a0a0; background-image: url('../img/admin_background_bottom.gif'); text-align: center;">
+	Stadel.dk CMS
+</div>
+
+<div style="position: absolute; bottom: 0px; width: 100%; padding: 3px 0px; color: #a0a0a0; background-image: url('../img/admin_background_bottom.gif'); text-align: center;">
+	(C) Stadel.dk 1999 - 2013
+</div>
+
+<div style="text-align: center; margin: auto; margin-top: 50px; width: 350px;">
+	{HTML}
+</div>
+
+</body>
+
+</html>

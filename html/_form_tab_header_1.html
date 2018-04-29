@@ -1,0 +1,73 @@
+<script type="text/javascript">
+<!--
+function _form_{FORM_ID}_ShowTab(id)
+{
+	elm = document.getElementById('_form_{FORM_ID}_active_tab').value;
+	if (id == elm.value) return;
+	_form_{FORM_ID}_HideTab();
+	try
+	{
+		elm = document.getElementById('_form_{FORM_ID}_tab_'+id);
+		elm.style.zIndex = 9999;
+		elm.style.left = '';
+		elm.style.top = '';
+		elm.style.width = '';
+		elm.style.height = '';
+		elm.style.overflow = '';
+		elm.style.visibility = '';
+		elm.style.position = '';
+		document.getElementById('_form_{FORM_ID}_tab_button_'+id+'_left').className = 'tabActiveLeft';
+		document.getElementById('_form_{FORM_ID}_tab_button_'+id+'_middle').className = 'tabActiveMiddle';
+		document.getElementById('_form_{FORM_ID}_tab_button_'+id+'_right').className = 'tabActiveRight';
+		document.getElementById('_form_{FORM_ID}_tab_button_'+id+'_right').style.zIndex = 9999;
+		document.getElementById('_form_{FORM_ID}_active_tab').value = id;
+	}
+	catch (e)
+	{
+		// Dummy
+	}
+}
+
+function _form_{FORM_ID}_HideTab()
+{
+	elm = document.getElementById('_form_{FORM_ID}_active_tab');
+	id = elm.value;
+	elm.value = "";
+	if (id == "") return;
+	try
+	{
+		cls = _form_{FORM_ID}_TabError[id] ? 'Error' : 'Inactive';
+		elm = document.getElementById('_form_{FORM_ID}_tab_'+id);
+		elm.style.zIndex = 0;
+		elm.style.left = '0px';
+		elm.style.top = '0px';
+		elm.style.width = '0px';
+		elm.style.height = '0px';
+		elm.style.overflow = 'hidden';
+		elm.style.visibility = 'hidden';
+		elm.style.position = 'absolute';
+		elm.style.zIndex = 0;
+		document.getElementById('_form_{FORM_ID}_tab_button_'+id+'_left').className = 'tab' + cls + 'Left';
+		document.getElementById('_form_{FORM_ID}_tab_button_'+id+'_middle').className = 'tab' + cls + 'Middle';
+		document.getElementById('_form_{FORM_ID}_tab_button_'+id+'_right').className = 'tab' + cls + 'Right';
+	}
+	catch (e)
+	{
+		// Dummy
+	}
+}
+
+var _form_{FORM_ID}_TabError = Array();
+var _form_{FORM_ID}_TabErrorId = -1;
+-->
+</script>
+
+<link rel="stylesheet" href="{SITE_URL}/css/form_tabs.css">
+
+<input type="hidden" name="_form_{FORM_ID}_active_tab" id="_form_{FORM_ID}_active_tab" value="">
+
+<table cellspacing="0" cellpadding="0">
+	<tr>
+		<td colspan="2" style="background-image: url('/img/tab_background.gif');">
+			<table cellspacing="0" cellpadding="0">
+				<tr>

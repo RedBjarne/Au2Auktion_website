@@ -1,0 +1,50 @@
+<!-- START: Må ikke ændres -->
+<form action="/" method="post" id="{MODULE}{ID}form">
+<input type="hidden" name="module" value="{MODULE}">
+<input type="hidden" name="page" value="default">
+<input type="hidden" name="do" value="send" id="{MODULE}{ID}do">
+<input type="hidden" name="id" value="{ID}">
+<!-- SLUT: Må ikke ændres -->
+
+
+<!-- START: Formularens udseende -->
+<!--
+	BEMÆRK:
+	- Value-taget "TITLE" erstattes automatisk med navnet på den aktuelle formular.
+	- Name-tags skal enten starte med "required_", hvis feltet er påkrævet, eller "optional_", hvis feltet
+	  er valgfrit.
+	- Efter "required_" eller "optional_" kommer felttypen. Dette kan være en af følgende typer:
+	    "number_"   - heltal
+	    "date_"     - dato i formatet "dd-mm-åååå" eller "dd-mm-åå"
+	    "time_"     - tid i formatet "tt:mm"
+	    "email_"    - e-mail
+	    "phone_"    - telefonnummer i formatet "xx xx xx xx" eller "xxxxxxxx"
+	    "free_"     - frit format
+	- Efter felttypen angives et valgfrit feltnavn, som må bestå af a-z, 0-9, _ og -. Dette navn benyttes
+	  i de e-mails der afsendes som reference til feltet.
+	- Value-tags skal altid starte med "VALUE_", hvorefter feltnavnet skrives. Feltnavnet skal skrives 
+	  med store bogstaver
+-->
+<div class="content_title">Kundeservice</div>
+			<div class="content_page"><!--content_page-->
+				<!-- content of all pages between here-->
+<div id="customerservice_page_confirm"><!--customerservice_page_confirm-->
+    <div id="customerservice_page_confirm_content"><!--customerservice_page_confirm_content-->
+    	<div id="customerservice_page_confirm_content_title">Tak for din henvendelse, Vi har registreret følgende om dig</div>
+		<div id="customerservice_page_confirm_content_name">Navn:&nbsp;&nbsp;<input type="hidden" name="required_free_Navn" value="{VALUE_NAVN}">{VALUE_NAVN}</div>
+        <div id="customerservice_page_confirm_content_email">E-mail:&nbsp;&nbsp;<input type="hidden" name="required_email_Email" value="{VALUE_EMAIL}">{VALUE_EMAIL}</div>
+        <div id="customerservice_page_confirm_content_phone">Telefon:&nbsp;&nbsp;<input type="hidden" name="optional_phone_Telefon" value="{VALUE_TELEFON}">{VALUE_TELEFON}</div>
+        <div id="customerservice_page_confirm_content_message">Besked:&nbsp;&nbsp;<input type="hidden" name="required_free_Din_besked" value="{VALUE_DIN_BESKED}">{VALUE_DIN_BESKED}</div>
+        <input type="button" value="Tilbage" onclick="history.back();" id="customerservice_page_confirm_content_backbtn">
+			<input type="submit" value="Bekræft" id="customerservice_page_confirm_content_confirmbtn">
+    </div><!--customerservice_page_confirm_content slut-->
+</div><!--customerservice_page_confirm slut-->
+<!-- and here-->
+			</div><!--content_page slut-->
+		</div><!--content slut-->
+		
+<!-- SLUT: Formularens udseende -->
+
+<!-- START: Må ikke ændres -->
+</form>
+<!-- SLUT: Må ikke ændres -->

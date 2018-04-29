@@ -1,0 +1,106 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="{SITE_URL}/css/admin_default.css">
+</head>
+
+<body style="margin-top: 5px;">
+
+<h2>Dynamisk hjælp</h2>
+
+<br>
+
+<div id="divHelp">
+	<i>Indlæser...</i>
+</div>
+
+<script>
+/*
+	Lidt AJAX halløj til XML
+*/
+
+ajax_done = false;
+
+function ajax(url)
+{
+	this.url = url;
+}
+
+ajax.prototype.url = '';
+ajax.prototype.data = false;
+
+ajax.prototype.done = function(data)
+{
+	// Dummy
+}
+
+ajax.prototype.download = function()
+{
+	if (window.ActiveXObject)
+	{
+		this.data = new ActiveXObject("Microsoft.XMLDOM");
+		this.data.async = false;
+		this.data.load(this.url);
+		this.done(this.data);
+	}
+	else if (document.implementation && document.implementation.createDocument)
+	{
+		this.data = document.implementation.createDocument("", "", null);
+		this.data.load(this.url);
+		ajax_done = this.done;
+		this.data.onload = this.load_done;
+	}
+}
+
+ajax.prototype.load_done = function()
+{
+	ajax_done(this);
+}
+
+/*
+	Hjælpe funktioner
+*/
+
+function UpdateHelp(html)
+{
+	document.getElementById('divHelp').innerHTML = html;
+}
+
+function GetHelp(cms_module, cms_page, cms_do)
+{
+	CurrentHelp = cms_module + '/' + cms_page + '/' + cms_do;
+	if (HelpCache[CurrentHelp] != '' && HelpCache[CurrentHelp] != 'undefined' && HelpCache[CurrentHelp] != null)
+	{
+		// Viser hjælp
+		UpdateHelp(HelpCache[CurrentHelp]);
+	}
+	else
+	{
+		// Henter hjælp
+		UpdateHelp('Indlæser dynamisk hjælp...');
+		a = new ajax('{SITE_URL}/Admin/?page=help&do=xmlhelp&cms_module=' + cms_module +
+			'&cms_page=' + cms_page + '&cms_do=' + cms_do);
+		a.done = ParseHelp;
+		a.download();
+	}
+}
+
+function ParseHelp(data)
+{
+	var helphtml = data.documentElement.getElementsByTagName('html')[0].childNodes[0].nodeValue;
+	if (helphtml == 'null' || helphtml == '' || helphtml == 'undefined' || helphtml == null)
+	{
+		helphtml = 'Ingen hjælp fundet til denne side...';
+	}
+	HelpCache[CurrentHelp] = helphtml;
+	UpdateHelp(helphtml);
+}
+
+var CurrentHelp = null;
+var HelpCache = Array();
+GetHelp('', 'default', '');
+</script>
+
+</body>
+
+</html>

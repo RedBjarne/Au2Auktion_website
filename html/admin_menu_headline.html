@@ -1,0 +1,11 @@
+<div class="MenuHeadline">
+	<a href="javascript:void(0);" onclick="MenuShowHide('{ID}');" onclick="this.blur();"><img src="../img/icon_open.gif" alt="" id="imgMenu{ID}" align="right" style="margin-right: 3px; float: right;"></a>
+	&nbsp;<img src="{ICON}" alt="" width="16" height="16" align="top"> {HEADLINE}
+</div>
+<div id="divMenu{ID}" style="visibility: hidden; position: absolute;">
+	{ELEMENTS}
+</div>
+<div style="height: 3px; font-size: 1pt;"></div>
+<script>
+if ('{SHOW}'=='1') MenuShowHide('{ID}');
+</script>

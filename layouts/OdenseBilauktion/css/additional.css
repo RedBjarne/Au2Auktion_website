@@ -1,0 +1,650 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {margin:0 auto;}
+body {background:url(../images/bg.png);}
+a {border:none;text-decoration:none;}
+#wrapper{width:1000px;height:auto;min-height:1000px;}
+#wrapper-top{width:1000px;height:241px;float:left;}
+#logo{width:375px;height:118px;float:left;background:url(../images/logo.png) no-repeat;margin-left:19px;margin-top:48px;}
+#help_menu{width:234px;height:29px;float:right;}
+.help_auktionscenter{width:149px;height:29px;float:left;background:url(../images/auktionscenter.png) center top no-repeat;}
+.help_auktionscenter:hover{background:url(../images/auktionscenter.png) center bottom no-repeat;}
+.help_hjaelp {width:85px;height:29px;float:left;background:url(../images/hjaelp.png) center top no-repeat;}
+.help_hjaelp:hover{background:url(../images/hjaelp.png) center bottom no-repeat;}
+#account_menu{width:608px;height:48px;float:right;margin-top:-21px;}
+#account_menu ul li {list-style-type:none;}
+#account_menu ul {width:608px;height:48px;float:left;margin-left:-40px;}
+.account_corner{width:90px;height:48px;float:left;background:url(../images/blue_corner.png) no-repeat;margin-left:7px;}
+.account_konto{width:120px;height:48px;float:left;background:url(../images/konto.png) center top no-repeat;}
+.account_konto:hover{background:url(../images/konto.png) center bottom no-repeat;}
+.account_login{width:95px;height:48px;float:left;background:url(../images/login.png) center top no-repeat;}
+.account_login:hover{background:url(../images/login.png) center bottom no-repeat;}
+.account_search{width:227px;height:48px;float:left;background:url(../images/searchspacer.png) no-repeat;}
+.account_search-btn{width:61px;height:48px;float:left;background:url(../images/soeg.png) center top no-repeat;}
+.account_search-btn:hover{background:url(../images/soeg.png) center bottom no-repeat;}
+.account_spacer{width:8px;height:48px;float:left;background:url(../images/blue_end.png) no-repeat;}
+#menu{width:1000px;height:48px;float:left;background:orange;}
+#menu ul li {list-style-type:none;}
+#menu ul {width:1000px;height:48px;float:left;margin-left:-40px;}
+.menu_bilsoeger {width:126px;height:48px;float:left;background:url(../images/bilsoeger.png) center top no-repeat;}
+.menu_bilsoeger:hover {background:url(../images/bilsoeger.png) center bottom no-repeat;}
+.menu_auktionskalender {width:219px;height:48px;float:left;background:url(../images/auktionskalender.png) center top no-repeat;}
+.menu_auktionskalender:hover {background:url(../images/auktionskalender.png) center bottom no-repeat;}
+.menu_koeb {width:74px;height:48px;float:left;background:url(../images/koeb.png) center top no-repeat;}
+.menu_koeb:hover {background:url(../images/koeb.png) center bottom no-repeat;}
+.menu_saelg {width:84px;height:48px;float:left;background:url(../images/saelg.png) center top no-repeat;}
+.menu_saelg:hover {background:url(../images/saelg.png) center bottom no-repeat;}
+.menu_services {width:113px;height:48px;float:left;background:url(../images/services.png) center top no-repeat;}
+.menu_services:hover {background:url(../images/services.png) center bottom no-repeat;}
+.menu_spacer {width:268px;height:48px;float:left;background:url(../images/menu_spacer.png) center top no-repeat;}
+.menu_kontakt {width:116px;height:48px;float:left;background:url(../images/kontakt.png) center top no-repeat;}
+.menu_kontakt:hover {background:url(../images/kontakt.png) center bottom no-repeat;}
+.search_field {width:190px;height:18px;margin-left:10px;margin-top:8px; -moz-border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;-webkit-border-radius: 10px;border:0px;padding-left:10px;color:#9a9a9a;}
+#wrapper-content{width:1000px;height:auto;min-height:700px;background:white;float:left;}
+
+/** Contact Form **/
+
+.submit input{
+    padding: 6px 3px;
+    margin-right:5px;
+    height: 36px;
+    cursor: pointer;
+    width: 96px;
+    -webkit-box-shadow:none;
+    -moz-box-shadow: none;
+    background: -webkit-gradient(linear, left top, left 30, from(#20a1c5), to(#136579));
+    background: -moz-linear-gradient(top, #20a1c5, #136579 30px);
+    border: 1px solid #ccc;
+    font-weight:bold;
+    color:#fff;
+	text-shadow:none;
+	margin-left:390px;
+}
+
+.submit_frontpage input {
+    padding: 6px 3px;
+    
+    height: 34px;
+    cursor: pointer;
+    width: 140px;
+    -webkit-box-shadow:none;
+    -moz-box-shadow: none;
+	
+    background: -webkit-gradient(linear, left top, left 30, from(#20a1c5), to(#136579));
+    background: -moz-linear-gradient(top, #20a1c5, #136579 30px);
+	
+    border: 1px solid #136579;
+    font-weight:bold;
+    color:#fff;
+	text-shadow:none;
+	margin-top:30px;
+	margin-left:160px;
+	border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+
+/** Form Styles **/
+input, textarea, select {
+    font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+    width: 335px;
+    padding: 8px 6px;
+    margin: 0;
+    color: #999999;
+    text-shadow: 0 0 1px #FFFFFF;
+    border: 1px solid #ddd;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background: -webkit-gradient(linear, left top, left 15, from(#FFFFFF), color-stop(4%, #f4f4f4), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #f4f4f4 1px, #FFFFFF 15px);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+}
+
+input {
+    height: 16px;
+}
+
+select {
+    width: 348px;
+    padding: 6px 6px;
+}
+
+select.costumer {
+    width: 150px;
+    padding: 6px 6px;
+	height:30px;
+	font-size:12px;
+}
+
+select.other {
+    width: 300px;
+    padding: 6px 6px;
+	height:30px;
+	font-size:12px;
+}
+
+textarea {
+    width: 335px;
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, left 15, from(#FFFFFF), color-stop(4%, #f4f4f4), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #f4f4f4 1px, #FFFFFF 15px);
+
+}
+
+input:focus, textarea:focus, select:focus {
+    -webkit-box-shadow: 0px 0px 5px #007eff;
+    -moz-box-shadow: 0px 0px 5px #007eff;
+    box-shadow: 0px 0px 5px #007eff;
+}
+
+
+
+.field {
+    margin: 18px 0;
+    position: relative;
+    width: 490px;
+    clear:both;
+}
+
+.field_frontpage {
+    margin: 10px 0;
+    position: relative;
+    width: 300px;
+    clear:both;
+}
+
+.frontpage_left {
+width:300px;
+height:250px;
+float:left;
+margin-left:20px;
+border-right: 2px solid #c9c9c9;
+padding-right: 10px;
+}
+
+.frontpage_middle {
+width:300px;
+height:210px;
+float:left;
+margin-top:40px;
+	
+}
+
+.frontpage_right {
+width:300px;
+height:210px;
+float:left;
+margin-top:40px;
+
+	
+}
+
+.frontpage_spacer {
+width:10px;
+height:250px;
+background:url(../images/frontpage_spacer.png) no-repeat;
+float:left;
+	
+}
+
+.frontpage_searcharea {
+width:980px;
+height:314px;
+background:white;
+float:left;
+margin-left:10px;
+-webkit-box-shadow: 0px 0px 5px #707070;
+-moz-box-shadow: 0px 0px 5px #707070;
+box-shadow: 0px 0px 5px #707070;
+border-bottom-left-radius: 15px;
+-webkit-border-bottom-left-radius: 15px;
+-moz-border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+-webkit-border-bottom-right-radius: 15px;
+-moz-border-bottom-right-radius: 15px;
+}
+
+.frontpage_searchtitles {
+width:980px;
+height:42px;
+background:white;
+float:left;
+margin-bottom:10px;
+}
+
+.frontpage_searchtitles_cars {
+width:327px;
+height:42px;
+background:url(../images/brugtebiler.png) left bottom no-repeat;
+float:left;
+}
+
+.frontpage_searchtitles_cars:hover {
+width:327px;
+height:42px;
+background:url(../images/brugtebiler.png) left top no-repeat;
+float:left;
+}
+
+.active .frontpage_searchtitles_cars  {
+width:327px;
+height:42px;
+background:url(../images/brugtebiler.png) left top no-repeat;
+float:left;
+}
+
+.frontpage_searchtitles_cargo {
+width:326px;
+height:42px;
+background:url(../images/brugtevarevogne.png) left bottom no-repeat;
+float:left;
+}
+
+.frontpage_searchtitles_cargo:hover {
+width:326px;
+height:42px;
+background:url(../images/brugtevarevogne.png) left top no-repeat;
+float:left;
+}
+
+.active .frontpage_searchtitles_cargo  {
+width:326px;
+height:42px;
+background:url(../images/brugtevarevogne.png) left top no-repeat;
+float:left;
+}
+
+.frontpage_searchtitles_notax {
+width:326px;
+height:42px;
+background:url(../images/momsfribiler.png) left bottom no-repeat;
+float:left;
+}
+
+.frontpage_searchtitles_notax:hover {
+width:326px;
+height:42px;
+background:url(../images/momsfribiler.png) left top no-repeat;
+float:left;
+}
+
+.active .frontpage_searchtitles_notax  {
+width:326px;
+height:42px;
+background:url(../images/momsfribiler.png) left top no-repeat;
+float:left;
+}
+
+.frontpage_searchresult  {
+width:980px;
+height:auto;
+min-height:200px;
+margin-left:10px;
+margin-top:20px;
+float:left;
+margin-bottom:50px;
+}
+
+.carinfo {
+	width:236px;
+	height:271px;
+	float:left;
+	background:url(../img/carinfo_bg.png) no-repeat;
+	margin-right:5px;
+	margin-left:4px;
+}
+
+.carinfo_img {
+	width:234px;
+	height:176px;
+	float:left;
+	margin-left:1px;
+	margin-top:1px;
+}
+
+.carinfo_text {
+	width:160px;
+	height:70px;
+	float:left;
+	margin-left:1px;
+	margin-top:5px;
+}
+
+.carinfo_title {
+	font-size:16px;
+	font-weight:bold;
+	font-family:myriad pro;
+	color:#136073;
+	margin-left:5px;
+}
+
+.carinfo_motor {
+	font-size:11px;
+	font-family:myriad pro;
+	color:black;
+	margin-left:5px;
+}
+
+.carinfo_km {
+	font-size:11px;
+	font-family:myriad pro;
+	color:black;
+	margin-left:5px;
+}
+
+.carinfo_reg {
+	font-size:11px;
+	font-family:myriad pro;
+	color:black;
+	margin-left:5px;
+}
+
+.carinfo_start {
+	width:60px;
+	height:50px;
+	float:left;
+	margin-left:5px;
+	margin-top:20px;
+}
+
+.carinfo_starttext {
+	font-size:11px;
+	font-family:myriad pro;
+	color:black;
+	margin-left:5px;
+}
+
+
+label {
+    display: block;
+    width: 118px;
+    padding:0 18px 0 0;
+    float: left;
+    color: #666;
+    text-align: right;
+    font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+}
+
+
+
+.tooltip {
+    background: #F2F2F2;
+    border-color: #DBDBDB;
+    color: #666;
+}
+.underpage-title {width:420px;height:50px;float:left;margin-top:20px;font-size:30px;font-weight:bold;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#136073;margin-left:20px;}
+.underpage-text{width:960px;min-height:50px;height:auto;float:left;margin-top:20px;font-size:15px;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#000;margin-left:20px;}
+.underpage_car-title {width:960px;height:50px;float:left;margin-top:20px;font-size:30px;font-weight:bold;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#136073;margin-left:20px;}
+.underpage_car-text{width:960px;min-height:50px;height:auto;float:left;margin-top:20px;font-size:15px;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#000;margin-left:20px;}
+.underpage_car-pictures{width:500px;min-height:50px;height:auto;float:left;margin-top:20px;margin-left:20px;}
+.underpage_car-information_title{width:100px;height:20px;float:left;font-size:15px;font-weight:bold;font-family:myriad pro;text-align:right;}
+.underpage_car-information_text{width:190px;height:20px;float:left;font-size:15px;font-family:myriad pro;margin-left:20px;}
+.underpage_car-information{width:360px;min-height:50px;height:auto;float:left;margin-top:20px;margin-left:120px;}
+.bid-title{width:420px;height:50px;float:left;margin-top:20px;font-size:20px;font-weight:bold;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#136073;margin-left:20px;}
+.underpage_car-bid{width:270px;min-height:50px;height:auto;float:right;}
+
+#contact-form {width:500px;height:600px;float:left;}
+.contact-title {width:420px;height:50px;float:left;margin-bottom:50px;margin-top:50px;font-size:30px;font-weight:bold;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#666;margin-left:80px;}
+
+#user-form {width:500px;height:auto;min-height:900px;float:left;}
+.user-title {width:420px;height:50px;float:left;margin-bottom:50px;margin-top:50px;font-size:30px;font-weight:bold;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#666;margin-left:80px;}
+
+#login-form {width:500px;height:490px;float:left;margin-left:-20px;}
+.login-title {width:420px;height:50px;float:left;margin-bottom:50px;margin-top:50px;font-size:30px;font-weight:bold;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#666;margin-left:40px;}
+
+#create-form {width:500px;height:490px;float:left;}
+.create-title {width:420px;height:50px;float:left;margin-bottom:50px;margin-top:50px;font-size:30px;font-weight:bold;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#666;margin-left:80px;}
+.contact-title-map {width:450px;height:50px;float:left;margin-top:50px;font-size:30px;font-weight:bold;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#666;}
+.contact-adress-map {width:450px;height:50px;float:left;margin-bottom:50px;font-size:12px;font-family: Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;color:#666;}
+#contact-map {width:450px;height:600px;float:left;margin-left:50px;}
+.map {
+    font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+    width: 335px;
+    padding: 8px 6px;
+    margin: 0;
+    color: #999999;
+    text-shadow: 0 0 1px #FFFFFF;
+    border: 1px solid #ddd;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background: -webkit-gradient(linear, left top, left 15, from(#FFFFFF), color-stop(4%, #f4f4f4), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #f4f4f4 1px, #FFFFFF 15px);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+}
+
+/*-- Footer Style --*/
+
+#footer_overflow {
+	clear:both;
+}
+
+#footer_button {
+	width: 100%;
+	height:85px;
+	background:url(../images/footer_top.png) repeat-x;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+}
+.fb_content {
+	width:940px;
+	height:85px;
+}
+
+.footer_openclose {
+	width:39px;
+	height:46px;
+	float:left;
+	
+	margin-top:23px;
+	background:url(../images/openclose.png) no-repeat;
+}
+.footer_openclose_text {
+	width:63px;
+	height:12px;
+	float:left;
+	
+	margin-top:46px;
+	background:url(../images/openclose_text.png) no-repeat;
+}
+.footer_citat {
+	width:726px;
+	height:85px;
+	float:left;
+}
+#footer_higher {
+	width:100%;	
+}
+#footer_content {
+	width: 100%;
+	height:369px;
+	background:url(../images/footer_bg.png) repeat-x;
+	display: none;
+	margin-top:0px;
+}
+#ft_content {
+	width:940px;
+	height:369px;
+	
+}
+.footer_adress {
+	width:239px;
+	height:369px;
+	float:left;
+	margin-right:10px;
+	
+}
+.footer_adress_name {
+	width:239px;
+	height:20px;
+	float:left;
+	font-size:20px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	margin-top:40px;
+}
+
+.footer_adress_map {
+	width:230px;
+	height:250px;
+	float:left;
+	font-size:20px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	margin-top:40px;
+	margin-left:-30px;
+	background:url(../images/map.png) no-repeat;
+	
+}
+
+.footer_adress_info{
+	width:229px;
+	height:239px;
+	float:left;
+	margin-top:10px;
+	text-align:left;
+	font-size:17px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	margin-left:10px;
+}
+.footer_quicklinks {
+	width:209px;
+	height:369px;
+	float:left;
+	margin-left:50px;
+}
+.footer_quicklinks_name {
+	width:209px;
+	height:20px;
+	float:left;
+	font-size:20px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	margin-top:40px;
+}
+.footer_quicklinks ul li {
+	list-style-type:none;
+	display:block;
+	margin-left:-40px;
+}
+.footer_quicklinks .quicklink {
+	width:181px;
+	height:22px;
+	float:left;
+	margin-top:5px;
+	margin-bottom:5px;
+	background:url(../images/quicklinksbg.png) no-repeat;
+	padding-left:15px;
+	font-size:12px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	color:white;
+}
+.footer_quicklinks .quicklink:hover {
+	color:#136073;
+}
+.footer_quicklinks #active {
+	color:#136073;
+}
+.footer_quicklinks #active:hover {
+	color:white;
+}
+.footer_quicklinks a {
+	color:white;
+}
+.footer_quicklinks a:visited {
+	color:white;
+}
+.footer_quicklinks a:active {
+	color:#136073;
+}
+
+
+.footer_partnerlinks {
+	width:209px;
+	height:369px;
+	float:left;
+}
+.footer_partnerlinks_name {
+	width:209px;
+	height:20px;
+	float:left;
+	font-size:20px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	margin-top:40px;
+}
+.footer_partnerlinks ul li {
+	list-style-type:none;
+	display:block;
+	margin-left:-40px;
+}
+.footer_partnerlinks .partnerlink {
+	width:181px;
+	height:22px;
+	float:left;
+	margin-top:5px;
+	margin-bottom:5px;
+	background:url(../images/quicklinksbg.png) no-repeat;
+	padding-left:15px;
+	font-size:12px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	color:white;
+}
+.footer_partnerlinks .partnerlink:hover {
+	color:#136073;
+}
+.footer_partnerlinks #active {
+	color:#136073;
+}
+.footer_partnerlinks #active:hover {
+	color:white;
+}
+.footer_partnerlinks a {
+	color:white;
+}
+.footer_partnerlinks a:visited {
+	color:white;
+}
+.footer_partnerlinks a:active {
+	color:#136073;
+}
+
+
+textarea:focus, input:focus{
+    outline: none;
+}
+#footer_lower {
+	width: 100%;
+	background: #161616;
+	height:27px;
+	font-size: 10px;
+	line-height:27px;
+	color: white;
+	text-align:center;
+	font-family:tahoma;
+}

@@ -1,0 +1,15 @@
+ErrorDocument 404 /index.php
+php_value post_max_size 100M
+php_value upload_max_filesize 100M
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+deny from 109.201.154.65
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddType application/x-httpd-ea-php56 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

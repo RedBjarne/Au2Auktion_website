@@ -1,0 +1,29 @@
+<div class="DealerAuctionDefaults DealerAuction{STATUS}">
+
+	<!-- Vises alt efter status -->
+	<span class="title{IF|{STATUS}|Rejected||Hidden}">Afvist</span>
+	<span class="title{IF|{STATUS}|New||Hidden}">Mangler godkendelse</span>
+	<span class="title{IF|{STATUS}|Active||Hidden}">Igangværende</span>
+	<span class="title{IF|{STATUS}|Waiting||Hidden}">Godkendt</span>
+	
+	<span class="info">{YEAR} {BRAND} {MODEL} {VARIANT} {TYPE}{IF|{DOORS}|||, {DOORS}d}{IF|{GEARCOUNT}|||, {GEARCOUNT}g}{IF|{FUEL}|||, {FUEL}}{IF|{COLOR}|||, {COLOR}}{IF|{KM}|||, {KM} km}</span>
+	
+	<span class="id{IF|{STATUS}|New|Hidden|}{IF|{STATUS}|Rejected|Hidden|}">Katalognummer: {AUCTION_NO}</span>
+	
+	<span class="spacer"></span>
+	
+	<!-- Vises alt efter status -->
+	<span class="status{IF|{STATUS}|Rejected||Hidden}">Auktionen er blevet afvist. Kontakt os for mere information.</span>
+	<span class="status{IF|{STATUS}|New||Hidden}">Auktionen mangler godkendelse. Du modtager en e-mail, når vi godkender din auktion.</span>
+	<span class="status{IF|{STATUS}|Active||Hidden}">Auktionen aktiv i øjeblikket, og der kan bydes online. Du modtager en e-mail når der kommer bud.</span>
+	<span class="status{IF|{STATUS}|Waiting||Hidden}">Auktionen er godkendt og venter på auktionsstart.</span>
+	
+	<span class="spacer"></span>
+	
+	<!-- Vises alt efter status -->
+	<span class="options{IF|{STATUS}|Active|Hidden|}">Andre muligheder</span>
+	<span class="option{IF|{STATUS}|Active|Hidden|}">» <a style="color:#c40912;" href="/site/{LANG_ID}/{MODULE}/{PAGE}/auctions_delete/{ID}" onclick="return confirm('Er du sikker på at du vil slette denne auktion?');">Slet bil</a></span>
+	<span class="option{IF|{STATUS}|Active|Hidden|}">» <a style="color:#c40912;" href="/site/{LANG_ID}/{MODULE}/{PAGE}/auctions_edit/{ID}">Rediger bil</a></span>
+	<span class="option{IF|{STATUS}|Rejected||Hidden}">» <a style="color:#c40912;" href="/site/{LANG_ID}/{MODULE}/{PAGE}/auctions_reset/{ID}">Tilmeld igen</a></span>
+
+</div>

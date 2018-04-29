@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="{LANG_ID}">
+
+<head>
+	<title>Stadel.dk CMS</title>
+	<link rel="stylesheet" href="../css/admin_default.css">
+	<script src="../js/admin.js"></script>
+	<base target="content_frame">
+	{TPL|jquery}
+</head>
+
+<body>
+
+<div style="width: 165px; overflow: hidden;">
+	<div id="divTime" style="text-align: center; top: 11px; font-size: 8pt; color: #a0a0a0; position: absolute; width: 165px;">{DATETIME|%d-%m-%Y %H:%M}</div>
+	<script>
+	setInterval(function() {
+		new ajax('time', [], function(val) {
+			if (val['state'] && val['state'] == 'ok' && val['time']) {
+				document.getElementById('divTime').innerHTML = val['time'];
+			}
+		}, 'POST', true);
+	}, 15000);
+	</script>
+	<div class="MenuTop"></div>
+	<div class="MenuMiddle">
+		{HTML}
+	</div>
+	<div class="MenuBottom"></div>
+	<div align="center" style="padding: 10px;">
+		<a href="javascript:void(0);" onclick="parent.frames['content_frame'].focus();parent.frames['content_frame'].print();" title="{LANG|Print}"><img src="../img/icon_print.gif" alt="{LANG|Print}"></a>
+		&nbsp;
+		<a href="http://stadel.dk/fjernsupport" title="{LANG|Fjernsupport}" target="_blank"><img src="../img/icon_support.gif" alt="{LANG|Fjernsupport}"></a>
+	</div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<script type="text/javascript" src="{SITE_URL}/js/stadel/ajax.js?20130815"></script>
+<script type="text/javascript">
+function ajax{GROUP}(ado, values, asyncFunction, httpMethod, hideAsyncState)
+{
+	if (!values) values = Array();
+	return StadelAjax('{URL}', 'module={MODULE}&page={PAGE}&do={DO}&id={ID}', '{GROUP}', ado, values, asyncFunction, httpMethod, hideAsyncState);
+}
+
+if (typeof(ajax) != 'function')
+{
+	function ajax(ado, values, asyncFunction, httpMethod, hideAsyncState)
+	{
+		return ajax{GROUP}(ado, values, asyncFunction, httpMethod, hideAsyncState);
+	}
+}
+</script>

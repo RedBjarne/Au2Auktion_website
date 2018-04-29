@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="{LANG_ID}">
+
+<head>
+	<title>Print: {SITE_TITLE}</title>
+	<link rel="stylesheet" href="../css/admin_print.css">
+	{TPL|jquery}
+</head>
+
+<body style="margin: 10px;">
+
+{HTML}
+
+<script>
+print();
+setTimeout('close();', 1000);
+</script>
+
+</body>
+
+</html>

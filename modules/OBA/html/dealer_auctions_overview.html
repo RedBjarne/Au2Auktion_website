@@ -1,0 +1,23 @@
+<div class="content_title">Mine biler</div>
+    <div class="content_page"><!--content_page-->
+        <!-- content of all pages between here-->
+            
+        <div id="cars_page"><!--cars_page-->
+        <!-- hvis ingen biler er oprettet -->
+        <div id="cars_page_topbar"><!--cars_page_topbar-->
+             <div class="cars_page_topbar_search"><!--search-->
+            
+                <div>{FORM}</div>
+            
+            </div><!--search slut-->
+            <input type="button" value="Opret bil" onclick="document.location.href = '/site/{LANG_ID}/{MODULE}/{PAGE}/auctions_add';" class="cars_page_topbar_createcar"/>
+            </div><!--cars_page_topbar slut--> 
+            <div align="center" style="margin-top:30px;float:left;margin-left:40%;">{PAGING}</div>
+            <div id="cars_page_content"><!--cars_page_content-->
+                {ELEMENTS}
+            </div><!--cars_page_content slut-->
+		</div><!--cars_page slut-->
+                    
+	<!-- and here-->
+	</div><!--content_page slut-->
+</div><!--content slut-->	

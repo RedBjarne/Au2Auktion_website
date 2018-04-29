@@ -1,0 +1,9 @@
+<b>{TITLE}</b><br>
+<img src="/layouts/{ID}/layout.gif" alt="" style="border: 1px solid #c0c0c0; margin-bottom: 2px;"><br>
+<a href="javascript:Popup('?page=layouts&do=example&id={ID}',800,600);void(0);" title="{LANG|Vis}"><img src="/img/icon_show.gif" alt="Vis"></a>
+&nbsp;
+<a href="?page=layouts&do=edit&id={ID}" title="Ret"><img src="/img/icon_edit.gif" alt="{LANG|Ret}"></a>
+&nbsp;
+<a href="?page=layouts&do=activate&id={ID}" onclick="return confirm('{LANG|Brug dette layout til siden}?');" title="Brug dette design"><img src="/img/icon_install.gif" alt="{LANG|Brug dette design}"></a>
+&nbsp;
+<a href="?page=layouts&do=remove&id={ID}" onclick="return confirm('{LANG|Vil du slette dette layout}?');" title="{LANG|Slet layout}"><img src="/img/icon_delete.gif" alt="{LANG|Slet layout}"></a>

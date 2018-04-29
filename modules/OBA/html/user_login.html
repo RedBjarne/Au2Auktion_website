@@ -1,0 +1,33 @@
+<div class="content_title">Log ind eller opret konto</div>
+			<div class="content_page"><!--content_page-->
+				<!-- content of all pages between here-->
+					
+                  <div id="login_page"><!--login_page-->
+                	<div id="login_page_content"><!--login_page_content-->
+                    	<div id="login_page_content_left"><!--login_page_content_left-->
+                        	<div class="login_page_content_left_title">Log ind</div>
+                            <div class="login_page_content_left_fields"><!--login_page_content_left_fields-->
+                            	{FORM}
+                            </div><!--login_page_content_left_fields slut-->
+                        </div><!--login_page_content_left slut-->
+                        <div id="login_page_content_right"><!--login_page_content_right-->
+                        	<div class="login_page_content_right_title">Opret Konto</div>
+                            <div class="login_page_content_right_fields"><!--login_page_content_right_fields-->
+                            	{FORM_SIGNUP}
+                            </div><!--login_page_content_right_fields slut-->
+                        </div><!--login_page_content_right slut-->
+                    </div><!--login_page_content slut-->
+                  </div><!--login_page slut-->
+                  
+				<!-- and here-->
+			</div><!--content_page slut-->
+<script>
+if ($("#type").val() != "dealer") $("#tr_vat").hide();
+$("#type").change(function() {
+	if ($("#type").val() != "dealer") {
+		$("#tr_vat").hide();
+	} else {
+		$("#tr_vat").show();
+	}
+});
+</script>

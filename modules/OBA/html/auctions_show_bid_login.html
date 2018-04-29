@@ -1,0 +1,17 @@
+ <div class="auction_pagedetails_bid_notloggedin"><!--auction_pagedetails_bid_notloggedin-->
+                <div class="auction_pagedetails_bid_notloggedin_highestbid">Højeste bud: <span style="color:#b7b7b7;">{IF|{CUR_PRICE}|0|Ingen bud|DKK {CUR_PRICE}}</span></div>
+                <div class="auction_pagedetails_bid_notloggedin_tip">Du skal være logget ind før du kan byde</div>
+                <div class="auction_pagedetails_bid_notloggedin_login"><!--auction_pagedetails_bid_notloggedin_login-->
+                    <form action="/" method="POST" enctype="" onsubmit="document.getElementById('_form__submit').disabled = true;" target="" id="_form__form">
+                        <input type="hidden" name="module" value="{MODULE}" id="_form__module">
+                        <input type="hidden" name="page" value="user" id="_form__page">
+                        <input type="hidden" name="do" value="login" id="_form__do">
+                        <input type="hidden" name="id" value="" id="_form__id">
+                        <input type="hidden" name="_form_" id="_form_" value="submit">
+                        <input type="hidden" name="when_done" value="/site/{LANG_ID}/{MODULE}/{PAGE}/{DO}/{ID}#bid">
+                        <input type="text" name="username" value="" id="username" class="auction_pagedetails_bid_notloggedin_login_field" placeholder="Indtast brugernavn"/>
+                        <input type="password" name="password" id="password" class="auction_pagedetails_bid_notloggedin_login_field" placeholder="Indtast password"/>
+                        <input type="submit" name="submit" value="Log ind" id="_form__submit" class="auction_pagedetails_bid_notloggedin_login_button" />
+                    </form>
+                </div><!--auction_pagedetails_bid_notloggedin_login slut-->
+            </div><!--auction_pagedetails_bid_notloggedin slut-->

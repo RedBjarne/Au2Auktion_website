@@ -1,0 +1,1363 @@
+@charset "iso-8859-1";
+/* CSS Document */
+
+* {margin:0 auto;}
+body {
+	background: #ffffff;
+	font-family: Verdana;
+}
+#account_menu1{height:48px;float:right;margin-top:-21px;overflow: hidden;}
+#account_menu1 ul li {list-style-type:none;float:left;}
+#account_menu1 ul {height:48px;float:left;margin-left:-40px;}
+
+.menu1 {
+	clear: both;
+	background: url(../images/menu_back.png) center top;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	height: 48px;
+	overflow: hidden;
+}
+.menuli1 {
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	font-size: 13pt;
+	background-image: url(../images/menu_spacer.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	height: 48px;
+}
+.menuli1:hover {
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	font-size: 13pt;
+	background-color: #127794;
+	/*background-image: url(../images/blue_back.png);
+	background-position: center;
+	background-repeat: repeat-x;*/
+	height: 48px;
+}
+.menua1 {
+	display: inline-block;
+	padding: 13px 15px 15px 15px;
+	color: #ffffff;
+}
+.menu2 {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	display: none;
+	position: absolute;
+	z-index: 10000;
+	background-color: #127794;
+	top: 241px;
+	left: 350px;
+	width: 900px;
+	padding-bottom: 15px;
+	border-bottom-left-radius: 15px;
+	-moz-border-bottom-left-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	-moz-border-bottom-right-radius: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+}
+.menu2 li {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	font-size: 8pt;
+	font-weight: bold;
+	width: 200px;
+	background: none;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+.menu2 li a {
+	color: #ffffff;
+}
+.menu3 {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.menu3 .menu3 {
+	display: none;
+}
+.menu3 li {
+	float: none;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	font-size: 8pt;
+	font-weight: normal;
+	width: 200px;
+	padding-top: 8px;
+}
+.menu3 li a {
+	color: #ffffff;
+}
+
+.account_element {
+	height: 48px;
+	float: left;
+	background: url(../images/blue_back.png);
+	background-position: center top;
+	background-repeat: repeat-x;
+}
+.account_element a {
+	color: #ffffff;
+	display: block;
+	padding: 15px;
+	text-shadow: 1px 1px #666666;
+}
+
+#help_menu1{
+	float:right;
+	background-image: url(../images/topmenu_blue.png);
+	background-repeat: repeat;
+}
+#help_menu1 ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#help_menu1 li {
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+#help_menu1 li:hover {
+	background-image: url(../images/topmenu_black.png);
+	background-color: #333333;
+}
+#help_menu1 a {
+	background-image: url(../img/arrow.png);
+	background-position: 3% 50%;
+	background-repeat: no-repeat;
+	padding: 7px 5px 7px 25px;
+	display: block;
+	color: #ffffff;
+	font-size: 9pt;
+	text-shadow: 1px 1px #666666;
+}
+
+.content-padding {
+	padding: 0px 10px;
+}
+
+.blue {
+	background-color: #176476;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #ffffff;
+	padding: 5px 10px;
+}
+.blue_back {
+	background-image: url(../images/blue_back.png);
+	background-repeat: repeat;	
+	height: 29px;
+	overflow: hidden;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #ffffff;
+}
+.blue_back a {
+	display: inline-block;
+	color: #ffffff;
+	font-size: 9pt;
+	padding: 7px 5px 0px 5px;
+	text-shadow: 1px 1px #666666;
+}
+
+.ul_right {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.ul_right li {
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	padding-right: 10px;
+	display: block;
+	text-align: right;
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+.ul_left {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.ul_left li {
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	text-align: left;
+	font-size: 9pt;
+}
+.dropshadow {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+}	
+.footer_top {
+	display: block;
+	background-image: url(../img/footer_back_top.png);
+	width: 100%;
+	height: 70px;
+	cursor: pointer;
+	margin-top: 15px;
+}
+.footer_content {
+	background-image: url(../img/footer_back_content.png);
+	height: 369px;
+	overflow: hidden;
+	display: none;
+}
+.footer_bottom {
+	background-color: #161616;
+	color: #ffffff;
+	font-size: 7pt;
+	text-align: center;
+	padding: 7px;
+}
+.footer_wrapper {
+	width: 1000px;
+	margin: auto;
+}
+.footer_address {
+	width:239px;
+	height:369px;
+	float:left;
+	margin-right:10px;
+	
+}
+.footer_address_name {
+	width:239px;
+	height:20px;
+	float:left;
+	font-size:20px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	margin-top:40px;
+}
+.footer_address_info{
+	width:229px;
+	height:239px;
+	float:left;
+	margin-top:10px;
+	text-align:left;
+	font-size:17px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	margin-left:10px;
+}
+.footer_address_map {
+	width:230px;
+	height:250px;
+	float:left;
+	font-size:20px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	margin-top:40px;
+	margin-left:-30px;
+	background:url(../images/map.png) no-repeat;
+	
+}
+
+
+.footer_quicklinks {
+	width:209px;
+	height:369px;
+	float:left;
+	margin-left:50px;
+}
+.footer_quicklinks_name {
+	width:209px;
+	height:20px;
+	float:left;
+	font-size:20px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	margin-top:40px;
+}
+.footer_quicklinks ul li {
+	list-style-type:none;
+	display:block;
+	margin-left:-40px;
+}
+.footer_quicklinks .quicklink {
+	width:181px;
+	height:22px;
+	float:left;
+	margin-top:5px;
+	margin-bottom:5px;
+	background:url(../images/quicklinksbg.png) no-repeat;
+	padding-left:15px;
+	font-size:12px;
+	font-family:tahoma;
+	color:white;
+	text-shadow: 1px 2px black;
+	color:white;
+}
+.footer_quicklinks .quicklink:hover {
+	color:#136073;
+}
+.footer_arrow_close {
+	background-image: url(../img/footer_close.png);
+	width: 39px;
+	height: 46px;
+	margin: 12px;
+}
+.footer_arrow_open {
+	background-image: url(../img/footer_open.png);
+	width: 39px;
+	height: 46px;
+	margin: 12px;
+}
+
+.submitButton {
+    padding: 6px 3px;
+    margin: 0px;
+    
+    height: 34px;
+    cursor: pointer;
+    width: 125px;
+    -webkit-box-shadow:none;
+    -moz-box-shadow: none;
+	
+    background: #20a1c5;
+    background: -webkit-gradient(linear, left top, left 30, from(#20a1c5), to(#136579));
+    background: -moz-linear-gradient(top, #20a1c5, #136579 30px);
+	
+    border: 1px solid #136579;
+    font-weight:bold;
+    color:#fff;
+	text-shadow:none;
+	border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+.Invisible {
+    opacity: 0;
+}
+.facebook_like {
+	float: right;
+	clear: right;
+	width: 120px;
+	height: 60px;
+	margin-top: 27px;
+}
+.ShortInput input {
+	width: 250px;
+}
+h1 {
+	color: #136088;
+	margin: 20px 0px 10px 0px;
+}
+.AuctionImage {
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	display: block;
+}
+
+/*
+	Rettelser 29-01-2014
+*/
+
+.car_information_container{width:990px;height:245px;float:left;margin-left:5px;}
+.car_information_container_left{width:624px;height:245px;float:left;margin-left:5px;background:url(../images/cars_left.png) no-repeat;}
+.car_information_container_right{width:347px;height:245px;float:left;margin-left:9px;background:url(../images/cars_right.png) no-repeat;}
+.car_information_container_right_date{width:200px;height:12px;color:#ffffff;font-size:12px;float:left;margin-top:183px;margin-left:275px;font-family:arial;text-shadow: 2px 2px 4px #000000;}
+.car_information_container_right_auknr{width:200px;height:12px;color:#ffffff;font-size:12px;float:left;margin-top:5px;margin-left:275px;font-family:arial;text-shadow: 2px 2px 4px #000000;}
+
+#auctions_container{width:1000px;height:860px;float:left; margin-left: -10px; margin-top: -10px;}
+.auctions_title{width:972px;height:30px;float:left;font-size:30px;font-family:arial;font-weight:bold;color:#136088;margin-top:16px;margin-left:14px;}
+.auctions_active{width:972px;height:22px;float:left;font-size:22px;font-family:arial;font-weight:bold;color:#136088;margin-top:26px;margin-left:14px;}
+.auctions_images{width:216px;height:199px;float:left;margin-left:14px;margin-top:24px;}
+.auctions_images_large{width:210px;height:148px;float:left;background-size:cover;background-position:50% 50%;}
+.auctions_images_small{width:67px;height:47px;float:left;margin-right:5px;margin-top:4px;background-size:cover;background-position:50% 50%;}
+.auctions_information{width:423px;height:199px;float:left;margin-left:8px;margin-top:24px;}
+.auctions_information_title{width:423px;height:18px;float:left;font-size:18px;font-family:arial;}
+.auctions_information_value{width:423px;height:15px;float:left;font-size:15px;font-family:arial;margin-top:5px;}
+.auctions_information_value b {width: 120px; display: inline-block; text-align: right; margin-right: 10px;}
+.auctions_bid{width:312px;height:263px;float:left;margin-left:14px;margin-top:24px;}
+.auctions_bid_winning{width:312px;height:16px;float:left;font-size:16px;font-family:arial;color:#0F0;text-align:center;}
+.auctions_bid_current{width:312px;height:15px;float:left;font-size:15px;font-family:arial;color:#000000;margin-top:5px;}
+.auctions_bid_your{width:312px;height:15px;float:left;font-size:15px;font-family:arial;color:#000000;margin-top:5px;}
+.auctions_bid_bidonthis{width:312px;height:15px;float:left;font-size:15px;font-family:arial;color:#000000;margin-top:19px;}
+.auctions_bidding{width:312px;height:163px;float:left;font-size:15px;font-family:arial;margin-top:5px;}
+.auctions_pris{width:298px;height:44px;float:left;font-size:23px;font-family:arial;background:#FFF;border:1px solid #999999;text-align:center;color:#999999;focus:none;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;}
+.auctions_pris:focus{outline: 0;}
+.auctions_btn-500{width:153px;height:36px;float:left;background:url(../images/btn-500.png);border:none;margin-top:6px;background-position:0% 0%;}
+.auctions_btn-500:hover{background:url(../images/btn-500.png);background-position:0% 100%;}
+.auctions_btn-1000{width:154px;height:36px;float:left;background:url(../images/btn-1000.png) no-repeat;border:none;margin-left:5px;margin-top:6px;background-position:0% 0%;}
+.auctions_btn-1000:hover{background:url(../images/btn-1000.png) no-repeat;background-position:0% 100%;}
+.auctions_btn-5000{width:153px;height:36px;float:left;background:url(../images/btn-5000.png) no-repeat;border:none;margin-top:6px;background-position:0% 0%;}
+.auctions_btn-5000:hover{background:url(../images/btn-5000.png) no-repeat;background-position:0% 100%;}
+.auctions_btn-10000{width:154px;height:36px;float:left;background:url(../images/btn-10000.png) no-repeat;border:none;margin-left:5px;margin-top:6px;background-position:0% 0%;}
+.auctions_btn-10000:hover{background:url(../images/btn-10000.png) no-repeat;background-position:0% 100%;}
+.auctions_btn-bid{width:312px;height:36px;float:left;background:url(../images/btn-bid.png) no-repeat;border:none;margin-top:6px;background-position:0% 0%;}
+.auctions_btn-bid:hover{background:url(../images/btn-bid.png) no-repeat;background-position:0% 100%;}
+.auctions_livestream{width:592px;height:349px;float:left;background:url(../images/livestream.png) no-repeat;margin-left:14px;margin-top:115px;}
+.auctions_upcoming{width:350px;height:160px;float:left;margin-left:23px;margin-top:115px;}
+.auctions_upcoming_title{width:350px;height:25px;font-size:20px;font-family:arial;font-weight:bold;color:#186291;background:url(../images/auctions_hr.png) left bottom no-repeat;float:left;}
+.auctions_upcoming_car{width:315px;height:12px;font-size:12px;font-family:arial;color:#000000;margin-top:5px;float:left;}
+.auctions_latest{width:350px;height:160px;float:left;margin-left:23px;margin-top:16px;}
+.auctions_latest_title{width:350px;height:25px;font-size:20px;font-family:arial;font-weight:bold;color:#186291;background:url(../images/auctions_hr.png) left bottom no-repeat;float:left;}
+.auctions_latest_car{width:315px;height:12px;font-size:12px;font-family:arial;color:#979596;margin-top:5px;float:left;}
+.auctions_status_s{width:23px;height:12px;background:#0F0;margin-top:5px;float:right;}
+.auctions_status_ns{width:23px;height:12px;background:#fe0000;margin-top:5px;float:right;}
+.auctions_status_ua{width:23px;height:12px;background:#ff9600;margin-top:5px;float:right;}
+
+.button_download_pdf{display:block;clear: both;width:238px;height:53px;float:left;background:url(../img/download_pdf.png);border:none;margin-top:6px;margin-bottom: 26px;background-position:0% 0%;}
+.button_download_pdf:hover{background-position:0% 100%;}
+
+
+/*
+	Rettelser 08-05-2014
+*/
+th {
+	background-color: #f0eeef;
+	color: #898788;
+	text-align: left;
+	font-size: 11pt;
+	font-weight: normal;
+	padding: 3px 15px;
+}
+.inputRegno {
+	background-image: url(../img/regno.png);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: 0% 50%;
+	font-size: 24pt;
+	padding-left: 40px;
+	text-transform: uppercase;
+	width: 180px;
+	height: auto;
+	border: 1px solid red;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+.equipmentWrapper {
+	width: 800px;
+	white-space: nowrap;
+}
+.equipmentColumn {
+	display: block;
+	width: 250px;
+	float: left;
+	text-align: right;
+}
+.equipmentCell {
+	overflow: hidden;
+	text-align: right;
+}
+.equipmentCell label {
+	width: 250px;
+	padding: 3px 0px;
+}
+.equipmentCell input {
+	width: 15px;
+	height: 15px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.SmallSelect {
+	text-align: right;
+	width: 400px;
+	padding: 3px 0px;
+}
+.SmallSelect select {
+	text-align: right;
+	width: 175px;
+}
+
+.exteriorRow {
+	width: 800px;
+	border-bottom: 1px solid #c0c0c0;
+}
+.exteriorTitle {
+	width: 200px;
+	float: left;
+	text-align: center;
+	padding: 3px 0px;
+}
+.exteriorColumn {
+	width: 300px;
+	float: left;
+	text-align: right;
+}
+.exteriorCell {
+	overflow: hidden;
+	text-align: right;
+	padding: 12px 0px 0px 0px;
+}
+.exteriorCell select {
+	width: 150px;
+}
+.clear {
+	clear: both;
+}
+.tab, .tabactive {
+	width: 325px;
+	height: 42px;
+	background:url(../img/tabback.png) left bottom no-repeat;
+	float:left;
+	color: #666666;
+	font-weight: bold;
+	display: block;
+	font-size: 12pt;
+}
+.tab span, .tabactive span {
+	display: block;
+	padding: 10px 0px 0px 10px;
+}
+.tab:hover, .tabactive {
+	background-position: left top;
+}
+.TableHeader th {
+	background-image: url(../images/blue_back.png);
+	background-size: auto 100%;
+	color: #fff;
+	padding: 10px;
+	border-left: 1px solid #22a1c2;
+	border-right: 1px solid #157993;
+}
+.TableRow td {
+	border-left: 1px solid #c0c0c0;
+	border-top: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+	font-size: 10pt;
+	cursor: pointer;
+}
+.TableRow td:last-child {
+	border-right: 1px solid #c0c0c0;
+}
+.TableRowSpacer td {
+	height: 10px;
+	font-size: 0pt;
+}
+.TableRow .Title {
+	display: block;
+	color: #207f9b;
+	font-weight: bold;
+}
+.TableRow .Description {
+	display: block;
+}
+.TableRow .Location {
+	display: block;
+	font-style: italic;
+}
+
+.AuctionTable {
+	width: 100%;
+}
+.AuctionTable h1 {
+	font-weight: normal;
+	font-size: 18pt;
+	margin: 0px;
+	color: #167895;
+}
+.AuctionTable h2 {
+	font-weight: normal;
+	font-size: 14pt;
+	color: #000;
+	margin: 0px;
+}
+.AuctionTable h3 {
+	font-weight: normal;
+	font-size: 12pt;
+	color: #aaa;
+}
+.AuctionTable td {
+	font-size: 12pt;
+	vertical-align: top;
+}
+.AuctionTable a {
+	font-size: 10pt;
+	color: #167895;
+}
+
+
+.BidTable {
+	width: 100%;
+}
+.BidTable h1 {
+	font-weight: normal;
+	font-size: 18pt;
+	margin: 0px;
+	color: #167895;
+}
+.BidTable h2 {
+	font-weight: normal;
+	font-size: 14pt;
+	color: #000;
+	margin: 0px;
+}
+.BidTable h3 {
+	font-weight: normal;
+	font-size: 12pt;
+	color: #aaa;
+}
+.BidTable td {
+	font-size: 12pt;
+	vertical-align: top;
+	background-color: #f0eeef;
+}
+.BidTable a {
+	font-size: 10pt;
+	color: #167895;
+}
+.BidTable th {
+	background-color: #535152;
+	color: #fff;
+}
+
+/*
+	Søgebar
+*/
+.SearchBar {
+	background-color: #f9f9f9;
+	border: 1px solid #e0e0e0;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	height: 60px;
+	padding: 5px 10px;
+	margin: 10px 0px;
+}
+.SearchBarColumn {
+	float: left;
+	width: 225px;
+	overflow: hidden;
+}
+.SearchBarSelect select {
+	width: 200px !important;
+}
+.SearchBarButton {
+	float: left;
+	width: 225px;
+	overflow: hidden;
+	padding-top: 22px;
+}
+.SearchBarButton input {
+	width: 200px !important;
+	height: 34px;
+	padding: 0px;
+}
+.SearchBarTitle {
+	height: 22px;
+}
+
+/*
+	Infoboks højre side
+*/
+.RightInfoContainer {
+	float: right;
+	width: 175px;
+}
+.RightInfoBox {
+	background-color: #fcfcfc;
+	border: 1px solid #e0e0e0;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	font-size: 9pt;
+}
+
+/*
+	Infoboks venstre side
+*/
+.LeftInfoContainer {
+	float: left;
+	width: 175px;
+	margin-top: 10px;
+}
+.LeftInfoBox {
+	background-color: #fcfcfc;
+	border: 1px solid #e0e0e0;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	font-size: 9pt;
+}
+.LeftInfoBoxTitle {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+/*
+	Tabel med grupper (Åben auktion osv)
+*/
+.TableGroups
+{
+	width: 790px;
+	float: left;
+}
+
+/*
+	Søg efter katalognummer
+*/
+.SearchIdContainer
+{
+	margin: auto;
+	background: #fff;
+	padding: 10px;
+	text-align: center;
+	clear: both;
+}
+.SearchIdContainer input
+{
+	font-size: 9pt;
+	width: 150px !important;
+	padding: 0px;
+	height: 25px;
+	text-align: center;
+}
+
+/*
+	Auktionsoversigt Online auktioner
+*/
+.AuctionsOverviewRight
+{
+	float: right;
+	width: 790px;
+	margin-top: 10px;
+}
+
+/*
+	Auktionsoversigt venstre mærker
+*/
+.LeftBrands
+{
+	
+}
+.LeftBrandsTitle
+{
+	font-weight: bold;
+}
+.LeftBrandsElement, .LeftBrandsElementActive
+{
+	display: block;
+}
+.LeftBrandsElementActive
+{
+	font-weight: bold;
+}
+
+/*
+	Auktionsoversigt venstre "kategori"
+*/
+.LeftCategory select
+{
+	width: 150px;
+}
+.LeftCategoryTitle
+{
+	font-weight: bold;
+}
+
+/*
+	Auktionsoversigt venstre grupper
+*/
+.LeftGroups
+{
+	
+}
+.LeftGroups h1
+{
+	
+}
+.LeftGroupsElement
+{
+	display: block;
+}
+
+/*
+	Kolonne 50% bredde
+*/
+.Column50pct
+{
+	width: 50%;
+	float: left;
+	margin-bottom: 10px;
+}
+.Column50pct h1
+{
+	margin: 0px;
+}
+
+/*
+	Auktionsoversigt - Boks højre
+*/
+.RightBigBox
+{
+	background-color: #fcfcfc;
+	border: 1px solid #e0e0e0;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	font-size: 9pt;
+}
+.RightBigBox select
+{
+	width: 200px;
+}
+
+/*
+	Auktion - Katalognummer
+*/
+.AuctionCatalogNo
+{
+	float: right;
+	border: 3px solid red;
+	margin: 10px;
+	padding: 10px;
+}
+
+/*
+	Auktion - Kategori
+*/
+.AuctionCategory
+{
+	padding: 10px;
+}
+
+/*
+	Auktion - 3 kolonner (Tilbage / Favoritter / Udskriv)
+*/
+.AuctionColumn3
+{
+	float: left;
+	width: 33%;
+}
+
+/*
+	Auktion - Tilføj favorit
+*/
+.AuctionAddFavorite
+{
+}
+
+/*
+	Auktion - Fjern favorit
+*/
+.AuctionRemoveFavorite
+{
+}
+
+/*
+	Tekst - Center
+*/
+.TextCenter
+{
+	text-align: center;
+}
+
+/*
+	Tekst - Højre
+*/
+.TextRight
+{
+	text-align: right;
+}
+
+/*
+	Skjul element
+*/
+.Hidden
+{
+	display: none !important;
+}
+
+/*
+	Auktions oversigt - Har højeste bud, mindstepris ikke opnået
+*/
+.OverviewBidMinPrice
+{
+	background-color: orange;
+}
+
+/*
+	Auktions oversigt - Har højeste bud, mindstepris opnået
+*/
+.OverviewBidHighest
+{
+	background-color: green;
+	color: #fff;
+}
+
+/*
+	Auktions oversigt - Overbudt
+*/
+.OverviewBidOverbid
+{
+	background-color: red;
+}
+
+/*
+	Auktions oversigt - Afgiv bud
+*/
+.AuctionOverviewDoBid input[type=number]
+{
+	width: 125px;
+	padding: 3px;
+	height: 25px;
+}
+.AuctionOverviewDoBid input[type=submit]
+{
+	width: 125px;
+	height: 35px;
+	padding: 3px;
+	margin: 0px;
+}
+
+/*
+	Auktions oversigt - <tr> med auktion
+*/
+.TableRow2 td {
+	border-left: 1px solid #c0c0c0;
+	border-top: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+	font-size: 10pt;
+}
+.TableRow2 td:last-child {
+	border-right: 1px solid #c0c0c0;
+}
+.TableRow2Spacer td {
+	height: 10px;
+	font-size: 0pt;
+}
+.TableRow2 .Title {
+	display: block;
+	color: #207f9b;
+	font-weight: bold;
+}
+.TableRow2 .Description {
+	display: block;
+}
+.TableRow2 .Location {
+	display: block;
+	font-style: italic;
+}
+
+/*
+	Auktion - Box øverst
+*/
+.AuctionBox
+{
+	border: 1px solid #e0e0e0;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	padding: 5px 10px;
+	margin: 10px 0px;
+}
+
+/*
+	Auktion - Byd - Har højeste bud, mindstepris ikke opnået
+*/
+.AuctionBidMinPrice
+{
+	border: 1px solid orange;
+	border-collapse: collapse;
+}
+.AuctionBidMinPrice th
+{
+	background: orange;
+	color: #fff;
+	text-align: center;
+}
+
+/*
+	Auktion - Byd - Har højeste bud, mindstepris opnået
+*/
+.AuctionBidHighest
+{
+	border: 1px solid green;
+	border-collapse: collapse;
+}
+.AuctionBidHighest th
+{
+	background: green;
+	color: #fff;
+	text-align: center;
+}
+
+/*
+	Auktion - Byd - Er overbudt
+*/
+.AuctionBidOverbid
+{
+	border: 1px solid #f00;
+	border-collapse: collapse;
+}
+.AuctionBidOverbid th
+{
+	background: #f00;
+	color: #fff;
+	text-align: center;
+}
+
+/*
+	Auktion - Byd - Standard
+*/
+.AuctionBidDefault
+{
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+}
+.AuctionBidDefault th
+{
+	height: 0px !important;
+	overflow: hidden;
+	padding: 0px;
+	font-size: 0px;
+}
+
+/*
+	Auktion - Oversigt over seneste bud
+*/
+.AuctionShowBids
+{
+	border: 1px solid #e0e0e0;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	padding: 5px 10px;
+	margin: 10px 0px;
+}
+.AuctionShowBids td
+{
+	padding: 5px 10px;
+}
+
+/*
+	Favoritter - Status - Har højeste bud, mindstepris ikke opnået
+*/
+.FavoritesBidMinPrice .title
+{
+	color: orange;
+	display: block;
+}
+
+/*
+	Favoritter - Status - Har højeste bud
+*/
+.FavoritesBidHighest .title
+{
+	color: green;
+	display: block;
+}
+
+/*
+	Favoritter - Status - Overbudt
+*/
+.FavoritesBidOverbid .title
+{
+	color: red;
+	display: block;
+}
+
+/*
+	Dine biler - Generelt 
+*/
+.DealerAuctionDefaults
+{
+	margin-bottom: 10px;
+}
+.DealerAuctionDefaults .title
+{
+	display: block;
+	color: white;
+	padding: 5px 10px;
+}
+.DealerAuctionDefaults .info
+{
+	float: left;
+	margin: 10px;
+}
+.DealerAuctionDefaults .id
+{
+	float: left;
+	display: inline-block;
+	border: 2px solid red;
+	padding: 5px;
+	margin: 3px 0px;
+}
+.DealerAuctionDefaults .spacer
+{
+	clear: both;
+	border-top: 1px solid #ccc;
+	display: block;
+}
+.DealerAuctionDefaults .status
+{
+	display: block;
+	padding: 5px 10px;
+}
+.DealerAuctionDefaults .options
+{
+	display: block;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+.DealerAuctionDefaults .option
+{
+	display: inline-block;
+	padding: 0px 10px 5px 10px;
+}
+
+/*
+	Dine biler - Venter på godkendelse
+*/
+.DealerAuctionNew
+{
+	border: 1px solid orange;
+}
+.DealerAuctionNew .title
+{
+	background: orange;
+}
+
+/*
+	Dine biler - Afvist
+*/
+.DealerAuctionRejected
+{
+	border: 1px solid red;
+}
+.DealerAuctionRejected .title
+{
+	background: red;
+}
+
+/*
+	Dine biler - Godkendt - Venter på auktionsstart
+*/
+.DealerAuctionWaiting
+{
+	border: 1px solid green;
+}
+.DealerAuctionWaiting .title
+{
+	background: green;
+}
+
+/*
+	Dine biler - Igangværende
+*/
+.DealerAuctionActive
+{
+	border: 1px solid green;
+}
+.DealerAuctionActive .title
+{
+	background: green;
+}
+
+/*
+	Dine handler - Generelt 
+*/
+.DealerDealDefaults
+{
+	margin-bottom: 10px;
+}
+.DealerDealDefaults input[type=button]
+{
+	width: 200px;
+	height: 30px;
+	padding: 3px;
+	font-size: 10pt;
+}
+.DealerDealDefaults .title
+{
+	display: block;
+	color: white;
+	padding: 5px 10px;
+}
+.DealerDealDefaults .info
+{
+	float: left;
+	margin: 10px;
+}
+.DealerDealDefaults .id
+{
+	float: right;
+	display: inline-block;
+	border: 2px solid red;
+	padding: 5px;
+	margin: 3px 3px;
+}
+.DealerDealDefaults .spacer
+{
+	clear: both;
+	border-top: 1px solid #ccc;
+	display: block;
+}
+.DealerDealDefaults .status
+{
+	display: block;
+	padding: 5px 10px;
+}
+.DealerDealDefaults .options
+{
+	display: block;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+.DealerDealDefaults .option
+{
+	display: inline-block;
+	padding: 0px 10px 5px 10px;
+}
+.DealerDealDefaults .text
+{
+	display: block;
+	padding: 5px 10px;
+}
+
+/*
+	Dine handler - Solgt
+*/
+.DealerDealSold
+{
+	border: 1px solid green;
+}
+.DealerDealSold .title
+{
+	background: green;
+}
+
+/*
+	Dine handler - Ikke Solgt
+*/
+.DealerDealNotSold
+{
+	border: 1px solid red;
+}
+.DealerDealNotSold .title
+{
+	background: red;
+}
+
+/*
+	Dine handler - Købt
+*/
+.DealerDealBought
+{
+	border: 1px solid orange;
+}
+.DealerDealBought .title
+{
+	background: orange;
+}
+
+/*
+	Dine handler - Søgeboks
+*/
+.DealerDealSearchbox h2
+{
+	font-size: 10pt;
+	margin-top: 5px;
+}
+.DealerDealSearchbox select
+{
+	width: 150px;
+}
+.DealerDealSearchbox input[type=text]
+{
+	width: 135px;
+}
+.DealerDealSearchbox input[type=submit]
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 150px;
+	height: 40px;
+}
+.DealerDealSearchbox .InputDate
+{
+	width: 55px !important;
+	font-size: 8pt;
+}
+
+/*
+	Dine handler - Bud - Har højeste bud, mindstepris ikke opnået
+*/
+.DealerDealMinPrice
+{
+	border: 1px solid orange;
+}
+.DealerDealMinPrice .title
+{
+	background: orange;
+	color: white;
+	display: block;
+}
+
+/*
+	Dine handler - Bud - Har højeste bud
+*/
+.DealerDealHighest 
+{
+	border: 1px solid green;
+}
+.DealerDealHighest .title
+{
+	background: green;
+	color: white;
+	display: block;
+}
+
+/*
+	Dine handler - Bud - Overbudt
+*/
+.DealerDealOverbid
+{
+	border: 1px solid red;
+}
+.DealerDealOverbid .title
+{
+	background: red;
+	color: #fff;
+	display: block;
+}
+.opretbil_banner{width:981px;height:246px;float:left;margin-top:15px;background:url(/upl/opretbil_banner.png) no-repeat;}
+  .udtjek-btn{width:262px;height:54px;float:left;background:url(/upl/udtjek-btn.png) no-repeat;margin-top:175px;margin-left:356px;}
+  .udtjek-btn:hover{background:url(/upl/udtjek-btn_hover.png) no-repeat;}
+  .tilbil-btn{width:262px;height:54px;float:left;background:url(/upl/tilbil-btn.png) no-repeat;margin-top:175px;margin-left:70px;}
+  .tilbil-btn:hover{background:url(/upl/tilbil-btn_hover.png) no-repeat;}

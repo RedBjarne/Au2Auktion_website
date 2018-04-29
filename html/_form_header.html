@@ -1,0 +1,25 @@
+<script>
+function _form_{FORM_ID}_image_check(elm)
+{
+	// Kilde-fil
+	src = elm.value;
+	// Tjekker fil-endelse vha. regexp
+	re = new RegExp('\.(jpg|JPG|jpeg|JPEG|gif|GIF|png|PNG)$');
+	if (!src.match(re)) 
+	{
+		// Viser fejl-besked
+		alert('{LANG|Du kan kun anvende JPG, GIF eller PNG} !');
+		elm.value = '';
+	}
+}
+</script>
+
+<form action="{ACTION}" method="{METHOD}" enctype="{ENCTYPE}" onsubmit="document.getElementById('_form_{FORM_ID}_submit').disabled = true;" target="{TARGET}" id="_form_{FORM_ID}_form">
+<input type="hidden" name="module" value="{MODULE}" id="_form_{FORM_ID}_module">
+<input type="hidden" name="page" value="{PAGE}" id="_form_{FORM_ID}_page">
+<input type="hidden" name="do" value="{DO}" id="_form_{FORM_ID}_do">
+<input type="hidden" name="id" value="{ID}" id="_form_{FORM_ID}_id">
+<input type="hidden" name="_form_{FORM_ID}" id="_form_{FORM_ID}" value="{FORM_DO}">
+{TAB}
+<table cellspacing="0" cellpadding="0"><tr><td valign="top">
+<table cellspacing="0">

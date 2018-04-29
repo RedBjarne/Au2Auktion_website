@@ -1,0 +1,79 @@
+<h1 style="padding-top: 10px;">{BRAND} {MODEL}</h1>
+<br>
+
+<div>
+	<input type="button" value="Tilbage" onclick="history.back();" style="font-size: 9pt; padding: 0px 5px;" class="submitButton" />
+</div>
+<br>
+
+<div style="margin-bottom: 20px;">
+	<div style="float: left; width: 600px; overflow: hidden; text-align: center;">
+		{IMAGES}
+	</div>
+	
+	<div style="float: right; width: 300px; padding-top: 10px;">
+		<ul class="ul_right">
+			<li>Mærke:</li>
+			<li>Model:</li>
+			<li>Variant:</li>
+			<li>Type:</li>
+			<li>Brændstof:</li>
+			<li>Døre:</li>
+			<li>Årgang:</li>
+			<li>Km-stand:</li>
+			<li>Farve:</li>
+			{IF|{NEWLY_TESTED}|1|<li>Nysynet:</li>|}
+			<li>Sidste syn:</li>
+			{IF|{IS_REGGED}|1|<li>Indregistreret:</li>|}
+			<li>1. indreg.:</li>
+			{IF|{NO_VAT}|1|<li>Uden moms:</li>|}
+			{IF|{NO_TAX}|1|<li>Uden afgift:</li>|}
+			{IF|{YELLOW_PLATE}|1|<li>Gul-plade:</li>|}
+			{IF|{SERVICE}|1|<li>Servicebog:</li>|}
+			<li>Stelnr.:</li>
+			<li>Kategori:</li>
+			<li>Auktionsdato:</li>
+			<li>Auktionsnr.:</li>
+		</ul>
+		<ul class="ul_left">
+			<li>{BRAND}&nbsp;</li>
+			<li>{MODEL}&nbsp;</li>
+			<li>{VARIANT}&nbsp;</li>
+			<li>{TYPE}&nbsp;</li>
+			<li>{FUEL}&nbsp;</li>
+			<li>{DOORS}&nbsp;</li>
+			<li>{YEAR}&nbsp;</li>
+			<li>{KM}&nbsp;</li>
+			<li>{COLOR}&nbsp;</li>
+			{IF|{NEWLY_TESTED}|1|<li>Ja</li>|}
+			<li>{NEWLY_TESTED_DATE}&nbsp;</li>
+			{IF|{IS_REGGED}|1|<li>Ja</li>|}
+			<li>{FIRST_REG_DATE}&nbsp;</li>
+			{IF|{NO_VAT}|1|<li>Ja</li>|}
+			{IF|{NO_TAX}|1|<li>Ja</li>|}
+			{IF|{YELLOW_PLATE}|1|<li>Ja</li>|}
+			{IF|{SERVICE}|1|<li>Ja</li>|}
+			<li>{CHASNO}</li>
+			<li><a title="{CATEGORY_TYPE}: {CATEGORY_TITLE}">{CATEGORY_TYPE}</a>&nbsp;</li>
+			<li>{AUCTION_DATE}&nbsp;</li>
+			<li>{AUCTION_NO}&nbsp;</li>
+		</ul>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div style="font-size: 9pt; padding: 10px;">{DESCRIPTION}</div>
+</div>
+<br>
+
+<a href="http://odensebilauktion.dk/SAeLG/VIGTIG_INFORMATION/Hvorfor_saelge_paa_auktion"><img src="/modules/{MODULE}/img/cars_left.png" align="left"></a>
+<a href="/site/{LANG_ID}/{MODULE}/live" style="width: 347px; height: 245px; background-image: url(/modules/{MODULE}/img/cars_right.png); float: right; font-size: 8pt; color: #ffffff; text-decoration: none; text-shadow: 1px 1px 5px black;">
+	<div style="padding-top: 184px; padding-left: 274px;">{AUCTION_DATE}</div>
+	<div style="padding-top: 3px; padding-left: 274px;">{AUCTION_NO}</div>
+</a>
+
+<div style="clear: both; margin-bottom: 10px;"></div>
+
+<script>
+$(".AuctionImage").fancybox();
+</script>

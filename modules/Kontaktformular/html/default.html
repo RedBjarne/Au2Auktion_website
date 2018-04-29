@@ -1,0 +1,62 @@
+<div id="customerservice_page"><!--customerservice_page-->
+                	<div id="customerservice_page_content"><!--customerservice_page_content-->
+                    	<div class="customerservice_page_content_contactinfo"><!--customerservice_page_content_contactinfo-->
+                        	<div class="customerservice_page_content_contactinfo_info"><!--customerservice_page_content_contactinfo_info-->
+                            	<div class="customerservice_page_content_contactinfo_info_title">Kontakt os</div>
+                                <div class="customerservice_page_content_contactinfo_info_text">Har du spørgsmål til en auktion, hvordan du bruger systemet eller en general forespørgsel så tøv ikke med at kontakte os.</div>
+                                <div class="customerservice_page_content_contactinfo_info_contactform"><!--customerservice_page_content_contactinfo_info_contactform-->
+                                	<div class="customerservice_page_content_contactinfo_info_contactform_location">Cikorievej 102, 5220 Odense SØ</div>
+                                    <div class="customerservice_page_content_contactinfo_info_contactform_number">71717738</div>
+                                    <div class="customerservice_page_content_contactinfo_info_contactform_mail">info@au2auktion.dk</div>
+                                    <div class="customerservice_page_content_contactinfo_info_contactform_form"><!--customerservice_page_content_contactinfo_info_form-->
+                                        <!-- START: Må ikke ændres -->
+                                        <form action="/" method="post" enctype="multipart/form-data">
+                                        <input type="hidden" name="module" value="{MODULE}">
+                                        <input type="hidden" name="page" value="default">
+                                        <input type="hidden" name="do" value="confirm">
+                                        <input type="hidden" name="id" value="{ID}">
+                                        <!-- SLUT: Må ikke ændres -->
+                                        
+                                        
+                                        <!-- START: Formularens udseende -->
+                                        <!--
+                                            BEMÆRK:
+                                            - Value-taget "TITLE" erstattes automatisk med navnet på den aktuelle formular.
+                                            - Name-tags skal enten starte med "required_", hvis feltet er påkrævet, eller "optional_", hvis feltet
+                                              er valgfrit.
+                                            - Efter "required_" eller "optional_" kommer felttypen. Dette kan være en af følgende typer:
+                                                "number_"   - heltal
+                                                "date_"     - dato i formatet "dd-mm-åååå" eller "dd-mm-åå"
+                                                "time_"     - tid i formatet "tt:mm"
+                                                "email_"    - e-mail
+                                                "phone_"    - telefonnummer i formatet "xx xx xx xx" eller "xxxxxxxx"
+                                                "free_"     - frit format
+                                            - Efter felttypen angives et valgfrit feltnavn, som må bestå af a-z, 0-9, _ og -. Dette navn benyttes
+                                              i de e-mails der afsendes som reference til feltet.
+                                            - Value-tags skal altid starte med "VALUE_", hvorefter feltnavnet skrives. Feltnavnet skal skrives 
+                                              med store bogstaver
+                                            - Error-tags skal altid starte med "ERROR_", hvorefter feltnavnet skrives. Feltnavnet skal skrives
+                                              med store bogstaver
+                                        -->
+                                            <input type="text" class="customerservice_page_content_contactinfo_info_contactform_form_fieldname" placeholder="Indtast dit navn" name="required_free_Navn" value="{VALUE_NAVN}"/>
+                                            <input type="text" name="required_email_Email" value="{VALUE_EMAIL}" class="customerservice_page_content_contactinfo_info_contactform_form_fieldmail" placeholder="Indtast din e-mail"/><br /><br /><br />
+                                            <input type="text" name="optional_phone_Telefon" value="{VALUE_TELEFON}" class="customerservice_page_content_contactinfo_info_contactform_form_fieldphone" placeholder="Indtast dit telefonnummer"/>
+                                            <select  name="optional_free_Afdeling" class="customerservice_page_content_contactinfo_info_contactform_form_fieldsurname">
+                                                <option value="Køb">Køb</option>
+                                                <option value="Salg">Salg</option>
+                                                <option value="Auktioner">Auktioner</option>
+                                            </select>
+                                            <textarea type="text" name="required_free_Din_besked" class="customerservice_page_content_contactinfo_info_contactform_form_fieldmessage" placeholder="Indtast besked">{VALUE_DIN_BESKED}</textarea>
+                                            <input type="submit" value="Send besked" class="customerservice_page_content_contactinfo_info_contactform_form_button" />
+                                        <!-- SLUT: Formularens udseende -->
+
+                                        <!-- START: Må ikke ændres -->
+                                        </form>
+                                        <!-- SLUT: Må ikke ændres -->
+                                    </div><!--customerservice_page_content_contactinfo_info_contactform_form slut-->
+                                </div><!--customerservice_page_content_contactinfo_info_contactform slut-->
+                            </div><!--customerservice_page_content_contactinfo_info slut-->
+                        </div><!--customerservice_page_content_contactinfo slut-->
+                        </div><!--customerservice_page_right slut-->
+                    </div><!--customerservice_page_content slut-->
+                </div><!--customerservice_page slut-->

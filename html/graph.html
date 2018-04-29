@@ -1,0 +1,47 @@
+<div id="divGraph{ID}" style="width: {WIDTH}px; height: {HEIGHT}px;"></div>
+<script type="text/javascript" src="/js/jquery/jqplot/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jqplot/plugins/jqplot.logAxisRenderer.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jqplot/plugins/jqplot.dateAxisRenderer.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jqplot/plugins/jqplot.barRenderer.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/jquery/jqplot/jquery.jqplot.min.css" />
+<script>
+$(document).ready(function() {
+    $.jqplot('divGraph{ID}', [{VALUES}], {
+	     grid: {
+	            background: 'rgba(0,0,0,0.0)',
+	            drawBorder: false,
+	            shadow: false,
+	            gridLineColor: '#444444',
+	            gridLineWidth: 1
+	    },	        
+        axes: {
+            xaxis: {
+	            autoscale: true,
+                renderer: $.jqplot.CategoryAxisRenderer,
+                ticks: [{KEYS}]
+            },
+            yaxis: {
+                autoscale: true,
+                min: 0
+            }
+        },
+        seriesDefaults: {
+            rendererOptions: {
+              smooth: true
+          	},
+          	showMarker: false
+        },
+        series: [
+        	{TITLES}
+        ],
+		legend: {
+            show: true,
+            placement: 'outsideGrid'
+        }
+    });
+});
+</script>

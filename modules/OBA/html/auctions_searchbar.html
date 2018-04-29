@@ -1,0 +1,53 @@
+<!--
+	Søgebar, der kan anvendes på alle under-sider
+-->
+
+<form action="/" method="get">
+<input type="hidden" name="module" value="{MODULE}" />
+<input type="hidden" name="page" value="{PAGE}" />
+<input type="hidden" name="do" value="searchresult" />
+<input type="hidden" name="auction_type" value="online" />
+<div class="auction_cat_topbar" id="SearchBar">
+	<label>Mærke:</label>
+		<select name="brand" id="brand"><option value="">Alle</option>{SELECT_BRANDS}</select>
+	<label>Brændstof:</label>
+		<select name="fuel" id="fuel"><option value="">Alle</option>{SELECT_FUEL}</select>
+	<label>Placering:</label>
+		<select name="region" id="region"><option value="">Alle</option>{SELECT_REGIONS}</select>
+		<input type="submit" value="Vis resultater" id="searchbutton" class="auction_cat_button" />
+</div>
+</form>
+
+<script>
+function SearchbarCount() {
+	var req = {
+		brand: $("#SearchBar #brand").val(),
+		fuel: $("#SearchBar #fuel").val(),
+		region: $("#SearchBar #region").val()
+	};
+	if (req["brand"] != arrPrevSearch["brand"] ||
+		req["fuel"] != arrPrevSearch["fuel"] ||
+		req["region"] != arrPrevSearch["region"])
+	{
+		arrPrevSearch = req;
+		new ajax{AJAX}("searchcount", req, function(val) {
+			if (val["state"] && val["state"] == "ok" && val["count"] && !isNaN(val["count"]))
+			{
+				$("#SearchBar #searchbutton").val("Vis resultater (" + val["count"] + " biler)");
+			}
+		}, "POST", true);
+	}
+}
+
+var arrPrevSearch = {
+	brand: "-",
+	fuel: "-",
+	region: "-"
+};
+
+$(document).ready(function() {
+	$("#SearchBar #brand, #SearchBar #fuel, #SearchBar #region").bind("change", SearchbarCount);
+	$("#SearchBar #brand, #SearchBar #fuel, #SearchBar #region").bind("click", SearchbarCount);
+	SearchbarCount();
+});
+</script>

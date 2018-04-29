@@ -1,0 +1,33 @@
+<a href="/site/{LANG_ID}/{MODULE}/auctions/show/{ID}"><div id="favorite_page_content_favorite"><!--favorite_page_content_favorite-->
+	{BID}
+    <div class="favorite_page_content_favorite_img">{IMAGES}</div>
+    <div class="favorite_page_content_favorite_title">{BRAND} {MODEL} {VARIANT} {TYPE}{IF|{DOORS}|||, {DOORS}d}</div>
+    <div class="favorite_page_content_favorite_1reg">1. Reg: <span style="color:#c40912;">{FIRST_REG_DATE}</span></div>
+    <div class="favorite_page_content_favorite_inspection">Seneste Syn: <span style="color:#c40912;">22-07-2014</span></div>
+    <div class="favorite_page_content_favorite_desc">{DESCRIPTION}</div>
+    <div class="favorite_page_content_favorite_bidagain"></div>
+    <div class="favorite_page_content_favorite_end">Auktionen slutter: <span style="color:#c40912;">{END_TIME}</span></div>
+    <div class="favorite_page_content_favorite_latestbid">Seneste bud: <span style="color:#c40912;">{CUR_PRICE}</span></div>
+    <div class="favorite_page_content_favorite_radius">{ZIPCODE} {CITY} {IF|{GPS_DISTANCE}|||({GPS_DISTANCE} km)}</div>
+</div></a><!--favorite_page_content_favorite slut-->
+<div class="favorite_page_content_favorite_bidagain_loggedinbidmp"><!--favorite_page_content_favorite_bidagain_loggedinbidmp-->                       
+    <div class="favorite_page_content_favorite_loggedinbidmp_tip">{BID_TIP}</div>
+    <div class="favorite_page_content_favorite_loggedinbidmp_bid"><!--favorite_pagedetails_bid_loggedinbidnomp_bid-->
+       <form action="/" method="post" style="float:left;">
+            <input type="hidden" name="module" value="{MODULE}" />
+            <input type="hidden" name="page" value="{PAGE}" />
+            <input type="hidden" name="do" value="bid" />
+            <input type="hidden" name="id" value="{ID}" />
+            <input type="hidden" name="return_url" value="/site/{LANG_ID}/{MODULE}/{PAGE}/{DO}?auction_type={VAR|auction_type}&group_id={VAR|group_id}&brand={VAR|brand}&no_tax={VAR|no_tax}&order={VAR|order}#{ID}" />
+            <label class="favorite_page_content_favorite_loggedinbidmp_bid_labeltop">Indtast nyt bud:</label>
+            <input type="number" name="bid" value="{NEXT_BID}" class="favorite_page_content_favorite_loggedinbidmp_bid_field"/>
+            <input type="submit" name="submit" method="submit" value="Byd" class="favorite_page_content_favorite_loggedinbidmp_bid_button" />
+        </form>
+    </div><!--favorite_pagedetails_bid_loggedinbidnomp_bid slut-->
+    <div class="favorite_page_content_favorite_loggedinbidmp_bid_labelbottom">(Byd DKK 22.100,- eller mere)</div>
+    <div class="favorite_page_content_favorite_loggedinbidmp_bid_fees">Salær for denne auktion er: DKK 1.200 ekskl. moms</div>
+
+</div><!--favorite_page_content_favorite_bidagain_loggedinbidmp slut-->
+<a href="/site/{LANG_ID}/{MODULE}/dealer/favorites_delete/{ID}"><div class="favorite_page_content_favorite_remove">X Fjern</div></a>
+
+<script> strAuctions += "{ID}|{CUR_PRICE_NUMERIC}\n"; </script>

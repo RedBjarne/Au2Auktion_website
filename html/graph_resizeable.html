@@ -1,0 +1,81 @@
+<img id="graph{ID}" src="/class/graph.php?id={ID}&width={WIDTH}&height={HEIGHT}" alt="{LANG|Klik for at ændre størrelse på grafen}" style="cursor: pointer;" onclick="graph{ID}_resize_click(event); return false;" onmouseout="graph{ID}_resize_out(event);" onmouseover="graph{ID}_resize_in(event);" style="width: {WIDTH}px; height: {HEIGHT}px;">
+
+<script language="JavaScript">
+<!--
+function graph{ID}_resize_in(e)
+{
+	if (graph{ID}_timeout != null) clearTimeout(graph{ID}_timeout);
+	graph{ID}_timeout = null;
+}
+
+function graph{ID}_resize_out(e)
+{
+	if (graph{ID}_timeout != null) clearTimeout(graph{ID}_timeout);
+	graph{ID}_timeout = null;
+	if (graph{ID}_resize_active)
+	{
+		graph{ID}_timeout = setTimeout('graph{ID}_resize_out_now(\'' + e + '\');', 500);
+	}
+}
+
+function graph{ID}_resize_out_now(e)
+{
+	graph{ID}_timeout = null;
+	graph{ID}_resize_click(e);
+}
+
+function graph{ID}_resize_move(e)
+{
+	if (!e) e = window.event;
+	if (!e) return false;
+	graph{ID}_width += (e.clientX - graph{ID}_offset_x);
+	graph{ID}_height += (e.clientY - graph{ID}_offset_y);
+	if (graph{ID}_width < 200) graph{ID}_width = 200;
+	if (graph{ID}_height < 150) graph{ID}_height = 150;
+	img = document.getElementById('graph{ID}');
+	img.style.width = graph{ID}_width + 'px';
+	img.style.height = graph{ID}_height + 'px';
+	graph{ID}_offset_x = e.clientX;
+	graph{ID}_offset_y = e.clientY;
+}
+
+function graph{ID}_resize_start(e)
+{
+	graph{ID}_offset_x = e.clientX;
+	graph{ID}_offset_y = e.clientY;
+	document.onmousemove = graph{ID}_resize_move;
+}
+
+function graph{ID}_resize_stop(e)
+{
+	img = document.getElementById('graph{ID}');
+	img.src = '/class/graph.php?id={ID}&width=' + graph{ID}_width + '&height=' + graph{ID}_height;
+	document.onmousemove = null;
+}
+
+function graph{ID}_resize_click(e)
+{
+	if (graph{ID}_timeout != null) clearTimeout(graph{ID}_timeout);
+	graph{ID}_timeout = null;
+	if (!e) e = window.event;
+	if (!e) return false;
+	if (graph{ID}_resize_active)
+	{
+		graph{ID}_resize_active = false;
+		graph{ID}_resize_stop(e);
+	}
+	else
+	{
+		graph{ID}_resize_active = true;
+		graph{ID}_resize_start(e);
+	}
+}
+
+var graph{ID}_resize_active = false;
+var graph{ID}_offset_x = 0;
+var graph{ID}_offset_y = 0;
+var graph{ID}_width = {WIDTH};
+var graph{ID}_height = {HEIGHT};
+var graph{ID}_timeout = null;
+-->
+</script>

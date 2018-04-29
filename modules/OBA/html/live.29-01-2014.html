@@ -1,0 +1,484 @@
+<!-- Container til ur -->
+<div id="divWatch" style="float: right; font-size: 14pt; z-index: 9; color: #c0c0c0; overflow: hidden;"></div>
+
+<h1>Live auktion</h1>
+
+<!-- Container med alle auktioner -->
+<div id="divLiveAuction" style="display: none;">
+	<!-- Container til live stream -->
+	<div id="divWebcam" style="float: right; z-index: 8; overflow: hidden; width: 320px; height: 240px;">
+		<iframe src="http://webstream.dk/livestreaming/?stream=oba&hash=odensebilauktion" frameborder="0" framespacing="0" width="320" height="240" scrolling="no"></iframe>
+	</div>
+	
+	<!-- Container til næste auktion -->
+	<div id="divNextAuction" class="dropshadow" style="opacity: 0.25; overflow: hidden; height: 240px; width: 640px;"><div id="divInner" style="display: none;">
+		<div id="divImage" style="width: 240px; height: 240px; background-position: 50% 50%; background-repeat: no-repeat; background-size: contain; float: left; margin-right: 20px;"></div>
+		<h1>Næste auktion: <span id="auction_no"></span></h1>
+		
+		<span id="brand"></span> <span id="model"></span> <span id="variant"></span> <span id="type"></span>
+
+		<div style="padding-top: 5px;">
+			<ul class="ul_right">
+				<li>Brændstof:</li>
+				<li>Døre:</li>
+				<li>Årgang:</li>
+				<li>Km-stand:</li>
+				<li>Farve:</li>
+				<li>Nysynet:</li>
+				<li>Indregistreret:</li>
+				<li>Momsfri:</li>
+				<li>Afgiftsfri:</li>
+			</ul>
+			<ul class="ul_left">
+				<li id="fuel"></li>
+				<li id="doors></li>
+				<li id="year"></li>
+				<li id="km"></li>
+				<li id="color"></li>
+				<li id="newly_tested"></li>
+				<li id="is_regged"></li>
+				<li id="no_vat"></li>
+				<li id="no_tax"></li>
+			</ul>
+		</div>
+				 		
+	</div></div>
+	
+	<!-- Container til aktuel auktion -->
+	<div id="divCurAuction" class="dropshadow" style="margin: 10px; overflow: hidden; height: 240px;"><div id="divInner" style="display: none;">
+		<div id="divImage" style="width: 240px; height: 240px; background-position: 50% 50%; background-repeat: no-repeat; background-size: contain; float: left; margin-right: 20px;"></div>
+		<div style="float: right; width: 300px; padding-top: 10px;">
+			Aktuelt bud: <span id="cur_price"></span><br>
+			<div style="height: 20px; margin: 3px;"><div id="divWinner" style="color: #00aa00; text-align: center; display: none;">Du har det vindende bud</div></div>
+			Byd på auktionen<br>
+			<div style="text-align: center;" id="divBid">
+				<input type="text" id="inputBid" value="" style="width: 275px; margin-bottom: 3px; text-align: center;" /><br>
+				<input type="button" value="+500" onclick="AddBid(500);" class="submitButton" />
+				<input type="button" value="+1000" onclick="AddBid(1000);" class="submitButton" />
+				<input type="button" value="+5000" onclick="AddBid(5000);" class="submitButton" />
+				<input type="button" value="+10000" onclick="AddBid(10000);" class="submitButton" /><br>
+				<input type="button" value="Afgiv bud!" onclick="DoBid();" style="font-size: 16pt; margin-top: 3px;" class="submitButton" /><br>
+			</div>
+			<div style="height: 15px; margin: 3px;"><div id="divMessage" style="color: #ff0000; text-align: center;"></div></div>
+			<small><i>Mindste overbud: 500,-</i></small>
+		</div>
+		<h1>Aktuel auktion: <span id="auction_no"></span></h1>
+		
+		<span id="brand"></span> <span id="model"></span> <span id="variant"></span> <span id="type"></span>
+
+		<div style="padding-top: 5px;">
+			<ul class="ul_right">
+				<li>Brændstof:</li>
+				<li>Døre:</li>
+				<li>Årgang:</li>
+				<li>Km-stand:</li>
+				<li>Farve:</li>
+				<li>Nysynet:</li>
+				<li>Indregistreret:</li>
+				<li>Momsfri:</li>
+				<li>Afgiftsfri:</li>
+			</ul>
+			<ul class="ul_left">
+				<li id="fuel"></li>
+				<li id="doors></li>
+				<li id="year"></li>
+				<li id="km"></li>
+				<li id="color"></li>
+				<li id="newly_tested"></li>
+				<li id="is_regged"></li>
+				<li id="no_vat"></li>
+				<li id="no_tax"></li>
+			</ul>
+		</div>
+				 
+	</div></div>
+	
+	<!-- Container til forrige auktion -->
+	<div id="divPrevAuction" class="dropshadow" style="margin: 10px; opacity: 0.25; overflow: hidden; height: 240px;"><div id="divInner" style="display: none;">
+		<div id="divImage" style="width: 240px; height: 240px; background-position: 50% 50%; background-repeat: no-repeat; background-size: contain; float: left; margin-right: 20px;"></div>
+		<div style="float: right; width: 300px; padding-top: 10px;">
+			Vindende bud: <span id="cur_price"></span><br>
+			<div style="height: 20px; margin: 3px;"><div id="divWinnerPrev" style="color: #00aa00; text-align: center; display: none;">Du har vundet auktionen</div></div>
+		</div>
+		<h1>Sidste auktion: <span id="auction_no"></span></h1>
+
+		<span id="brand"></span> <span id="model"></span> <span id="variant"></span> <span id="type"></span>
+
+		<div style="padding-top: 5px;">
+			<ul class="ul_right">
+				<li>Brændstof:</li>
+				<li>Døre:</li>
+				<li>Årgang:</li>
+				<li>Km-stand:</li>
+				<li>Farve:</li>
+				<li>Nysynet:</li>
+				<li>Indregistreret:</li>
+				<li>Momsfri:</li>
+				<li>Afgiftsfri:</li>
+			</ul>
+			<ul class="ul_left">
+				<li id="fuel"></li>
+				<li id="doors></li>
+				<li id="year"></li>
+				<li id="km"></li>
+				<li id="color"></li>
+				<li id="newly_tested"></li>
+				<li id="is_regged"></li>
+				<li id="no_vat"></li>
+				<li id="no_tax"></li>
+			</ul>
+		</div>
+				 		
+	</div></div>
+</div>
+
+<!-- Container når der ikke er live auktioner -->
+<div id="divNoAuction">
+	{MODULE|WYSIWYG|default|Ingen live auktion}
+</div>
+
+<script>
+function HideMessage(msg)
+{
+	if (msg == $("#divMessage").html())
+	{
+		$("#divMessage").stop(true, true);
+		$("#divMessage").fadeOut(400);
+	}
+}
+
+function ShowMessage(msg)
+{
+	$("#divMessage").stop(true, true);
+	$("#divMessage").html(msg);
+	$("#divMessage").fadeIn(400, function() {
+		setTimeout(function() {
+			HideMessage(msg)
+		}, 2000);
+	});
+}
+
+function DoBid()
+{
+	if (boolBidding) return;
+	var curBid = parseInt($("#inputBid").val());
+	if (isNaN(curBid))
+	{
+		ShowMessage('Indtast dit bud i bud-feltet i hele kroner');
+		$("#inputBid").focus();
+		return;
+	}
+	if (curBid < intCurPrice + 500)
+	{
+		ShowMessage('Dit bud er for lavt');
+		$("#inputBid").focus();
+		return;
+	}
+	boolBidding = true;
+	$("#divBid").animate({
+		opacity: 0.25
+	}, 200);
+	new ajax('bid', {
+		id: strCurAuctionId,
+		bid: curBid
+	}, function(val) {
+		if (val['state'] && val['state'] == 'ok')
+		{
+			if (val['message']) ShowMessage(val['message']);
+			if (val['cur_price']) $("#divCurAuction #cur_price").html(val['cur_price'] + ',-');
+		}
+		setTimeout(function() {
+			boolBidding = false;
+			$("#divBid").animate({
+				opacity: 1
+			}, 200);
+		}, 5000);
+	}, 'POST', true);
+}
+
+function AddBid(intAdd)
+{
+	var curBid = parseInt($("#inputBid").val());
+	if (isNaN(curBid)) curBid = intCurPrice;
+	if (curBid < intCurPrice) curBid = intCurPrice;
+	curBid += intAdd;
+	$("#inputBid").val(curBid);
+}
+
+function Refresh()
+{
+	if (timeoutRefresh != null) clearTimeout(timeoutRefresh);
+	new ajax('refresh', [], RefreshReturn, 'POST', true);
+}
+
+function RefreshReturn(val)
+{
+	if (val['state'] == 'ok')
+	{
+		boolCheckRefresh = true;
+		
+		// Ur
+		$("#divWatch").html(val['time']);
+		
+		// Er der en aktiv auktion?
+		if (val['current_auction_id'] != '' && val['current_auction_id'] != 'undefined' && val['current_auction_id'] != null)
+		{
+			if ($("#divNoAuction").css("display") != "none")
+			{
+				$("#divNoAuction").hide();
+				$("#divLiveAuction").show();
+			}
+			
+			// Næste
+			if (strNextAuctionId != val['next_auction_id'])
+			{
+				strNextAuctionId = val['next_auction_id'];
+				$("#divNextAuction #divInner").fadeOut();
+				new ajax('get_auction', {
+					id: strNextAuctionId
+				}, function(val) {
+					if (val['state'] == 'ok')
+					{
+						$("#divNextAuction #divInner").fadeIn();
+						for (key in val)
+						{
+							if (key == 'cur_price') val[key] = val[key] + ',-';
+							if (key == 'newly_tested') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'is_regged') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'no_vat') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'no_tax') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							$("#divNextAuction #" + key).html(val[key]);
+						}
+						arrNextImages = val['images'].split('|');
+						NextImage('next');
+					}
+				}, 'POST', true);
+			}
+			
+			// Aktuel
+			if (strCurAuctionId != val['current_auction_id'])
+			{
+				strCurAuctionId = val['current_auction_id'];
+				$("#divCurAuction #divInner").fadeOut();
+				new ajax('get_auction', {
+					id: strCurAuctionId,
+					tpl: 'current'
+				}, function(val) {
+					if (val['state'] == 'ok')
+					{
+						$("#divCurAuction #divInner").fadeIn();
+						for (key in val)
+						{
+							if (key == 'newly_tested') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'is_regged') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'no_vat') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'no_tax') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'cur_price')
+							{
+								val[key] = val[key] + ',-';
+								intCurPrice = parseInt(val[key]);
+								$("#inputBid").val(intCurPrice + 500);
+							}
+							$("#divCurAuction #" + key).html(val[key]);
+						}
+						arrCurImages = val['images'].split('|');
+						NextImage('cur');
+					}
+				}, 'POST', true);
+				
+				$("#divWinner").hide();
+			}
+			else if (val['cur_price'])
+			{
+				// Opdater aktuelt bud
+				$("#divCurAuction #cur_price").html(val['cur_price'] + ',-');
+				AddBid(0);
+				
+				if ($("#divWinner").css("display") == 'none')
+				{
+					if (val['is_winner'] == '1')
+					{
+						$("#divWinner").fadeIn();
+					}
+				}
+				else
+				{
+					if (val['is_winner'] != '1')
+					{
+						$("#divWinner").fadeOut();
+					}
+				}
+			}
+			
+			// Forrige
+			if (strPrevAuctionId != val['prev_auction_id'])
+			{
+				strPrevAuctionId = val['prev_auction_id'];
+				$("#divPrevAuction #divInner").fadeOut();
+				new ajax('get_auction', {
+					id: strPrevAuctionId,
+					tpl: 'prev'
+				}, function(val) {
+					if (val['state'] == 'ok')
+					{
+						$("#divPrevAuction #divInner").fadeIn();
+						$("#divWinnerPrev").hide();
+						for (key in val)
+						{
+							if (key == 'prev_price') val[key] = val[key] + ',-';
+							if (key == 'newly_tested') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'is_regged') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'no_vat') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							if (key == 'no_tax') val[key] = (val[key] == '1' ? 'Ja' : 'Nej');
+							$("#divPrevAuction #" + key).html(val[key]);
+						}
+						
+						// Har brugeren vundet ?
+						if (val['bidder_id'] == '{USER_ID}' && parseInt(val['cur_price']) >= parseInt(val['min_price']) && parseInt(val['cur_price']) > 0)
+						{
+							// Har vundet!
+							$("#divWinnerPrev").show();
+							html_popup('<h1>Tillykke du har vundet auktionsnr. ' + val['auction_no'] + '</h1>' +
+								'Dit vindende bud er: ' + val['cur_price'] + '');
+						}
+						
+						arrPrevImages = val['images'].split('|');
+						NextImage('prev');
+					}
+				}, 'POST', true);
+			}
+		}
+		else
+		{
+			// Ingen aktive auktioner
+			
+			if ($("#divNoAuction").css("display") == "none")
+			{
+				$("#divLiveAuction").hide();
+				$("#divNoAuction").show();
+			}
+			
+			// Forrige
+			if (strPrevAuctionId != val['prev_auction_id'])
+			{
+				strPrevAuctionId = val['prev_auction_id'];
+				new ajax('get_auction', {
+					id: strPrevAuctionId,
+					tpl: 'prev'
+				}, function(val) {
+					if (val['state'] == 'ok')
+					{
+						// Har brugeren vundet ?
+						if (val['bidder_id'] == '{USER_ID}' && parseInt(val['cur_price']) >= parseInt(val['min_price']) && parseInt(val['cur_price']) > 0)
+						{
+							// Har vundet!
+							$("#divWinnerPrev").show();
+							html_popup('<h1>Tillykke du har vundet auktionsnr. ' + val['auction_no'] + '</h1>' +
+								'Dit vindende bud er: ' + val['cur_price'] + '');
+						}
+					}
+				}, 'POST', true);
+			}
+		}
+		
+		timeoutRefresh = setTimeout('timeoutRefresh = null; Refresh();', 1000);
+	}
+}
+
+function CheckRefresh()
+{
+	if (!boolCheckRefresh)
+	{
+		if (timeoutRefresh != null) clearTimeout(timeoutRefresh);
+		Refresh();
+	}
+	boolCheckRefresh = false;
+}
+
+function NextImage(group)
+{
+	if (timeoutNextImage != null) clearTimeout(timeoutNextImage);
+	
+	if (group == '' || group == 'next')
+	{
+		if (arrNextImages.length > 0)
+		{
+			intNextImageIdx++;
+			if (intNextImageIdx >= arrNextImages.length) intNextImageIdx = 0;
+			
+			$("#divNextAuction #divImage").css({
+				'background-image': 'url(/modules/{MODULE}/upl/image_' + arrNextImages[intNextImageIdx] + '.jpg)'
+			});
+		}
+		else
+		{
+			$("#divNextAuction #divImage").css({
+				'background-image': ''
+			});
+		}
+	}
+	
+	if (group == '' || group == 'cur')
+	{
+		if (arrCurImages.length > 0)
+		{
+			intCurImageIdx++;
+			if (intCurImageIdx >= arrCurImages.length) intCurImageIdx = 0;
+			
+			$("#divCurAuction #divImage").css({
+				'background-image': 'url(/modules/{MODULE}/upl/image_' + arrCurImages[intCurImageIdx] + '.jpg)'
+			});
+		}
+		else
+		{
+			$("#divCurAuction #divImage").css({
+				'background-image': ''
+			});
+		}
+	}
+	
+	if (group == '' || group == 'prev')
+	{
+		if (arrPrevImages.length > 0)
+		{
+			intPrevImageIdx++;
+			if (intPrevImageIdx >= arrPrevImages.length) intPrevImageIdx = 0;
+			
+			$("#divPrevAuction #divImage").css({
+				'background-image': 'url(/modules/{MODULE}/upl/image_' + arrPrevImages[intPrevImageIdx] + '.jpg)'
+			});
+		}
+		else
+		{
+			$("#divPrevAuction #divImage").css({
+				'background-image': ''
+			});
+		}
+	}
+	
+	timeoutNextImage = setTimeout('timeoutNextImage = null; NextImage();', 5000);
+}
+
+var boolCheckRefresh = false;
+var strPrevAuctionId = '';
+var strCurAuctionId = '';
+var strNextAuctionId = '';
+var intWidth = 0;
+var intHeight = 0;
+var arrNextImages = [];
+var arrPrevImages = [];
+var arrCurImages = [];
+var intNextImageIdx = -1;
+var intPrevImageIdx = -1;
+var intCurImageIdx = -1;
+var timeoutNextImage = null;
+var timeoutRefresh = null;
+var intCurPrice = 0;
+var boolBidding = false;
+
+$(document).ready(function() {
+	Refresh();
+	setInterval('CheckRefresh();', 15000);
+	NextImage();
+});
+</script>

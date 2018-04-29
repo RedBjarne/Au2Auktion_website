@@ -1,0 +1,32 @@
+<div class="content_title">Rediger konto</div>
+			<div class="content_page"><!--content_page-->
+
+<form action="{ACTION}" method="{METHOD}" enctype="{ENCTYPE}" onsubmit="document.getElementById('_form_{FORM_ID}_submit').disabled = true;" target="{TARGET}" id="_form_{FORM_ID}_form">
+<input type="hidden" name="module" value="{MODULE}" id="_form_{FORM_ID}_module">
+<input type="hidden" name="page" value="{PAGE}" id="_form_{FORM_ID}_page">
+<input type="hidden" name="do" value="{DO}" id="_form_{FORM_ID}_do">
+<input type="hidden" name="id" value="{ID}" id="_form_{FORM_ID}_id">
+<input type="hidden" name="_form_{FORM_ID}" id="_form_{FORM_ID}" value="{FORM_DO}">
+
+      <div id="account_edit_page"><!--account_edit_page-->
+                    <div id="account_edit_page_content"><!--account_edit_page_content-->
+						<div class="account_edit_page_content_topbar">Rediger brugeroplysninger</div>
+						<div class="account_edit_page_content_edit"><!--account_edit_page_content_edit-->
+                        <form action="" method="">
+                            <label>Navn:</label><input type="text" name="name" class="account_edit_page_content_edit_field" placeholder="Brugerens navn" value="{NAME}"/>
+                            <label>Adresse:</label><input type="text" name="address" class="account_edit_page_content_edit_field" placeholder="Brugerens adresse" value="{ADDRESS}"/><br />
+                            <label>Postnummer:</label><input type="text" name="zipcode" class="account_edit_page_content_edit_field" placeholder="Brugerens postnummer" value="{ZIPCODE}"/>
+                            <label>By:</label><input type="text" name="city" class="account_edit_page_content_edit_field" placeholder="Brugerens by" value="{CITY}"/><br />
+                            <label>Telefon:</label><input type="text" name="phone" class="account_edit_page_content_edit_field" placeholder="Brugerens telefonnummer" value="{PHONE}"/>
+                            <label>E-mail:</label><input type="text" name="email" class="account_edit_page_content_edit_field" placeholder="Brugerens e-mail" value="{EMAIL}"/><br />
+                            <label>Brugernavn:</label><input type="text" name="editaccountusername" class="account_edit_page_content_edit_field" placeholder="Brugerens brugernavn" readonly disabled value="{USERNAME}"/>
+                            <label>Kodeord:</label><input type="text" name="new_password" class="account_edit_page_content_edit_field" placeholder="Indtast nyt kodeord" value=""/>
+                            <input type="submit" name="submit" method="submit" value="Gem oplysninger" class="account_edit_page_content_edit_button" />
+            			</form>
+                        </div><!--account_edit_page_content_edit slut-->
+					</div><!--account_edit_page_content slut-->
+                </div><!--account_edit_page slut-->
+                
+</form>
+
+</div></div>

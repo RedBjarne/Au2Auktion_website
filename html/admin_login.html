@@ -1,0 +1,55 @@
+<div><img src="../img/admin_background_login.gif" alt=""></div>
+
+<div style="color: #ff0000; padding: 10px;">{ERROR}</div>
+
+<form action="?" method="post" onsubmit="document.getElementById('login_submit').disabled = true;">
+<input type="hidden" name="do" value="login">
+<table>
+	<tr>
+		<td rowspan="5" valign="top" style="padding-right: 20px;">
+			<img src="../img/icon_large_login.gif" alt="">
+		</td>
+		<td>
+			{LANG|Sprog}:
+		</td>
+		<td>
+			<select onchange="document.location.href = './?page=login&do=change_language&lang_id=' + this.options[this.selectedIndex].value;" style="width: 120px;">
+				{LANGS}
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			{LANG|Brugernavn}:
+		</td>
+		<td>
+			<input type="text" name="username" id="username" style="width: 120px;">
+			<script> document.getElementById('username').focus(); </script>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			{LANG|Password}:
+		</td>
+		<td>
+			<input type="password" name="password" style="width: 120px;">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			{LANG|Husk mig på denne computer}:
+		</td>
+		<td>
+			<input type="checkbox" name="autologin">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right">
+			<input type="submit" value="{LANG|Log ind}" id="login_submit">
+		</td>
+	</tr>
+</table>
+</form>
+<br>
+
+<a href="./?page={PAGE}&do=forgot_password">» {LANG|Glemt brugernavn eller password}</a>

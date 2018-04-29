@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="{LANG_ID}">
+
+<head>
+	<title>Admin: {SITE_TITLE}</title>
+	<link rel="stylesheet" href="../css/admin_default.css">
+	<script src="../js/admin.js"></script>
+	{TPL|jquery}
+</head>
+
+<body>
+
+<div style="padding: 10px;">
+	<script type="text/javascript">
+	if ('{VAR|module}|{VAR|page}' != '|note')
+	{
+		document.write('<img src="/img/note.png" alt="{LANG|Se / opret notat}" onclick="Popup(\'./?page=note&id={VAR|module}|{VAR|page}\');" style="cursor: pointer; float: right;">');
+	}
+	</script>
+
+	{HTML}
+		
+	<script type="text/javascript">
+	if (top.location.href == document.location.href)
+	{
+		document.write('<div><a href="./?page=frameset&url=' + escape(document.location.href) + '" target="_top">» Vis admin menu</a></div>');
+	}
+	</script>
+</div>
+
+</body>
+
+</html>

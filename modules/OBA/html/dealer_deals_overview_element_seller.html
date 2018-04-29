@@ -1,0 +1,22 @@
+<div id="trades_page_right_trade_sold{STATUS}"><!--trades_page_right_trade_sold-->
+    <div class="trades_page_right_trade_sold_top{STATUS}{IF|{STATUS}|Sold||Hidden}">Solgt {END_TIME}</div>
+    <div class="trades_page_right_trade_sold_top{STATUS}{IF|{STATUS}|NotSold||Hidden}">Ikke solgt - {IF|{CUR_PRICE}|0|Ingen bud|Højeste bud: DKK {CUR_PRICE}}</div>
+    <div class="trades_page_right_trade_sold_details{STATUS}">{YEAR} {BRAND} {MODEL} {VARIANT} {TYPE}{IF|{DOORS}|||, {DOORS}d}{IF|{GEARCOUNT}|||, {GEARCOUNT}g}{IF|{FUEL}|||, {FUEL}}{IF|{COLOR}|||, {COLOR}}{IF|{KM}|||, {KM} km}<span style="width:auto;min-width:160px;height:39px;float:right;background:#c40912;color:white;margin-left:200px;text-align:right;padding-right:10px;padding-left:10px;">Katalognummer: {AUCTION_NO}</span></div>
+    <div class="trades_page_right_trade_sold_info{STATUS}{IF|{STATUS}|Sold||Hidden|}"><!--trades_page_right_trade_sold_info-->
+        <div class="trades_page_right_trade_sold_info_step1{STATUS}"><!--trades_page_right_trade_sold_info_step1-->
+            <div class="trades_page_right_trade_sold_info_step1_left{STATUS}">1. Udskriv slutseddel</div>
+            <a href="/site/{LANG_ID}/{MODULE}/{PAGE}/deals_contract/{ID}" target="_blank"><div class="trades_page_right_trade_sold_info_step1_right">Hent slutsedlen her</div></a>
+        </div><!--trades_page_right_trade_sold_info_step1 slut-->
+        <div class="trades_page_right_trade_sold_info_step2{STATUS}">
+            <div class="trades_page_right_trade_sold_info_step2_left{STATUS}">1. Kontakt køber</div>
+            <div class="trades_page_right_trade_sold_info_step2_middle{STATUS}">{BUYER_NAME}<br />{BUYER_ADDRESS}<br />DK-{BUYER_ZIPCODE} {BUYER_CITY}<br />{IF|{BUYER_PHONE}|||Telefon:} <a href="tel:{BUYER_PHONE}"  style="color:#c40912;">{BUYER_PHONE}</a><br />{IF|{BUYER_EMAIL}|||E-mail:} <a href="mailto:{BUYER_EMAIL}" style="color:#c40912;">{BUYER_EMAIL}</a></div>
+            <div class="trades_page_right_trade_sold_info_step2_right{STATUS}">Pris: DKK {CUR_PRICE}<br />{IF|{NO_TAX}|1|Uden afgift|Med afgift}</div>
+    </div><!--trades_page_right_trade_sold_info slut-->
+    
+    
+</div>
+<div class="trades_page_right_trade_sold_options{STATUS}{IF|{STATUS}|Sold||Hidden|}"><strong style="color:black;">Andre Muligheder:</strong><br /><a href="/site/{LANG_ID}/{MODULE}/{PAGE}/deals_seller_invoice/{ID}" target="_blank">Se faktura</a></div>
+    <div class="trades_page_right_trade_sold_options{STATUS}{IF|{STATUS}|NotSold||Hidden|}"><strong style="color:black;">Andre Muligheder:</strong><br /><span class="option"> <a href="/site/{LANG_ID}/{MODULE}/{PAGE}/auctions_delete/{ID}" onclick="return confirm('Er du sikker på at du vil slette denne auktion?');">Slet bil</a></span>
+		<span class="option">| <a href="/site/{LANG_ID}/{MODULE}/{PAGE}/auctions_edit/{ID}">Rediger bil</a></span>
+		<span class="option">| <a href="/site/{LANG_ID}/{MODULE}/{PAGE}/auctions_reset/{ID}">Tilmeld igen</a></span></div>
+</div><!--trades_page_right_trade_sold slut-->

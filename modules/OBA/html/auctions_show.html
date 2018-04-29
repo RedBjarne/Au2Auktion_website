@@ -1,0 +1,152 @@
+<div class="content_title">Auktioner</div>
+	<div class="content_page"><!--content_page-->
+     <div id="auction_pagedetails"><!--auctionpage-->
+        <div id="auction_pagedetails_title" style="color:#c40912;"><span class="{IF|{GROUP_ID}|0|Hidden|}"><a href="/site/{LANG_ID}/{MODULE}/{PAGE}/searchresult?auction_type={AUCTION_TYPE}&group_id={GROUP_ID}" style="color:#c40912;">{GROUP_TITLE}</a> &gt;</span>
+	<a href="/site/{LANG_ID}/{MODULE}/{PAGE}/searchresult?auction_type={AUCTION_TYPE}&group_id={GROUP_ID}&no_tax={NO_TAX}" style="color:#c40912;">{IF|{NO_TAX}|1|Uden afgift|Med afgift}</a> &gt;
+	<a href="/site/{LANG_ID}/{MODULE}/{PAGE}/searchresult?auction_type={AUCTION_TYPE}&group_id={GROUP_ID}&no_tax={NO_TAX}&brand={BRAND}" style="color:#c40912;">{BRAND}</a> &gt;</div>
+        <div id="auction_pagedetails_catalognumber">Katalognummer: <span style="color:#c40912;">{AUCTION_NO}</span></div>
+        <div id="auction_pagedetails_actions"><!--auction_pagedetails_actions-->
+            <a href="javascript:history.back();"><div class="auction_pagedetails_actions_back HideOnPrint">Tilbage</div></a>
+            <a href="javascript:SwitchFavorite();void(0);"><div class="auction_pagedetails_actions_save HideOnPrint">
+            <!-- Tilføj til favoritter -->
+		<span class="AuctionAddFavorite auction_pagedetails_actions_save_{IF|{IS_FAVORITE}|1|Hidden|}">Tilføj til favoritter</span>
+		
+		<!-- Fjern fra favoritter -->
+		<span class="AuctionRemoveFavorite auction_pagedetails_actions_save_{IF|{IS_FAVORITE}|0|Hidden|}">Fjern fra favoritter</span></div></a>
+            <a href="/site/{LANG_ID}/{MODULE}/{PAGE}/{DO}/{ID}?print=true" target="_blank"><div class="auction_pagedetails_actions_print HideOnPrint">Udskriv</div></a>
+        </div><!--auction_pagedetails_actions slut-->
+        
+        
+        <div id="auction_pagedetails_topbar" class="{IF|{AUCTION_TYPE}|online||Hidden}"><!--auction_pagedetails_topbar-->
+            <div class="auction_pagedetails_topbar_latestbid">Højeste bud: {IF|{CUR_PRICE}|0|Ingen bud|DKK {CUR_PRICE}}</div>
+            <div class="auction_pagedetails_topbar_end">Auktionen slutter: {END_TIME}</div>
+        </div><!--auction_pagedetails_topbar slut-->
+        <div id="auction_pagedetails_topinfo"><!--auction_pagedetails_topinfo-->
+            <div class="auction_pagedetails_topinfo_image">{IMAGE}</div>
+            <div class="auction_pagedetails_topinfo_title">{BRAND} {MODEL} {VARIANT}</div>
+            <div class="auction_pagedetails_topinfo_subtitle">{TYPE} {FUEL}{IF|{HP}|||, {HP} HK}{IF|{COLOR}|||, {COLOR}}</div>
+            <div class="auction_pagedetails_topinfo_1reg">1. Registrering:<br><span style="color:#c40912;">{FIRST_REG_DATE}</span></div>
+            <div class="auction_pagedetails_topinfo_year">Model årgang:<br><span style="color:#c40912;">{YEAR}</span></div>
+            <div class="auction_pagedetails_topinfo_tax">Med Afgift:<br><span style="color:#c40912;">{IF|{NO_TAX}|1|Nej|Ja}</span></div>
+            <div class="auction_pagedetails_topinfo_inspection">Seneste Syn:<br><span style="color:#c40912;">{NEWLY_TESTED_DATE}</span></div>
+            <div class="auction_pagedetails_topinfo_color">Farve:<br><span style="color:#c40912;">{COLOR}</span></div>
+            <div class="auction_pagedetails_topinfo_moms">Momsfri:<br><span style="color:#c40912;">{IF|{NO_VAT}|1|Nej|Ja}</span></div>
+            <div class="auction_pagedetails_topinfo_vinnumber">Stelnummer:<br><span style="color:#c40912;text-transform:uppercase;">{CHASNO}</span></div>
+            <div class="auction_pagedetails_topinfo_milage">Kilometerstand:<br><span style="color:#c40912;">{KM}</span></div>
+            <div class="auction_pagedetails_topinfo_fueltype">Brændstofstype:<br><span style="color:#c40912;">{FUEL}</span></div>
+            <div class="auction_pagedetails_topinfo_regnumber">Registreringsnummer:<br><span style="color:#c40912;text-transform:uppercase;">{REGNO}</span></div>
+            <div class="auction_pagedetails_topinfo_status">Status:<br><span style="color:#c40912;">{IF|{IS_REGGED}|1|Indregistreret|Afmeldt}</span></div>
+            <div class="auction_pagedetails_topinfo_debt">Restgæld:<br><span style="color:#c40912;">{IF|{UNPAID_DEBT}|1|Ja|Nej} - <a href="http://www.nummerplade.net/soeg/?regnr={REGNO}" target="_blank">Tjek for restgæld</a></span></div>
+            <div class="auction_pagedetails_topinfo_newprice">Nypris(DKK): <span style="color:#c40912;">{NEW_PRICE},-</span></div>
+        </div><!--auction_pagedetails_topinfo slut-->
+        <div id="auction_pagedetails_doc-milage"><!--auction_pagedetails_doc-milage slut-->
+            <div class="auction_pagedetails_doc-milage_topbar">Dokumentation for kilometerstand</div>
+            <div class="auction_pagedetails_doc-milage_text">{IF|{KM_DOC}|1|Ja, dokumentation haves|Ingen dokumentation haves}</div>
+        </div><!--auction_pagedetails_doc-milage slut-->
+       
+        <div id="auction_pagedetails_equipment"><!--auction_pagedetails_equipment-->
+            <div class="auction_pagedetails_equipment_topbar">Udstyr standard/ekstra</div>
+            {EQUIPMENT_EQUIPMENT}
+            <div class="auction_pagedetails_equipment_commenttitle">Bemærkninger til udstyr:</div>
+            <div class="auction_pagedetails_equipment_commenttext">{EQUIPMENT_COMMENT}</div>
+        </div><!--auction_pagedetails_equipment slut-->
+        <div id="auction_pagedetails_tires"><!--auction_pagedetails_tires-->
+            <div class="auction_pagedetails_tires_topbar">Dæk<span style="margin-left:45%">Ekstra dæk</span></div>
+            <div class="auction_pagedetails_tires_left"><!--auction_pagedetails_tires_left-->
+                <div class="auction_pagedetails_tires_left_title">Monterede dæk og fælge:</div>
+                <div class="auction_pagedetails_tires_left_tires">Dæk:<span style="margin-left:22%;color:#c40912;">{TIRES_TYPE}</span></div>
+                <div class="auction_pagedetails_tires_left_rims">fælge:<span style="margin-left:20%;color:#c40912;">{TIRES_RIM}</span></div>
+                <div class="auction_pagedetails_tires_left_printfor">Mønster for:<span style="margin-left:5%;color:#c40912;">{TIRES_DEPTH_FRONT}</span></div>
+                <div class="auction_pagedetails_tires_left_printback">Mønster bag:<span style="margin-left:2%;color:#c40912;">{TIRES_DEPTH_BACK}</span></div>
+            </div><!--auction_pagedetails_tires_left slut-->
+            <div class="auction_pagedetails_tires_right"><!--auction_pagedetails_tires_right-->
+                <div class="auction_pagedetails_tires_right_title">Ekstra dæk og fælge:</div>
+                <div class="auction_pagedetails_tires_right_tires">Dæk:<span style="margin-left:22%;color:#c40912;">{TIRES_TYPE_EXTRA}</span></div>
+                <div class="auction_pagedetails_tires_right_rims">fælge:<span style="margin-left:20%;color:#c40912;">{TIRES_RIM_EXTRA}</span></div>
+                <div class="auction_pagedetails_tires_right_printfor">Mønster for:<span style="margin-left:5%;color:#c40912;">{TIRES_DEPTH_FRONT_EXTRA}</span></div>
+                <div class="auction_pagedetails_tires_right_printback">Mønster bag:<span style="margin-left:2%;color:#c40912;">{TIRES_DEPTH_BACK_EXTRA}</span></div>
+            </div><!--auction_pagedetails_tires_right slut-->
+        </div><!--auction_pagedetails_tires slut-->
+        <div id="auction_pagedetails_condition"><!--auction_pagedetails_condition-->	
+            <div class="auction_pagedetails_condition_topbar">Stand</div>
+            <div class="auction_pagedetails_condition_interior">Indvendig stand:<br /><span style="color:#c40912;">{CONDITION_INSIDE}</span></div>
+            <div class="auction_pagedetails_condition_headlights">Forlygter:<br /><span style="color:#c40912;">{CONDITION_LIGHT_FRONT}</span></div>
+            <div class="auction_pagedetails_condition_electrics">Elektrisk stand:<br /><span style="color:#c40912;">{CONDITION_ELECTRIC}</span></div>
+            <div class="auction_pagedetails_condition_mechanics">Mekanisk stand:<br /><span style="color:#c40912;">{CONDITION_MECANICAL}</span></div>
+            <div class="auction_pagedetails_condition_rearlights">Baglygter:<br /><span style="color:#c40912;">{CONDITION_LIGHT_BACK}</span></div>
+            <div class="auction_pagedetails_condition_damaged">Tidligere skadet:<br /><span style="color:#c40912;">{CONDITION_DAMAGE}</span></div>
+            <div class="auction_pagedetails_condition_paint">Lak stand:<br /><span style="color:#c40912;">{CONDITION_LACQUER}</span></div>
+            <div class="auction_pagedetails_condition_foglights">Tågelygter:<br /><span style="color:#c40912;">{CONDITION_LIGHT_FOG}</span></div>
+        </div><!--auction_pagedetails_condition slut-->
+        <div id="auction_pagedetails_maintenance"><!--auction_pagedetails_maintenance-->
+            <div class="auction_pagedetails_maintenance_topbar">Vedligeholdelse</div>
+            <div class="auction_pagedetails_maintenance_servicebook">Servicebog medfølger:<br /><span style="color:#c40912;">{MAINTAIN_BOOK}</span></div>
+            <div class="auction_pagedetails_maintenance_lastservice">Sidste service ved:<br /><span style="color:#c40912;">{IF|{MAINTAIN_LAST_SERVICE}|||{MAINTAIN_LAST_SERVICE} km}</span></div>
+            <div class="auction_pagedetails_maintenance_servicebookfull">Servicebog udfyldt:<br /><span style="color:#c40912;">{MAINTAIN_SERVICE_OK}</span></div>
+            <div class="auction_pagedetails_maintenance_nextservice">Næste service ved:<br /><span style="color:#c40912;">{IF|{MAINTAIN_NEXT_SERVICE}|||{MAINTAIN_NEXT_SERVICE} km}</span></div>
+            <div class="auction_pagedetails_maintenance_underbody">Undervognsbehandlet:<br /><span style="color:#c40912;">{MAINTAIN_RUST_TREAT}</span></div>
+            <div class="auction_pagedetails_maintenance_beltdrive">Tandrem skiftet ved:<br /><span style="color:#c40912;">{IF|{MAINTAIN_TIMING_BELT}|||{MAINTAIN_TIMING_BELT} km}</span></div>
+            <div class="auction_pagedetails_maintenance_brakepads">Bremseklodser skiftet ved:<br /><span style="color:#c40912;">{IF|{MAINTAIN_BRAKE}|||{MAINTAIN_BRAKE} km}</span></div>
+            <div class="auction_pagedetails_maintenance_oil">Olie skiftet ved:<br /><span style="color:#c40912;">{IF|{MAINTAIN_OIL}|||{MAINTAIN_OIL} km}</span></div>
+        </div><!--auction_pagedetails_maintenance slut-->
+        <div id="auction_pagedetails_maintenancecomments"><!--auction_pagedetails_maintenancecomments-->
+            <div class="auction_pagedetails_maintenancecomments_topbar">Bemærkninger til vedligeholdelse</div>
+            <div class="auction_pagedetails_maintenancecomments_text">{MAINTAIN_COMMENT}</div>
+        </div><!--auction_pagedetails_maintenancecomments slut-->
+        <div id="auction_pagedetails_outercondition"><!--auction_pagedetails_outercondition-->
+            <div class="auction_pagedetails_outercondition_topbar">Udvendig stand</div>
+            {EXTERIOR}
+        </div><!--auction_pagedetails_outercondition slut-->
+        <div id="auction_pagedetails_images"><!--auction_pagedetails_image-->
+            <div class="auction_pagedetails_images_topbar">Billeder</div>
+            <div class="auction_pagedetails_images_imgspacer"></div>
+            {IMAGES}
+        </div><!--auction_pagedetails_images slut-->
+        <div id="auction_pagedetails_bid"><!--auction_pagedetails_bid-->
+            <div class="auction_pagedetails_bid_topbar">Byd på bilen<span style="margin-left:14%;">Katalognummer: {AUCTION_NO}</span><span style="margin-left:14%;">Bil: {BRAND} {MODEL} {VARIANT}</span><span style="margin-left:14%;">Auktionstype: {SELLER_TYPE}</span></div>
+            
+          <div class="HideOnPrint">{BID}</div>
+            
+            
+            <div id="auction_pagedetails_actions" style="margin-top:50px;margin-bottom:-30px;"><!--auction_pagedetails_actions-->
+                <a href="javascript:history.back();"><div class="auction_pagedetails_actions_back HideOnPrint">Tilbage</div></a>
+                <a href="javascript:SwitchFavorite();void(0);"><div class="auction_pagedetails_actions_save HideOnPrint">
+                	<!-- Tilføj til favoritter -->
+		<span class="AuctionAddFavorite auction_pagedetails_actions_save_{IF|{IS_FAVORITE}|1|Hidden|}">Tilføj til favoritter</span>
+		
+		<!-- Fjern fra favoritter -->
+		<span class="AuctionRemoveFavorite auction_pagedetails_actions_save_{IF|{IS_FAVORITE}|0|Hidden|}">Fjern fra favoritter</span>
+                </div></a>
+                <a href="/site/{LANG_ID}/{MODULE}/{PAGE}/{DO}/{ID}?print=true" target="_blank"><div class="auction_pagedetails_actions_print HideOnPrint">Udskriv</div></a>
+            </div><!--auction_pagedetails_actions slut-->
+        </div><!--auction_pagedetails_bid slut-->
+    </div><!--auctionpage slut-->
+</div><!--content_page slut-->
+<script>
+function SwitchFavorite()
+{
+	new ajax{AJAX}("switch_favorite", [], function(val) {
+		if (val["state"] && val["state"] == "ok")
+		{
+			if (val["is_favorite"] == "1")
+			{
+				$(".AuctionAddFavorite").hide();
+				$(".AuctionRemoveFavorite").show();
+			}
+			else
+			{
+				$(".AuctionAddFavorite").show();
+				$(".AuctionRemoveFavorite").hide();
+			}
+		}
+		else
+		{
+			alert(val["message"] ? val["message"] : "Der er opstået en uventet fejl");
+		}
+	}, "POST", true);
+}
+
+$(document).ready(function() {
+	$(".ImageGallery").fancybox();
+});
+</script>

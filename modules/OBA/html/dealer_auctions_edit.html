@@ -1,0 +1,125 @@
+<div style="display: none;" id="divForm">{FORM}</div>
+
+<script>
+// Skjul felter, der ikke vedrører aktuel auktionstype
+function ChangeAuctionType()
+{
+	if ('{DO}' != 'auctions_add') return;
+	if ($("#auction_type").val() == "online")
+	{
+		// Online
+		$("#auction_date_online").closest("tr").show();
+		$("#group_id").closest("tr").show();
+		
+		$("#auction_date_live").closest("tr").hide();
+		$("#category_id").closest("tr").hide();
+		$("#type_id").closest("tr").hide();
+	}
+	else
+	{
+		// Fysisk
+		$("#auction_date_online").closest("tr").hide();
+		$("#group_id").closest("tr").hide();
+		
+		$("#auction_date_live").closest("tr").show();
+		$("#category_id").closest("tr").show();
+		$("#type_id").closest("tr").show();
+	}
+}
+
+var arrDates = '{DATES}'.split(',');
+
+$(document).ready(function() {
+	$("#auction_date_live").datepicker({
+		dateFormat: 'dd-mm-yy',
+		minDate: '+1',
+		maxDate: '+180',
+		dayNamesMin: ['Sø', 'Ma', 'Ti', 'On', 'To', 'Fr', 'Lø', 'Sø'],
+		monthNames: ['Januar', 'Februar', 'Marts', 'April', 'Maj', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'December'],
+		firstDay: 1,
+		beforeShowDay: CheckDate
+	});
+	
+	$('#newly_tested_date').datepicker({
+		dateFormat: 'dd-mm-yy',
+		minDate: '-180',
+		maxDate: '+0',
+		dayNamesMin: ['Sø', 'Ma', 'Ti', 'On', 'To', 'Fr', 'Lø', 'Sø'],
+		monthNames: ['Januar', 'Februar', 'Marts', 'April', 'Maj', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'December'],
+		firstDay: 1,
+		changeMonth: true,
+		changeYear: true,
+		yearRange: "1950:+0"
+	});
+	
+	$('#first_reg_date').datepicker({
+		dateFormat: 'dd-mm-yy',
+		maxDate: '+0',
+		dayNamesMin: ['Sø', 'Ma', 'Ti', 'On', 'To', 'Fr', 'Lø', 'Sø'],
+		monthNames: ['Januar', 'Februar', 'Marts', 'April', 'Maj', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'December'],
+		firstDay: 1,
+		changeMonth: true,
+		changeYear: true,
+		yearRange: "1950:+0"
+	});
+	
+	$('#buttonLookupRegno').attr('disabled', ($('#regno').val() != '') ? false : 'disabled');
+	$('#regno').keyup(function() {
+		$('#buttonLookupRegno').attr('disabled', ($('#regno').val() != '') ? false : 'disabled');
+	});
+	
+	$("#auction_type").bind("change", function(e) {
+		ChangeAuctionType();
+	});
+	
+	ChangeAuctionType();
+	
+	$("#divForm").show();
+});		
+
+function StrPadLeft(str, len, pad)
+{
+	str = str.toString();
+	if (pad == null || pad == "undefined" || pad == "") pad = "0";
+	while (str.length < len)
+	{
+		str = pad.substr(0, len - str.length) + str;
+	}
+	return str;
+}
+
+function CheckDate(date)
+{
+	date = date.getFullYear() + '-' + StrPadLeft(date.getMonth() + 1, 2, "0") + '-' + StrPadLeft(date.getDate(), 2, "0");
+	if (arrDates.indexOf(date) > -1)
+	{
+		return [true, ""];
+	}
+	else
+	{
+		return [false, ""];
+	}
+}
+
+function LookupRegno()
+{
+	$('#buttonLookupRegno').attr('disabled', 'disabled');
+	new ajax{AJAX}('lookup_regno', {
+		regno: $('#regno').val()
+	}, function(val) {
+		$('#buttonLookupRegno').attr('disabled', false);
+		if (val['state'] && val['state'] == 'ok')
+		{
+			if (val['brand']) $('#brand').val(val['brand']);
+			if (val['model']) $('#model').val(val['model']);
+			if (val['variant']) $('#variant').val(val['variant']);
+			if (val['type']) $('#type').val(val['type']);
+			if (val['year']) $('#year').val(val['year']);
+			if (val['newly_tested']) $('#newly_tested').attr('checked', val['newly_tested'] == '1' ? 'checked' : false);
+			if (val['regno']) $('#is_regged').attr('checked', 'checked');
+			if (val['fuel']) $('#fuel').val(val['fuel']);
+			if (val['chasno']) $('#chasno').val(val['chasno']);
+		}
+	}, 'POST', true);
+}
+</script>

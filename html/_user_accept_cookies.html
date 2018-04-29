@@ -1,0 +1,141 @@
+<!-- Bruger accept af cookies -->
+<style>
+#UserAcceptCookiesBack
+{
+	position: absolute;
+	z-index: 10000;
+	background: #000000;
+	filter: opacity(alpha=10);
+	opacity: 0.1;
+	top: 0px;
+	left: 0px;
+	width: 1px;
+	height: 1px;
+}
+#UserAcceptCookiesPrompt
+{
+	position: absolute;
+	z-index: 10001;
+	background: #ffffff;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 10px;
+	top: 0px;
+	left: 0px;
+	width: 300px;
+	font-size: 8pt;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.10);
+	-moz-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.10);
+	-webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.10);
+}
+#UserAcceptCookiesPrompt ul
+{
+	padding-left: 20px;
+	margin: 0px;
+}
+#UserAcceptCookiesPrompt li
+{
+	margin: 10px;
+}
+#UserAcceptCookiesPrompt h1
+{
+	margin: 0px;
+	font-size: 10pt;
+}
+#UserAcceptCookiesPromtOK
+{
+	display: block;
+	color: #ffffff;
+	background: #7fba00;
+	border: 1px solid #597e00;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	width: 50px;
+	margin: auto;
+	padding: 3px;
+	text-align: center;
+	text-decoration: none;
+}
+</style>
+<script src="/js/jquery/jquery.js"></script>
+<script>
+function UserAcceptCookies()
+{
+	var exp = new Date();
+	exp.setDate(exp.getDate() + 3650);
+	document.cookie = "USER_HAS_ACCEPTED_COOKIES=TRUE; path=/; http=true; expires=" + exp.toUTCString();
+	$("#UserAcceptCookiesBack").remove();
+	$("#UserAcceptCookiesPrompt").remove();
+}
+function UserAcceptCookiesBack()
+{
+	history.back();
+}
+function UserAcceptCookiesClose()
+{
+	$("#UserAcceptCookiesBack").remove();
+	$("#UserAcceptCookiesPrompt").remove();
+}
+function UserAcceptCookiesResize()
+{
+	$("#UserAcceptCookiesPrompt").css({
+		left: 0,
+		top: 0
+	});
+	
+	var wW = $(window).width();
+	var wH = $(window).height();
+	var sL = $(window).scrollLeft();
+	var sT = $(window).scrollTop();
+	var pW = $("#UserAcceptCookiesPrompt").width();
+	var pH = $("#UserAcceptCookiesPrompt").height();
+	
+	$("#UserAcceptCookiesBack").css({
+		left: sL,
+		top: sT,
+		width: wW,
+		height: wH
+	});
+	
+	$("#UserAcceptCookiesPrompt").css({
+		left: wW / 2 - pW / 2 + sL,
+		top: wH / 2 - pH / 2 + sT
+	});
+}
+function UserAcceptCookiesIsTouch()
+{
+	return (
+		(navigator.platform.indexOf('iPad') > -1) ||
+		(navigator.platform.indexOf('iPhone') > -1) ||
+		(navigator.platform.indexOf('iPod') > -1)
+		);
+}
+
+
+$(document).ready(function() {
+	var url = '{URL}';
+	$("body").prepend('<div id="UserAcceptCookiesBack"></div>');
+	$("body").prepend('<div id="UserAcceptCookiesPrompt">' +
+		'<h1>{LANG|Hjemmesiden benytter cookies}</h1>' +
+		'<ul>' +
+		'<li>Cookies benyttes så vi kan lave statistik over brugen af vores hjemmeside og for at give dig en bedre oplevelse</li>' +
+		'<li>Du accepterer cookies, når du klikker på OK</li>' +
+		'</ul>' +
+		(url != '' ? ('<div align="center" style="margin-bottom: 10px;"><a href="' + url + '" target="_blank">Læs mere om cookies her</a></div>') : '') +
+		'<a href="javascript:UserAcceptCookies();void(0);" id="UserAcceptCookiesPromtOK">OK</a>' +
+		'</div>');
+	UserAcceptCookiesResize();
+});
+$(window).resize(function() {
+	UserAcceptCookiesResize();
+});
+if (!UserAcceptCookiesIsTouch())
+{
+	$(window).scroll(function() {
+		UserAcceptCookiesResize();
+	});
+}
+</script>

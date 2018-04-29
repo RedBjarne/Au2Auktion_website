@@ -1,0 +1,99 @@
+<div class="content_title">Auktioner</div>
+<div class="content_page"><!--content_page-->
+	<div id="auction_page"><!--auctionpage-->
+    	<div id="auction_page_title">{TITLE}</div>
+		<div id="auction_page_subtitle_top_right">{MODULE|WYSIWYG|default|Hjemmeside - Onlineauktioner - Top Højre}</div>       
+        <div id="auction_page_subtitle_bottom_right">{MODULE|WYSIWYG|default|Hjemmeside - Onlineauktioner - Bund Højre}</div>
+        <div id="auction_page_subtitle_bottom_left">{MODULE|WYSIWYG|default|Hjemmeside - Onlineauktioner - Bund Venstre}</div>
+        
+        <div id="auction_page_topbar"><!--auctionpage-->
+            <div class="auction_page_topbar_status">Senest opdateret {DATETIME|%d-%m-%Y %H:%M:%S}</div>
+            <a href="javascript:document.location.reload();"><div class="auction_page_topbar_update">Opdater</div></a>
+            <a href="javascript:window.open(document.location.href + '&print=true');void(0);"><div class="auction_page_topbar_print">Print</div></a>
+            <div class="auction_page_topbar_sort"><!--auction_page_topbar_sort-->
+                
+                    <label>Sorter efter:</label>
+                    <select onchange="document.location.href = '/?module={MODULE}&page={PAGE}&do={DO}&auction_type={VAR|auction_type}&group_id={VAR|group_id}&brand={VAR|brand}&no_tax={VAR|no_tax}' + this.options[this.selectedIndex].value;">
+                        <option value="&order=description">Beskrivelse</option>
+			<option value="&order=first_reg_date" {IF|{VAR|order}|first_reg_date|selected|}>1. registreringsdato</option>
+			<option value="&order=km" {IF|{VAR|order}|km|selected|}>Kilometerstand</option>
+			<option value="&order=gps" {IF|{VAR|order}|gps|selected|}>Afstand til bilen</option>
+                    </select>
+               
+        	</div><!--auction_page_topbar_sort slut-->
+		</div><!--auctionpage_topbar slut-->
+        <div id="auction_page_left"><!--auction_page_left-->
+            <div class="auction_page_left_bids"><!--auction_page_left_bids-->
+                {MODULE|WYSIWYG|default|Hjemmeside - Onlineauktioner - Oversigt}
+            </div><!--auction_page_left_bids slut-->
+            <div class="auction_page_left_category"><!--auction_page_left_category-->
+                <div class="auction_page_left_category_title">Åben Auktion</div>
+                <div class="auction_page_left_category_sort"> 
+                    <label>Vælg kategori:</label><br />
+                    <select onchange="document.location.href = '/?module={MODULE}&page={PAGE}&do={DO}&auction_type={VAR|auction_type}&group_id={VAR|group_id}&brand={VAR|brand}&order={VAR|order}' + this.options[this.selectedIndex].value">
+                        <option value="">Alle</option>
+                        <option value="&no_tax=0" {IF|{VAR|no_tax}|0|selected|}>Med afgift</option>
+                        <option value="&no_tax=1" {IF|{VAR|no_tax}|1|selected|}>Uden afgift</option>
+                    </select>
+                </div>
+                <div class="auction_page_left_category_brandtitle">Vælg mærke:</div>
+                <a href="/?module={MODULE}&page={PAGE}&do={DO}&auction_type={VAR|auction_type}&group_id={VAR|group_id}&no_tax={VAR|no_tax}&order={VAR|order}" class="LeftBrandsElement"><div class="auction_page_left_category_brand {IF|{VAR|brand}||auction_page_left_category_brandselected|}">Alle ({BRANDS_TOTAL} stk)</div></a>
+                {BRANDS}
+                
+            </div><!--auction_page_left_category slut-->
+            {MODULE|{MODULE}|{PAGE}|groups_left}
+        </div><!--auction_page_left slut-->
+		<div id="auction_page_right"><!--auction_page_right-->
+			{AUCTIONS}
+    	</div><!--auction_page_right slut-->
+<script>
+function SwitchFavorite(id)
+{
+	new ajax{AJAX}("switch_favorite", {
+		id: id
+	}, function(val) {
+		if (val["state"] && val["state"] == "ok")
+		{
+			if (val["is_favorite"] == "1")
+			{
+				$("#Favorite" + id + " .AuctionOverviewAddFavorite").hide();
+				$("#Favorite" + id + " .AuctionOverviewRemoveFavorite").removeClass("Hidden");
+				$("#Favorite" + id + " .AuctionOverviewRemoveFavorite").show();
+			}
+			else
+			{
+				$("#Favorite" + id + " .AuctionOverviewAddFavorite").removeClass("Hidden");
+				$("#Favorite" + id + " .AuctionOverviewAddFavorite").show();
+				$("#Favorite" + id + " .AuctionOverviewRemoveFavorite").hide();
+			}
+		}
+		else
+		{
+			alert(val["message"] ? val["message"] : "Der er opstået en uventet fejl");
+		}
+	}, "POST", true);
+}
+
+$(document).ready(function() {
+	// Find nærmeste		
+	var str_gps_lat = '{GPS_LAT}';
+	var str_gps_lng = '{GPS_LNG}';
+	if (navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(function(location) {
+			str_gps_lat = location.coords.latitude;
+			str_gps_lng = location.coords.longitude;
+			
+			// Gemmer koordinater
+			new ajax{AJAX}('save_gps', {
+				lat: str_gps_lat,
+				lng: str_gps_lng
+			}, function() {
+			}, 'POST', true);
+		});
+	}
+});
+</script>
+	</div><!--auction_page slut-->
+<!-- and here-->
+</div><!--content_page slut-->

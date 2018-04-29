@@ -1,0 +1,10 @@
+
+<td class="tabErrorLeft" id="_form_{FORM_ID}_tab_button_{ID}_left"><div style="width: 11px;"></div></td>
+<td class="tabErrorMiddle" id="_form_{FORM_ID}_tab_button_{ID}_middle" nowrap>
+	<a href="javascript:_form_{FORM_ID}_ShowTab({ID});void(0);" onclick="this.blur();">{TEXT}</a>
+	<script>
+	_form_{FORM_ID}_TabError[{ID}] = true;
+	if (_form_{FORM_ID}_TabErrorId == -1) _form_{FORM_ID}_TabErrorId = '{ID}';
+	</script>
+</td>
+<td class="tabErrorRight" id="_form_{FORM_ID}_tab_button_{ID}_right"><div style="width: 11px;"></div></td>

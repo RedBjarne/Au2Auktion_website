@@ -1,0 +1,29 @@
+<script type="text/javascript" src="/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery/tablednd.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#_table_{TABLE_ID}').tableDnD({
+		onDrop: function(table, row) {
+			var move_id = row.id.replace('_table_row_{TABLE_ID}_', '');
+			var after_id = '';
+			var rows = table.tBodies[0].rows;
+			for (var i = 0; i < rows.length; i++)
+			{
+				if (rows[i].id == row.id)
+				{
+					i = rows.length;
+				}
+				else
+				{
+					after_id = rows[i].id.replace('_table_row_{TABLE_ID}_', '');
+				}
+			}
+			
+			// Opdaterer siden
+			document.getElementById('_table_move_id_{TABLE_ID}').value = move_id;
+			document.getElementById('_table_after_id_{TABLE_ID}').value = after_id;
+			document.getElementById('_table_form_{TABLE_ID}').submit();
+		}
+	});
+});
+</script>

@@ -1,0 +1,19 @@
+<tr>
+	<td nowrap class="{CLASS}">
+		{TEXT}:
+	</td>
+	<td class="{CLASS}">
+		<div id="_form_{FORM_ID}_{NAME}_div" style="visibility: hidden; position: absolute;">
+			<div style="position: relative; top: 20px;">
+				<select name="_form_{FORM_ID}_{NAME}_select" size="10" onclick="if (this.selectedIndex >= 0) { document.getElementById('{NAME}').value = this.options[this.selectedIndex].value; } this.selectedIndex = -1; document.getElementById('_form_{FORM_ID}_{NAME}_div').style.visibility = 'hidden';">
+					{OPTIONS}
+				</select>
+			</div>
+		</div>
+		<input type="text" name="{NAME}" id="{NAME}" value="{VALUE}" style="height: 19px;"><img src="/img/icon_dropdown.gif" alt="Flere valg" align="absmiddle" onclick="div = document.getElementById('_form_{FORM_ID}_{NAME}_div'); if (div.style.visibility == '') { div.style.visibility = 'hidden'; } else { div.style.visibility = ''; }">
+		{INFO}
+	</td>
+	<td style="color: #ff0000; font-size: 8pt;" class="{CLASS}">
+		{ERROR}
+	</td>
+</tr>

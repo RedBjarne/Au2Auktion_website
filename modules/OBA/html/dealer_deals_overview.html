@@ -1,0 +1,97 @@
+<div class="content_title">Mine handler</div>
+			<div class="content_page"><!--content_page-->
+				<!-- content of all pages between here-->
+					
+                <div id="trades_page"><!--trades_page-->
+                	<div id="trades_page_content"><!--trades_page_content-->
+                    	<div id="trades_page_left" class="HideOnPrint DealerDealSearchbox"><!--trades_page_left-->
+                            <div class="trades_page_left_typesort"><!--trades_page_left_typesort-->
+                                <form action="/" method="get">
+                                    <input type="hidden" name="module" value="{MODULE}" />
+                                    <input type="hidden" name="page" value="dealer" />
+                                    <input type="hidden" name="do" value="deals_overview" />
+                                    <label>Vis:</label><br />
+                                    <select name="deals" id="deals">
+                                        <option value="">Dine handler</option>
+                                        <option value="bids" {IF|{VAR|deals}|bids|selected|}>Dine bud</option>
+                                        <option value="auctions" {IF|{VAR|deals}|auctions|selected|}>Dine tilmeldte biler</option>
+                                    </select>
+                            </div><!--trades_page_left_typesort slut-->
+                        	<div class="trades_page_left_period"><!--trades_page_left_period-->
+                                    <label>Periode:</label><br />
+                                    <input type="text" id="inputDateFrom" name="date_from"   value="{VAR|date_from}" class="trades_page_left_period_fieldtop" />
+                                    <span class="trades_page_left_period_spacer"> - </span>
+                                    <input type="text" id="inputDateTo" name="date_to" value="{VAR|date_to}" class="trades_page_left_period_fieldbottom" /> 
+                            </div><!--trades_page_left_period slut-->
+                            <div class="trades_page_left_status"><!--trades_page_left_status-->
+                                    <label>Status:</label><br />
+                                    <select name="status" id="status">
+                                        <option>Alle</option>
+                                        <option value="sold" {IF|{VAR|status}|sold|selected|}>Solgt</option>
+                                        <option value="not_sold" {IF|{VAR|status}|not_sold|selected|}>Ikke solgt</option>
+                                        <option value="bought" {IF|{VAR|status}|bought|selected|}>Købt</option>
+                                        <option value="not_bought" {IF|{VAR|status}|not_bought|selected|}>Ikke købt</option>
+                                    </select>
+                                    <input type="submit" value="Søg" class="trades_page_left_status_button"/>
+                                </form>
+                            </div><!--trades_page_left_status slut-->
+
+                        </div><!--trades_page_left slut-->
+                        <div id="trades_page_right"><!--trades_page_right-->
+                            <div align="center" style="margin-top:-37px;">{PAGING}</div>
+                            {ELEMENTS}   
+                        </div><!--trades_page_right slut-->
+                    </div><!--trades_page_content slut-->
+                </div><!--trades_page slut-->
+                    
+				<!-- and here-->
+			</div><!--content_page slut-->
+            
+<script>
+$(document).ready(function() {
+	$("#deals").bind("click change", function() {
+		if ($(this).val() == "bids")
+		{
+			// Dine bud
+			if ($("#status").val() == "sold" || $("#status").val() == "not_sold") $("#status").val("");
+		}
+		else if ($(this).val() == "auctions")
+		{
+			// Dine tilmeldte biler
+			if ($("#status").val() == "bought" || $("#status").val() == "not_bought") $("#status").val("");
+		}
+		else
+		{
+			// Dine handler
+			if ($("#status").val() == "not_sold" || $("#status").val() == "not_bought") $("#status").val("");
+		}
+	});	
+	
+	$("#status").bind("click change", function() {
+		if ($(this).val() == "sold")
+		{
+			// Solgt
+			if ($("#deals").val() == "bids") $("#deals").val("");
+		}
+		else if ($(this).val() == "not_sold")
+		{
+			// Ikke solgt
+			$("#deals").val("auctions");
+		}
+		else if ($(this).val() == "bought")
+		{
+			// Købt
+			if ($("#deals").val() == "auctions") $("#deals").val("");
+		}
+		else if ($(this).val() == "not_bought")
+		{
+			// Ikke købt
+			$("#deals").val("bids");
+		}
+	});	
+	
+	$("#inputDateFrom,#inputDateTo").datepicker({
+		dateFormat: "dd-mm-yy"
+	});
+});
+</script>

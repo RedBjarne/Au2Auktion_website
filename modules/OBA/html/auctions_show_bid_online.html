@@ -1,0 +1,107 @@
+<div class="{BID_CLASS}"><!--auction_pagedetails_bid_notloggedin-->
+    <div class="{BID_CLASS}_top">Status: <span style="font-weight:bold;">{BID_TITLE}</span></div>
+    <div class="{BID_CLASS}_tip">{BID_TIP}</div>
+    <div class="{BID_CLASS}_highestbid">Højeste bud: <span style="color:#b7b7b7;">{IF|{CUR_PRICE}|0|Ingen bud|DKK {CUR_PRICE}}</span></div>
+    <div class="{BID_CLASS}_bid"><!--{BID_CLASS}_bid-->
+       <form action="/" method="post" onsubmit="return CheckBid();" id="formBid" style="float:left;">
+            <input type="hidden" name="module" value="{MODULE}" />
+            <input type="hidden" name="page" value="{PAGE}" />
+            <input type="hidden" name="do" value="bid" />
+            <input type="hidden" name="id" value="{ID}" /> 
+            <label class="{BID_CLASS}_bid_labeltop">Indtast dit bud:</label>
+            <input type="text" name="bid" id="bid" value="" class="{BID_CLASS}_bid_field" />
+            <input type="button" onclick="$('#formBid').submit();"  value="Byd" class="{BID_CLASS}_bid_button" />
+        </form>
+        
+    </div><!--{BID_CLASS}_bid slut-->
+    <div class="{BID_CLASS}_bid_labelbottom">(Byd DKK 100,- eller mere)</div>
+    <div class="{BID_CLASS}_bid_fees">Salær ved køb DKK {SALERY} inkl. moms</div>
+</div><!--auction_pagedetails_bid_notloggedinbidnomp slut-->
+
+<div id="auction_pagedetails_clearbar"></div>
+<div id="auction_pagedetails_latestbids"><!--auction_pagedetails_latestbids-->
+    <div class="auction_pagedetails_latestbids_title">{BID_COUNT} bud modtaget indtil nu</div>
+    <div class="auction_pagedetails_latestbids_latest">5 seneste bud</div>
+    <div class="auction_pagedetails_latestbids_bid"><!--auction_pagedetails_latestbids_bid-->
+        <div class="auction_pagedetails_latestbids_bid_title">Bud</div>                          
+        <div class="auction_pagedetails_latestbids_time_title">Tidspunkt</div>
+        {BIDS}{TIME}
+    </div><!--auction_pagedetails_latestbids slut-->
+</div><!--auction_pagedetails_latestbids slut-->
+<div id="auction_pagedetails_end"><!--auction_pagedetails_end-->
+    <div class="auction_pagedetails_end_title">Auktionens sluttidspunkt</div>
+    <div class="auction_pagedetails_end_timeleft">Resterende tid:<br /><span style="color:black;"><span id="SpanCountDown"><span id="days"></span> dag(e)<span id="hours"></span> time(r)<span id="mins"></span> minut(ter)<span id="secs"></span> sekund(er)</span></span></div>
+    <div class="auction_pagedetails_end_auctionend">Auktionen slutter:<br /><span style="color:black;">{END_TIME}</span></div>
+    <div class="auction_pagedetails_end_update"><a href="javascript:document.location.reload();">Opdater</a><br /><span style="color:#b7b7b7;">(Sidst opdateret {DATETIME|%d-%m-%Y %H:%M:%S})</span></div>
+</div><!--auction_pagedetails_end slut-->
+		
+
+<script>
+function CountDown()
+{
+	if (secsLeft <= 0)
+	{
+		$("#SpanCountDown").text("Auktionen er slut");
+	}
+	else
+	{
+		var s = secsLeft;
+		var d = 0;
+		var h = 0;
+		var m = 0;
+		while (s >= 86400)
+		{
+			d++;
+			s -= 86400;
+		}
+		while (s >= 3600)
+		{
+			h++;
+			s -= 3600;
+		}
+		while (s >= 60)
+		{
+			m++;
+			s -= 60;
+		}
+		
+		$("#SpanCountDown #days").text(d);
+		$("#SpanCountDown #hours").text(h);
+		$("#SpanCountDown #mins").text(m);
+		$("#SpanCountDown #secs").text(s);
+		
+	}
+	
+	secsLeft--;
+	setTimeout("CountDown();", 1000);
+}
+var secsLeft = parseInt({SECS_LEFT});
+CountDown();
+
+function CheckBid()
+{
+	if (!allowSubmit)
+	{
+		return false;
+	}
+	
+	var b = $("#bid").val();
+	if (isNaN(b) || b != parseInt(b))
+	{
+		alert("Du skal indtaste et gyldigt bud");
+		return false;
+	}
+	else if (parseInt(b) < {CUR_PRICE} + 100)
+	{
+		alert("Du skal byde mindst DKK 100,- højere end nuværende bud");
+		return false;
+	}
+	else
+	{
+		allowSubmit = false;
+		return true;
+	}
+}
+
+var allowSubmit = true;
+</script>

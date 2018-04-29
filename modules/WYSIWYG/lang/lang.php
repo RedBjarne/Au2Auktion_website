@@ -1,0 +1,32 @@
+<?
+$lang = array(
+"Gem",
+"Gruppe",
+"Grupper",
+"HTML",
+"Herunder kan du redigere dine WYSIWYG-sider",
+"Ikke grupperede",
+"Indstillinger",
+"Indtast gruppe eller vælg på liste",
+"Ingen",
+"Kopier",
+"Lad ikke publicerede sider indgå i sitemap",
+"Opret WYSIWYG-side",
+"Oversigt",
+"Publiceret",
+"Rediger",
+"Rediger søgeord",
+"Ret",
+"SEO",
+"Skal udfyldes",
+"Slet",
+"Slet denne WYSIWYG-side",
+"Søgeord - et pr. linie",
+"Tilbage",
+"Tilføj",
+"Titel",
+"Valg",
+"WYSIWYG-siden blev ikke fundet",
+"WYSIWYG-siden er nu slettet"
+);
+?>

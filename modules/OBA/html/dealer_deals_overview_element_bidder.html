@@ -1,0 +1,23 @@
+<!--<div class="DealerDealDefaults DealerDeal{STATUS}">
+
+	<!-- Vises alt efter status -->
+	<!--<span class="title {IF|{STATUS}|Highest||Hidden}">Du har det højeste bud - Dit max-bud: DKK {BID_BID}</span>
+	<span class="title {IF|{STATUS}|MinPrice||Hidden}">Mindstepris er ikke opnået - Dit max-bud: DKK {BID_BID}</span>
+	<span class="title {IF|{STATUS}|Overbid||Hidden}">Du er blevet overbudt - Dit max-bud: DKK {BID_BID}</span>
+	
+	<span class="info">{YEAR} {BRAND} {MODEL} {VARIANT} {TYPE}{IF|{DOORS}|||, {DOORS}d}{IF|{GEARCOUNT}|||, {GEARCOUNT}g}{IF|{FUEL}|||, {FUEL}}{IF|{COLOR}|||, {COLOR}}{IF|{KM}|||, {KM} km}</span>
+	
+	<span class="id">Katalognummer: {AUCTION_NO}</span>
+	
+	<span class="spacer"></span>
+			
+</div>-->
+
+<!-- biler der er budt på -->
+                        	<div id="trades_page_right_trade_bids{STATUS}"><!--trades_page_right_trade_bids-->
+                            	<div class="trades_page_right_trade_bids_top{STATUS}{IF|{STATUS}|Highest||Hidden}">Du har det højeste bud - Dit max-bud: DKK {BID_BID}</div>
+                                <div class="trades_page_right_trade_bids_top{STATUS}{IF|{STATUS}|MinPrice||Hidden}">Mindstepris er ikke opnået - Dit max-bud: DKK {BID_BID}</div>
+                                <div class="trades_page_right_trade_bids_top{STATUS}{IF|{STATUS}|Overbid||Hidden}">Du er blevet overbudt - Dit max-bud: DKK {BID_BID}</div>
+                                <div class="trades_page_right_trade_bids_details">{YEAR} {BRAND} {MODEL} {VARIANT} {TYPE}{IF|{DOORS}|||, {DOORS}d}{IF|{FUEL}|||, {FUEL}}{IF|{KM}|||, {KM} km}<span style="width:auto;min-width:160px;height:39px;float:right;background:#c40912;color:white;text-align:right;padding-right:10px;padding-left:10px;">Katalognummer: {AUCTION_NO}</span></div>
+                                </div><!--trades_page_right_trade_bids slut-->
+                            <!-- biler der er budt på slut -->

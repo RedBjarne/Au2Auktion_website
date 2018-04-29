@@ -1,0 +1,116 @@
+<!-- Info -->
+<div style="background-image: url(/layouts/{SITE_LAYOUT}/img/mail_hor_fade.png);">
+	<table cellspacing="0" cellpadding="5" width="515">
+		<tr>
+			<td>
+				<div style="font-size: 18pt; color: #ba1617;">Desværre opnåede din bil ikke mindsteprisen</div>
+				<div style="color: #767676;">
+					Din bil har været på auktion hos Au2 Auktion og vi må desværre meddele dig at bilen ikke opnåede mindsteprisen og derfor ikke blev solgt.<br>
+					<br>
+					Det højeste bud var:<br>
+					<div style="font-size: 14pt;">DKK {CUR_PRICE},-</div>
+				</div>
+			</td>
+			<td align="right">
+				<img src="{IF|{IMAGE_ID}||/modules/{MODULE}/img/no_image.jpg|/modules/{MODULE}/upl/image_{IMAGE_ID}_thumb.jpg}" width="220" />
+			</td>
+		</tr>
+	</table>
+</div>
+<img src="/layouts/{SITE_LAYOUT}/img/mail_hr.png" />
+
+<!-- Du har fået bud på -->
+<table cellspacing="0" cellpadding="5" width="515">
+	<tr>
+		<td valign="top">
+			<div style="color: #3b78b9; font-size: 14pt;">Denne bil blev ikke solgt</div>
+			<table>
+				<tr>
+					<td align="right" style="color: #787878;">
+						Auktionsnummer:
+					</td>
+					<td  style="color: #787878;">
+						{AUCTION_NO}
+					</td>
+				</tr>
+				<tr>
+					<td align="right" style="color: #787878;">
+						Mærke:
+					</td>
+					<td  style="color: #787878;">
+						{BRAND}
+					</td>
+				</tr>
+				<tr>
+					<td align="right" style="color: #787878;">
+						Model:
+					</td>
+					<td  style="color: #787878;">
+						{MODEL}
+					</td>
+				</tr>
+				<tr>
+					<td align="right" style="color: #787878;">
+						Variant:
+					</td>
+					<td  style="color: #787878;">
+						{VARIANT}
+					</td>
+				</tr>
+				<tr>
+					<td align="right" style="color: #787878;">
+						1. indreg.:
+					</td>
+					<td  style="color: #787878;">
+						{FIRST_REG_DATE}
+					</td>
+				</tr>
+				<tr>
+					<td align="right" style="color: #787878;">
+						KM:
+					</td>
+					<td  style="color: #787878;">
+						{KM}
+					</td>
+				</tr>
+				<tr>
+					<td align="right" style="color: #787878;">
+						Mindstepris:
+					</td>
+					<td  style="color: #787878;">
+						DKK {MIN_PRICE},-
+					</td>
+				</tr>
+				<tr>
+					<td align="right" style="color: #787878;">
+						Start-dato:
+					</td>
+					<td  style="color: #787878;">
+						{START_DATE}
+					</td>
+				</tr>
+			</table>
+			<br>
+			<div style="color: #787878;">Du vil snarest blive kontaktet af vores kundeservice med henblik på hvad der videre skal ske.</div>
+		</td>
+		<td style="background-image: url(/layouts/{SITE_LAYOUT}/img/mail_ver_fade.png); color: #787878;" width="200" valign="top">
+			<div style="color: #2c517b; font-size: 14pt;">
+				<img src="/layouts/{SITE_LAYOUT}/img/mail_custcare.png" align="absmiddle" />
+				Kundeservice
+			</div>
+			Skulle der opstå spørgsmål i forbindelse med auktionen er du velkommen til at kontakte vores kundeservice.<br>
+			<br>
+			<b>Åbningstider:</b><br>
+			Mandag - Fredag: 10:00 - 16:00<br>
+			Lørdag - Søndag: Lukket<br>
+			<br>
+			<b>Kontaktoplysninger:</b><br>
+			Au2 Auktion ApS<br>
+			Cikorievej 102<br>
+			5220 Odense SØ<br>
+			<br>
+			Telefon: 71 71 77 38<br>
+			info@au2auktion.dk
+		</td>
+	</tr>
+</table>

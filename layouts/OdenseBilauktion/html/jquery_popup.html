@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/layouts/{SITE_LAYOUT}/css/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/layouts/{SITE_LAYOUT}/js/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript">
+function url_popup(url, width, height)
+{
+	if (!width || width == null) width = 800;
+	if (!height || height == null) height = 600;
+	$.fancybox(
+		'<iframe src="' + url + '" width="' + width + '" height="' + height + '" frameborder="0" framespacing="0" scrolling="no"></iframe>',
+		{
+        	'autoDimensions'	: true,
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none'
+		}
+	);
+}
+function html_popup(html)
+{
+	$.fancybox(
+		html,
+		{
+        	'autoDimensions'	: true,
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none'
+		}
+	);
+}
+</script>

@@ -1,0 +1,57 @@
+<div class="content_title">Mine favoritter</div>
+			<div class="content_page"><!--content_page-->
+				<!-- content of all pages between here-->
+<script>
+var strAuctions = "";
+</script>
+	
+<div id="favorite_page"><!--favorite_page-->
+    <div id="favorite_page_topbar"><!--favortie_page_topbar-->
+        <div class="favorite_page_topbar_status">Senest opdateret {DATETIME|%d-%m-%Y %H:%M:%S}</div>
+        <a href="javascript:document.location.reload();"><div class="favorite_page_topbar_update">Opdater</div></a>
+        <a href="/site/{LANG_ID}/{MODULE}/{PAGE}/{DO}/{ID}?print=true" target="_blank"><div class="favorite_page_topbar_print">Udskriv</div></a>
+        <div class="favorite_page_topbar_sort"><!--favorite_page_topbar_sort-->
+            
+                <label>Sorter efter:</label>
+                <select onchange="document.location.href = '/?module={MODULE}&page=dealer&do=favorites_overview' + this.options[this.selectedIndex].value;">
+                    <option value="&order=id">Kat.nr.</option>
+                    <option value="&order=first_reg_date" {IF|{VAR|order}|first_reg_date|selected|}>År</option>
+                    <option value="&order=model" {IF|{VAR|order}|model|selected|}>Model</option>
+                    <option value="&order=auction_type" {IF|{VAR|order}|auction_type|selected|}>Auktion</option>
+                    <option value="&order=end_time" {IF|{VAR|order}|end_time|selected|}>Rest.tid</option>
+                    <option value="&order=status" {IF|{VAR|order}|status|selected|}>Status</option>
+                    <option value="&order=cur_price" {IF|{VAR|order}|cur_price|selected|}>Højeste bud</option>
+                </select>
+            
+        </div><!--favorite_page_topbar_sort slut-->
+    </div><!--favortie_page_topbar-->
+    <div id="favorite_page_content"><!--favorite_page_content-->
+
+	
+	
+	
+		{AUCTIONS}
+	
+
+<script>
+function CheckForNewBids() {
+	new ajax{AJAX}("new_bids", {
+		auctions: strAuctions
+	}, function(val) {
+		if (val["state"] && val["state"] == "new_bids")
+		{
+			document.location.reload();
+		}
+		else
+		{		
+			setTimeout("CheckForNewBids();", 5000);
+		}
+	}, "POST", true);
+}
+
+setTimeout("CheckForNewBids();", 5000);
+</script>
+		</div><!--favorite_page_content slut-->
+	</div><!--favortie_page slut-->
+<!-- and here-->
+</div><!--content_page slut-->

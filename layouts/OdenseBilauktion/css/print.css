@@ -1,0 +1,14 @@
+/*
+	Skjul på print
+*/
+.HideOnPrint {
+	display: none !important;
+}
+.AuctionsOverviewRight {
+	float: none !important;
+}
+.TableHeader th {
+	border: 1px solid #ccc !important;
+	background: none !important;
+	color: #444 !important;
+}

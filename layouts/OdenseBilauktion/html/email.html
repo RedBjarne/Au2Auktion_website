@@ -1,0 +1,80 @@
+<html>
+
+<style>
+<!--
+body
+{
+	background-color: #4d4b4c;
+	font-family: Arial;
+	font-size: 9pt;
+	margin: 0px;
+}
+p
+{
+	margin: 0px;
+}
+a
+{
+	color: #000000;
+	text-decoration: none;
+}
+a img {
+	border: 0px;
+	vertical-align: middle;
+}
+-->
+</style>
+
+<body>
+
+<div style="background-image: url(/layouts/{SITE_LAYOUT}/img/mail_back.png); background-position: 50% 0%; background-repeat: no-repeat; min-height: 800px; padding: 15px;">
+
+	<!-- Bredde -->
+	<table width="515" style="width: 515px; margin: auto;" cellspacing="0">
+	
+		<!-- Logo + dato -->
+		<tr>
+			<td align="left">
+				<img src="/layouts/{SITE_LAYOUT}/images/logo.png" width="175" />
+			</td>
+			<td align="right">
+				<div style="margin-top: 20px; width: 178px; text-align: center; height: 24px; background-image: url(/layouts/{SITE_LAYOUT}/img/mail_date.png);">
+					<div style="padding-top: 3px; color: #fff;">{DATETIME|%A d. %e. %B %Y}</div>
+				</div>
+			</td>
+		</tr>
+
+		<!-- Kære + Facebook -->
+		<tr>
+			<td align="left" style="color: #2b507a; font-size: 16pt; background-color: #f2f2f2; padding: 5px;">
+				Kære [NAME]
+			</td>
+			<td align="right" style="background-color: #f2f2f2; padding: 5px;">
+				<a href="https://www.facebook.com/Au2-Auktion-ApS-438870516296251/?fref=ts" target="_blank"><img src="/layouts/{SITE_LAYOUT}/img/mail_facebook.png" /></a>
+			</td>
+		</tr>
+		
+		<!-- Indhold -->
+		<tr>
+			<td colspan="2" style="background-color: #f2f2f2;">
+				<img src="/layouts/{SITE_LAYOUT}/img/mail_hr.png" />
+				{HTML}
+			</td>
+		</tr>
+			
+		<!-- Bund -->
+		<tr>
+			<td colspan="2" style="background-color: #f2f2f2;">
+				<img src="/layouts/{SITE_LAYOUT}/img/mail_hr.png" />
+				<div style="text-align: center; font-size: 8pt; padding: 5px; color: #838383;">
+					Au2 Auktion ApS · Cikorievej 102, 5220 Odense SØ · TLF: 71 71 77 38
+				</div>
+			</td>
+		</tr>
+		
+	</table>
+</div>
+
+</body>
+
+</html>

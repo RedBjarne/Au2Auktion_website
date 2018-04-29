@@ -1,0 +1,39 @@
+<h1>Auktions kalender</h1>
+
+
+<div align="center">
+
+	<a href="/site/{LANG_ID}/{MODULE}/{PAGE}?date={DATE_PREV}" onclick="if ('{DATE_PREV}' == '') return false;" class="{IF|{DATE_PREV}||Invisible|} submitButton">«</a>
+	<span style="width: 150px; text-align: center; display: inline-table;">{MONTH} {YEAR}</span>
+	<a href="/site/{LANG_ID}/{MODULE}/{PAGE}?date={DATE_NEXT}" onclick="if ('{DATE_NEXT}' == '') return false;" class="{IF|{DATE_NEXT}||Invisible|} submitButton">»</a>
+	<br>
+	<br>
+	
+	<table>
+		<tr>
+			<th>
+				Mandag
+			</th>
+			<th>
+				Tirsdag
+			</th>
+			<th>
+				Onsdag
+			</th>
+			<th>
+				Torsdag
+			</th>
+			<th>
+				Fredag
+			</th>
+			<th>
+				Lørdag
+			</th>
+			<th>
+				Søndag
+			</th>
+		</tr>
+		{DAYS}
+	</table>
+	
+</div>
